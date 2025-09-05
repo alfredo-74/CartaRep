@@ -43,32 +43,12 @@ export default function ServicesSection() {
     }
   ];
 
-  const additionalServices = [
-    {
-      icon: Home,
-      title: "Residential Design",
-      description: "Home lighting solutions",
-      color: "text-primary"
-    },
-    {
-      icon: Building,
-      title: "Commercial Spaces",
-      description: "Office & retail lighting",
-      color: "text-secondary"
-    },
-    {
-      icon: Cog,
-      title: "Smart Integration",
-      description: "IoT lighting controls",
-      color: "text-accent"
-    },
-    {
-      icon: Leaf,
-      title: "Sustainability",
-      description: "Eco-friendly solutions",
-      color: "text-primary"
-    }
-  ];
+  const additionalServices: Array<{
+    icon: any;
+    title: string;
+    description: string;
+    color: string;
+  }> = [];
 
   return (
     <section id="services" className="py-32 relative z-10" ref={sectionRef} data-testid="services-section">

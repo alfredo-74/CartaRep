@@ -77,15 +77,6 @@ export default function ContactSection() {
             </a>
           </div>
 
-          {/* CartaRep Logo */}
-          <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`}>
-            <img 
-              src="/attached_assets/esignature_1757011490490.png" 
-              alt="CartaRep Logo with Pendant Light" 
-              className="mx-auto h-24 w-auto opacity-80 hover:opacity-100 transition-opacity" 
-              data-testid="img-contact-logo"
-            />
-          </div>
         </div>
       </div>
     </section>
