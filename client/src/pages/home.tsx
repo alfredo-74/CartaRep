@@ -2,7 +2,6 @@ import BackgroundCarousel from "@/components/background-carousel";
 import FloatingShapes from "@/components/floating-shapes";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
-import WhoWeAre from "@/components/who-we-are";
 import OurBrands from "@/components/our-brands";
 import OurProjects from "@/components/our-projects";
 import ServicesSection from "@/components/services-section";
@@ -15,7 +14,6 @@ export default function Home() {
       <FloatingShapes />
       <Navigation />
       <HeroSection />
-      <WhoWeAre />
       <OurBrands />
       <OurProjects />
       <ServicesSection />
@@ -26,12 +24,6 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <img 
-                src="/attached_assets/esignature_1757011490490.png" 
-                alt="CartaRep Logo" 
-                className="h-8 w-auto" 
-                data-testid="img-footer-logo"
-              />
               <span className="text-xl font-bold" data-testid="text-footer-brand">CartaRep</span>
             </div>
             
