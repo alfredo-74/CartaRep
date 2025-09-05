@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <BackgroundCarousel />
-      <div className="fixed inset-0 gradient-overlay z-[-1]" />
       <FloatingShapes />
       <Navigation />
       <HeroSection />
