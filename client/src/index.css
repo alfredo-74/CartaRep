@@ -147,6 +147,35 @@
     }
   }
 
+  /* Pink Neon Text Effect */
+  .pink-neon-text {
+    font-family: var(--font-neon);
+    color: hsl(320, 100%, 80%);
+    text-shadow: 
+      0 0 5px hsl(320, 100%, 60%),
+      0 0 10px hsl(320, 100%, 60%),
+      0 0 20px hsl(320, 100%, 60%),
+      0 0 40px hsl(320, 100%, 60%);
+    animation: pink-neon-flicker 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pink-neon-flicker {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px hsl(320, 100%, 60%),
+        0 0 10px hsl(320, 100%, 60%),
+        0 0 20px hsl(320, 100%, 60%),
+        0 0 40px hsl(320, 100%, 60%);
+    }
+    50% {
+      text-shadow: 
+        0 0 2px hsl(320, 100%, 60%),
+        0 0 5px hsl(320, 100%, 60%),
+        0 0 10px hsl(320, 100%, 60%),
+        0 0 20px hsl(320, 100%, 60%);
+    }
+  }
+
   /* Glass Cards */
   .glass-card {
     background: rgba(255, 255, 255, 0.05);

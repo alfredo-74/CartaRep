@@ -32,14 +32,8 @@ export default function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* CartaRep Logo */}
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/attached_assets/esignature_1757011490490.png" 
-              alt="CartaRep Logo" 
-              className="h-12 w-auto" 
-              data-testid="img-nav-logo"
-            />
-            <span className="neon-text text-2xl font-neon font-bold" data-testid="text-nav-brand">
+          <div className="flex items-center">
+            <span className="pink-neon-text text-2xl font-neon font-bold" data-testid="text-nav-brand">
               CartaRep
             </span>
           </div>
