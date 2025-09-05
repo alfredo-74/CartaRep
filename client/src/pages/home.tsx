@@ -10,7 +10,7 @@ import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground relative">
       <BackgroundCarousel />
       <FloatingShapes />
       <Navigation />
