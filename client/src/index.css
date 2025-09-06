@@ -118,27 +118,49 @@
 }
 
 @layer components {
-  /* Reduced Glow Effects */
+  /* White Neon Effects */
   .neon-text {
     font-family: var(--font-neon);
     color: white;
     text-shadow: 
-      0 0 2px rgba(255, 255, 255, 0.3),
-      0 0 4px rgba(255, 255, 255, 0.2);
+      0 0 5px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 20px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 255, 255, 0.2);
+    animation: white-neon-flicker 2s ease-in-out infinite alternate;
     font-weight: 500;
   }
 
 
-  /* White Text Effect */
+  /* White Neon Text Effect */
   .pink-neon-text {
     font-family: var(--font-neon);
     color: white;
     text-shadow: 
-      0 0 2px rgba(255, 255, 255, 0.3),
-      0 0 4px rgba(255, 255, 255, 0.2);
+      0 0 5px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 20px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 255, 255, 0.2);
+    animation: white-neon-flicker 2s ease-in-out infinite alternate;
     font-weight: 500;
   }
 
+  @keyframes white-neon-flicker {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 20px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+      text-shadow: 
+        0 0 2px rgba(255, 255, 255, 0.6),
+        0 0 5px rgba(255, 255, 255, 0.4),
+        0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.1);
+    }
+  }
 
   /* Glass Cards */
   .glass-card {
