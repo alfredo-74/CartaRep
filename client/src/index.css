@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -40,7 +40,7 @@
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --font-neon: Orbitron, monospace;
+  --font-neon: Oswald, sans-serif;
   --radius: 0.75rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
@@ -90,7 +90,7 @@
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --font-neon: Orbitron, monospace;
+  --font-neon: Oswald, sans-serif;
   --radius: 0.75rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
@@ -118,63 +118,27 @@
 }
 
 @layer components {
-  /* Neon Effects */
+  /* Reduced Glow Effects */
   .neon-text {
     font-family: var(--font-neon);
-    color: var(--primary);
+    color: white;
     text-shadow: 
-      0 0 5px var(--primary),
-      0 0 10px var(--primary),
-      0 0 20px var(--primary),
-      0 0 40px var(--primary);
-    animation: neon-flicker 2s ease-in-out infinite alternate;
+      0 0 2px rgba(255, 255, 255, 0.3),
+      0 0 4px rgba(255, 255, 255, 0.2);
+    font-weight: 500;
   }
 
-  @keyframes neon-flicker {
-    0%, 100% {
-      text-shadow: 
-        0 0 5px var(--primary),
-        0 0 10px var(--primary),
-        0 0 20px var(--primary),
-        0 0 40px var(--primary);
-    }
-    50% {
-      text-shadow: 
-        0 0 2px var(--primary),
-        0 0 5px var(--primary),
-        0 0 10px var(--primary),
-        0 0 20px var(--primary);
-    }
-  }
 
-  /* Pink Neon Text Effect */
+  /* White Text Effect */
   .pink-neon-text {
     font-family: var(--font-neon);
-    color: hsl(320, 100%, 80%);
+    color: white;
     text-shadow: 
-      0 0 5px hsl(320, 100%, 60%),
-      0 0 10px hsl(320, 100%, 60%),
-      0 0 20px hsl(320, 100%, 60%),
-      0 0 40px hsl(320, 100%, 60%);
-    animation: pink-neon-flicker 2s ease-in-out infinite alternate;
+      0 0 2px rgba(255, 255, 255, 0.3),
+      0 0 4px rgba(255, 255, 255, 0.2);
+    font-weight: 500;
   }
 
-  @keyframes pink-neon-flicker {
-    0%, 100% {
-      text-shadow: 
-        0 0 5px hsl(320, 100%, 60%),
-        0 0 10px hsl(320, 100%, 60%),
-        0 0 20px hsl(320, 100%, 60%),
-        0 0 40px hsl(320, 100%, 60%);
-    }
-    50% {
-      text-shadow: 
-        0 0 2px hsl(320, 100%, 60%),
-        0 0 5px hsl(320, 100%, 60%),
-        0 0 10px hsl(320, 100%, 60%),
-        0 0 20px hsl(320, 100%, 60%);
-    }
-  }
 
   /* Glass Cards */
   .glass-card {
