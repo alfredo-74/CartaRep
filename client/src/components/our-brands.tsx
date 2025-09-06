@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight, Download, ExternalLink } from "lucide-react";
 
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
+  const [activeCarousel, setActiveCarousel] = useState<{ [key: string]: number }>({});
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,33 +26,119 @@ export default function OurBrands() {
   const brands = [
     {
       name: "A-emotional Light",
-      category: "Nature inspired,",
-      specialty: "artistic lamps",
-      image: "https://images.unsplash.com/photo-1524634126442-357e0eac3c14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300",
-      alt: "A-emotional Light pendant fixture"
+      category: "Artisans of light,",
+      specialty: "nature-inspired artistic lamps",
+      tagline: "The light that thrills",
+      website: "https://www.a-emotionallight.com/",
+      catalogUrl: "https://www.a-emotionallight.com/a-emotional-light-releases-new-brand-image/",
+      collections: [
+        {
+          name: "Pendant Collection",
+          image: "https://images.unsplash.com/photo-1524634126442-357e0eac3c14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "A-emotional Light pendant fixtures"
+        },
+        {
+          name: "Artistic Series",
+          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "A-emotional Light artistic lamps"
+        },
+        {
+          name: "Nature Inspired",
+          image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "A-emotional Light nature-inspired designs"
+        }
+      ]
     },
     {
       name: "Ole Lighting",
-      category: "Sustainable,",
-      specialty: "smart lighting",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300",
-      alt: "Ole Lighting sustainable fixture"
+      category: "Sustainable design,",
+      specialty: "minimalist Mediterranean lighting",
+      tagline: "Lighting for the Earth",
+      website: "https://www.ole-lighting.com/en",
+      catalogUrl: "https://pdf.archiexpo.com/pdf/ole-lighting/catalogue-2022-2023-lighting-earth/52969-415939.html",
+      collections: [
+        {
+          name: "AVATAR Collection",
+          image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Ole Lighting AVATAR wall-to-wall system"
+        },
+        {
+          name: "ILLA Esparto Series",
+          image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Ole Lighting ILLA natural fiber collection"
+        },
+        {
+          name: "Sustainable Collection",
+          image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Ole Lighting sustainable designs"
+        }
+      ]
     },
     {
-      name: "Boyer Barcelona",
-      category: "Timeless,",
-      specialty: "elegant lighting",
-      image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300",
-      alt: "Boyer Barcelona elegant lighting"
+      name: "Bover Barcelona",
+      category: "Mediterranean luxury,",
+      specialty: "contemporary decorative lighting",
+      tagline: "Balance between design and timelessness",
+      website: "https://bover.es/en/",
+      catalogUrl: "https://bover.es/en/",
+      collections: [
+        {
+          name: "Dome Collection",
+          image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Bover Dome handcrafted wooden pendants"
+        },
+        {
+          name: "Mei Pleated Series",
+          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Bover Mei pleated fabric collection"
+        },
+        {
+          name: "Outdoor Garota",
+          image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Bover Garota outdoor lighting"
+        }
+      ]
     },
     {
       name: "Panzeri Lighting",
-      category: "Architectural,",
-      specialty: "decorative lighting",
-      image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300",
-      alt: "Panzeri architectural lighting"
+      category: "Italian excellence,",
+      specialty: "70+ years of architectural lighting",
+      tagline: "Quality, Tradition, Innovation",
+      website: "https://panzeri.it/en/",
+      catalogUrl: "https://panzeri.it/en/download/",
+      collections: [
+        {
+          name: "Jackie LED Collection",
+          image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Panzeri Jackie LED dimmable lamps"
+        },
+        {
+          name: "Tubino Iconic Series",
+          image: "https://images.unsplash.com/photo-1524634126442-357e0eac3c14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Panzeri Tubino torch-inspired collection"
+        },
+        {
+          name: "432 Ways Modular",
+          image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Panzeri 432 Ways modular system"
+        }
+      ]
     }
   ];
+
+  const nextSlide = (brandName: string, collectionsLength: number) => {
+    setActiveCarousel(prev => ({
+      ...prev,
+      [brandName]: ((prev[brandName] || 0) + 1) % collectionsLength
+    }));
+  };
+
+  const prevSlide = (brandName: string, collectionsLength: number) => {
+    setActiveCarousel(prev => ({
+      ...prev,
+      [brandName]: ((prev[brandName] || 0) - 1 + collectionsLength) % collectionsLength
+    }));
+  };
 
   return (
     <section id="brands" className="py-32 relative z-10" ref={sectionRef} data-testid="brands-section">
@@ -59,29 +147,115 @@ export default function OurBrands() {
           Our Brands
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-2 gap-12">
           {brands.map((brand, index) => (
             <div 
               key={brand.name}
-              className={`glass-card p-8 rounded-2xl text-center transition-all duration-1000 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              className={`glass-card p-8 rounded-2xl transition-all duration-1000 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`}
+              style={{ animationDelay: `${index * 200}ms` }}
               data-testid={`card-brand-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              <img 
-                src={brand.image} 
-                alt={brand.alt}
-                className="rounded-xl mb-6 w-full h-48 object-cover" 
-                data-testid={`img-brand-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
-              />
-              <h3 className="text-xl font-bold text-primary mb-2" data-testid={`text-brand-name-${index}`}>
-                {brand.name}
-              </h3>
-              <p className="text-muted-foreground mb-2" data-testid={`text-brand-category-${index}`}>
-                {brand.category}
-              </p>
-              <p className="text-accent" data-testid={`text-brand-specialty-${index}`}>
-                {brand.specialty}
-              </p>
+              {/* Brand Header */}
+              <div className="text-center mb-6">
+                <h3 className="neon-text text-2xl font-bold mb-2" data-testid={`text-brand-name-${index}`}>
+                  {brand.name}
+                </h3>
+                <p className="text-muted-foreground mb-2" data-testid={`text-brand-category-${index}`}>
+                  {brand.category}
+                </p>
+                <p className="text-white text-sm mb-2" data-testid={`text-brand-specialty-${index}`}>
+                  {brand.specialty}
+                </p>
+                <p className="text-accent text-sm italic" data-testid={`text-brand-tagline-${index}`}>
+                  "{brand.tagline}"
+                </p>
+              </div>
+
+              {/* Collection Carousel */}
+              <div className="relative mb-6">
+                <div className="overflow-hidden rounded-xl">
+                  <div 
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{ transform: `translateX(-${(activeCarousel[brand.name] || 0) * 100}%)` }}
+                  >
+                    {brand.collections.map((collection, collectionIndex) => (
+                      <div 
+                        key={collectionIndex}
+                        className="w-full flex-shrink-0"
+                        data-testid={`carousel-slide-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${collectionIndex}`}
+                      >
+                        <img 
+                          src={collection.image}
+                          alt={collection.alt}
+                          className="w-full h-64 object-cover"
+                          data-testid={`img-collection-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${collectionIndex}`}
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
+                          <h4 className="font-semibold" data-testid={`text-collection-name-${collectionIndex}`}>
+                            {collection.name}
+                          </h4>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Carousel Controls */}
+                <button
+                  onClick={() => prevSlide(brand.name, brand.collections.length)}
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all"
+                  data-testid={`button-carousel-prev-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => nextSlide(brand.name, brand.collections.length)}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all"
+                  data-testid={`button-carousel-next-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+
+                {/* Carousel Indicators */}
+                <div className="flex justify-center mt-4 space-x-2">
+                  {brand.collections.map((_, dotIndex) => (
+                    <button
+                      key={dotIndex}
+                      onClick={() => setActiveCarousel(prev => ({ ...prev, [brand.name]: dotIndex }))}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        (activeCarousel[brand.name] || 0) === dotIndex 
+                          ? 'bg-white' 
+                          : 'bg-white/40'
+                      }`}
+                      data-testid={`button-carousel-dot-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${dotIndex}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-4 justify-center">
+                <a
+                  href={brand.catalogUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all border border-white/20 hover:border-white/40"
+                  data-testid={`link-catalog-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Catalog</span>
+                </a>
+                <a
+                  href={brand.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-primary/20 hover:bg-primary/30 text-primary px-4 py-2 rounded-lg transition-all border border-primary/20 hover:border-primary/40"
+                  data-testid={`link-website-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Website</span>
+                </a>
+              </div>
             </div>
           ))}
         </div>
