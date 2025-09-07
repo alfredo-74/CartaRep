@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Download, ExternalLink } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
@@ -166,19 +166,6 @@ export default function OurBrands() {
     }
   ];
 
-  const nextSlide = (brandName: string, collectionsLength: number) => {
-    setActiveCarousel(prev => ({
-      ...prev,
-      [brandName]: ((prev[brandName] || 0) + 1) % collectionsLength
-    }));
-  };
-
-  const prevSlide = (brandName: string, collectionsLength: number) => {
-    setActiveCarousel(prev => ({
-      ...prev,
-      [brandName]: ((prev[brandName] || 0) - 1 + collectionsLength) % collectionsLength
-    }));
-  };
 
   return (
     <section id="brands" className="py-32 relative z-10" ref={sectionRef} data-testid="brands-section">
@@ -238,38 +225,6 @@ export default function OurBrands() {
                       </div>
                     ))}
                   </div>
-                </div>
-                
-                {/* Carousel Controls */}
-                <button
-                  onClick={() => prevSlide(brand.name, brand.collections.length)}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all"
-                  data-testid={`button-carousel-prev-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => nextSlide(brand.name, brand.collections.length)}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all"
-                  data-testid={`button-carousel-next-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-
-                {/* Carousel Indicators */}
-                <div className="flex justify-center mt-4 space-x-2">
-                  {brand.collections.map((_, dotIndex) => (
-                    <button
-                      key={dotIndex}
-                      onClick={() => setActiveCarousel(prev => ({ ...prev, [brand.name]: dotIndex }))}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        (activeCarousel[brand.name] || 0) === dotIndex 
-                          ? 'bg-white' 
-                          : 'bg-white/40'
-                      }`}
-                      data-testid={`button-carousel-dot-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${dotIndex}`}
-                    />
-                  ))}
                 </div>
               </div>
 
