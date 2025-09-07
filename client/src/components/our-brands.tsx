@@ -5,12 +5,27 @@ export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCarousel, setActiveCarousel] = useState<{ [key: string]: number }>({});
   const sectionRef = useRef<HTMLDivElement>(null);
+  const intervalRefs = useRef<{ [key: string]: NodeJS.Timeout }>({});
+
+  // Generate random colors for text elements
+  const randomColors = [
+    'text-cyan-400', 'text-emerald-400', 'text-purple-400', 'text-pink-400', 
+    'text-yellow-400', 'text-orange-400', 'text-red-400', 'text-blue-400',
+    'text-teal-400', 'text-violet-400', 'text-rose-400', 'text-lime-400'
+  ];
+
+  const getRandomColor = () => randomColors[Math.floor(Math.random() * randomColors.length)];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          // Start auto-scrolling for all brand carousels
+          startAutoScroll();
+        } else {
+          // Stop auto-scrolling when not visible
+          stopAutoScroll();
         }
       },
       { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
@@ -20,8 +35,33 @@ export default function OurBrands() {
       observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      stopAutoScroll();
+    };
   }, []);
+
+  const startAutoScroll = () => {
+    brands.forEach((brand) => {
+      if (intervalRefs.current[brand.name]) {
+        clearInterval(intervalRefs.current[brand.name]);
+      }
+      
+      intervalRefs.current[brand.name] = setInterval(() => {
+        setActiveCarousel(prev => ({
+          ...prev,
+          [brand.name]: ((prev[brand.name] || 0) + 1) % brand.collections.length
+        }));
+      }, 3000 + Math.random() * 2000); // Random interval between 3-5 seconds
+    });
+  };
+
+  const stopAutoScroll = () => {
+    Object.values(intervalRefs.current).forEach(interval => {
+      if (interval) clearInterval(interval);
+    });
+    intervalRefs.current = {};
+  };
 
   const brands = [
     {
@@ -160,13 +200,13 @@ export default function OurBrands() {
                 <h3 className="neon-text text-2xl font-bold mb-2" data-testid={`text-brand-name-${index}`}>
                   {brand.name}
                 </h3>
-                <p className="text-muted-foreground mb-2" data-testid={`text-brand-category-${index}`}>
+                <p className={`${getRandomColor()} mb-2 font-medium`} data-testid={`text-brand-category-${index}`}>
                   {brand.category}
                 </p>
-                <p className="text-white text-sm mb-2" data-testid={`text-brand-specialty-${index}`}>
+                <p className={`${getRandomColor()} text-sm mb-2`} data-testid={`text-brand-specialty-${index}`}>
                   {brand.specialty}
                 </p>
-                <p className="text-accent text-sm italic" data-testid={`text-brand-tagline-${index}`}>
+                <p className={`${getRandomColor()} text-sm italic font-light`} data-testid={`text-brand-tagline-${index}`}>
                   "{brand.tagline}"
                 </p>
               </div>
@@ -190,8 +230,8 @@ export default function OurBrands() {
                           className="w-full h-64 object-cover"
                           data-testid={`img-collection-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${collectionIndex}`}
                         />
-                        <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
-                          <h4 className="font-semibold" data-testid={`text-collection-name-${collectionIndex}`}>
+                        <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-4">
+                          <h4 className={`font-semibold ${getRandomColor()}`} data-testid={`text-collection-name-${collectionIndex}`}>
                             {collection.name}
                           </h4>
                         </div>
