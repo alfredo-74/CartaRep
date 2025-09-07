@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
-
-@font-face {
-  font-family: 'RC-Demo';
-  src: url('./assets/fonts/RC-Demo.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -48,7 +40,7 @@
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --font-neon: 'RC-Demo', Oswald, sans-serif;
+  --font-neon: 'Jost', sans-serif;
   --radius: 0.75rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
@@ -98,7 +90,7 @@
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --font-neon: 'RC-Demo', Oswald, sans-serif;
+  --font-neon: 'Jost', sans-serif;
   --radius: 0.75rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
