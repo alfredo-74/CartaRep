@@ -86,33 +86,6 @@ export default function ContactSection() {
             </p>
           </div>
 
-          {/* Contact Information Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className={`glass-card p-6 rounded-xl transition-all duration-1000 delay-100 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`} data-testid="card-contact-email">
-              <Mail className="text-3xl text-primary mb-4 mx-auto" data-testid="icon-contact-email" />
-              <h3 className="font-semibold mb-2" data-testid="text-contact-email-title">Email Us</h3>
-              <a 
-                href="mailto:ask@cartarep.com" 
-                className="text-primary hover:underline" 
-                data-testid="link-contact-email"
-              >
-                ask@cartarep.com
-              </a>
-            </div>
-
-            <div className={`glass-card p-6 rounded-xl transition-all duration-1000 delay-200 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`} data-testid="card-contact-location">
-              <MapPin className="text-3xl text-secondary mb-4 mx-auto" data-testid="icon-contact-location" />
-              <h3 className="font-semibold mb-2" data-testid="text-contact-location-title">Location</h3>
-              <p className="text-muted-foreground" data-testid="text-contact-location-address">London, United Kingdom</p>
-            </div>
-
-            <div className={`glass-card p-6 rounded-xl transition-all duration-1000 delay-300 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`} data-testid="card-contact-consultation">
-              <Clock className="text-3xl text-accent mb-4 mx-auto" data-testid="icon-contact-consultation" />
-              <h3 className="font-semibold mb-2" data-testid="text-contact-consultation-title">Consultation</h3>
-              <p className="text-muted-foreground" data-testid="text-contact-consultation-description">Free initial consultation</p>
-            </div>
-          </div>
-
           {/* Contact Form */}
           <div className={`glass-card p-8 rounded-xl max-w-4xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`}>
             <h3 className="text-2xl font-bold text-center mb-8 text-primary">Send us a message</h3>
