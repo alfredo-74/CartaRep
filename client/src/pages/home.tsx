@@ -3,7 +3,6 @@ import FloatingShapes from "@/components/floating-shapes";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import OurBrands from "@/components/our-brands";
-import OurProjects from "@/components/our-projects";
 import ServicesSection from "@/components/services-section";
 import ContactSection from "@/components/contact-section";
 
@@ -15,7 +14,6 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <OurBrands />
-      <OurProjects />
       <ServicesSection />
       <ContactSection />
       
