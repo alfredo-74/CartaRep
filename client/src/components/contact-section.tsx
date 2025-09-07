@@ -51,10 +51,7 @@ export default function ContactSection() {
   });
 
   const contactMutation = useMutation({
-    mutationFn: (data: ContactFormData) => apiRequest("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(data),
-    }),
+    mutationFn: (data: ContactFormData) => apiRequest("POST", "/api/contact", data),
     onSuccess: () => {
       toast({
         title: "Message sent successfully!",
@@ -160,7 +157,7 @@ export default function ContactSection() {
                       <FormItem>
                         <FormLabel>Company</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your company name" {...field} data-testid="input-company" />
+                          <Input placeholder="Your company name" {...field} value={field.value || ""} data-testid="input-company" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -201,7 +198,7 @@ export default function ContactSection() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Budget Range</FormLabel>
-                      <Select onValueChange={field.onChange} value={field.value}>
+                      <Select onValueChange={field.onChange} value={field.value || ""}>
                         <FormControl>
                           <SelectTrigger data-testid="select-budget">
                             <SelectValue placeholder="Select budget range (optional)" />
