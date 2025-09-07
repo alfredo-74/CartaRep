@@ -5,6 +5,15 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Generate random colors for text elements
+  const randomColors = [
+    'text-cyan-400', 'text-emerald-400', 'text-purple-400', 'text-pink-400', 
+    'text-yellow-400', 'text-orange-400', 'text-red-400', 'text-blue-400',
+    'text-teal-400', 'text-violet-400', 'text-rose-400', 'text-lime-400'
+  ];
+
+  const getRandomColor = () => randomColors[Math.floor(Math.random() * randomColors.length)];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -42,35 +51,28 @@ export default function Navigation() {
           <div className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors"
+              className={`${getRandomColor()} hover:text-primary transition-colors font-medium`}
               data-testid="button-nav-about"
             >
               Who We Are
             </button>
             <button 
               onClick={() => scrollToSection('brands')}
-              className="text-foreground hover:text-primary transition-colors"
+              className={`${getRandomColor()} hover:text-primary transition-colors font-medium`}
               data-testid="button-nav-brands"
             >
               Our Brands
             </button>
             <button 
-              onClick={() => scrollToSection('projects')}
-              className="text-foreground hover:text-primary transition-colors"
-              data-testid="button-nav-projects"
-            >
-              Projects
-            </button>
-            <button 
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors"
+              className={`${getRandomColor()} hover:text-primary transition-colors font-medium`}
               data-testid="button-nav-services"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors"
+              className={`${getRandomColor()} hover:text-primary transition-colors font-medium`}
               data-testid="button-nav-contact"
             >
               Contact
@@ -92,35 +94,28 @@ export default function Navigation() {
           <div className="md:hidden mt-4 pb-4 space-y-4" data-testid="mobile-menu">
             <button 
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors"
+              className={`block w-full text-left ${getRandomColor()} hover:text-primary transition-colors font-medium`}
               data-testid="button-mobile-nav-about"
             >
               Who We Are
             </button>
             <button 
               onClick={() => scrollToSection('brands')}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors"
+              className={`block w-full text-left ${getRandomColor()} hover:text-primary transition-colors font-medium`}
               data-testid="button-mobile-nav-brands"
             >
               Our Brands
             </button>
             <button 
-              onClick={() => scrollToSection('projects')}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors"
-              data-testid="button-mobile-nav-projects"
-            >
-              Projects
-            </button>
-            <button 
               onClick={() => scrollToSection('services')}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors"
+              className={`block w-full text-left ${getRandomColor()} hover:text-primary transition-colors font-medium`}
               data-testid="button-mobile-nav-services"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors"
+              className={`block w-full text-left ${getRandomColor()} hover:text-primary transition-colors font-medium`}
               data-testid="button-mobile-nav-contact"
             >
               Contact
