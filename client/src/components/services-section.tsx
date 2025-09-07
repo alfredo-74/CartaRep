@@ -34,12 +34,6 @@ export default function ServicesSection() {
       title: "Tailored Consultancy",
       description: "Expert guidance and project specifications from concept to completion.",
       color: "text-secondary"
-    },
-    {
-      icon: UserCheck,
-      title: "Expert Support",
-      description: "Personalized assistance and ongoing support throughout your project journey.",
-      color: "text-accent"
     }
   ];
 
@@ -58,7 +52,7 @@ export default function ServicesSection() {
         </h2>
         
         {/* Main Services */}
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 gap-12">
           {mainServices.map((service, index) => (
             <div 
               key={service.title}
