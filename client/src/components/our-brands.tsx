@@ -75,34 +75,34 @@ export default function OurBrands() {
       catalogUrl: "https://drive.google.com/file/d/13UB8WrcGQANk4yh9J5HBhb26RXJxetxP/view?usp=drive_link",
       collections: [
         {
-          name: "Baleira Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BaleiraView-1.jpg",
-          alt: "Baleira handcrafted lighting collection"
+          name: "Veiga Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Veiga-Pendant-Light-2_512x512.jpg",
+          alt: "Veiga pendant light by Isaac Piñeiro"
         },
         {
           name: "Umbra Line Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/UmbraLineView.jpg",
-          alt: "Umbra Line contemporary lighting series"
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Umbra-Line-Wall-Light-2_512x769.jpg",
+          alt: "Umbra Line wall light by Isaac Piñeiro"
         },
         {
-          name: "Brétema Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BretemaView-1.jpg",
-          alt: "Brétema organic lighting designs"
+          name: "Baleira Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Baleira-Pendant-Light-2_512x641.jpg",
+          alt: "Baleira pendant reinterpreting timeless geometry"
+        },
+        {
+          name: "Lisa Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Lisa-Wall-Light-2_512x513.jpg",
+          alt: "Lisa wall light advocating simplicity"
         },
         {
           name: "Agasallo Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/agasallo-collection-lamps.jpg",
-          alt: "Agasallo gift-inspired lighting collection"
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Agasallo-Floor-Lamp-2_512x641.jpg",
+          alt: "Agasallo floor lamp with organic fluidity"
         },
         {
-          name: "Coral Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2019/06/coral_icono.jpg",
-          alt: "Coral nature-inspired lighting collection"
-        },
-        {
-          name: "Parga Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/parga-collection-lamps.jpg",
-          alt: "Parga sculptural lighting collection"
+          name: "Nebra Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Nebra-Suspension-Light-2_512x408.jpg",
+          alt: "Nebra suspension light contemporary design"
         }
       ]
     },
@@ -116,19 +116,34 @@ export default function OurBrands() {
       catalogUrl: "https://drive.google.com/drive/folders/1nfbTayrcQEE0Vj504vV-ktJq5vEWa3FO?usp=drive_link",
       collections: [
         {
-          name: "AVATAR Collection",
-          image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "Ole Lighting AVATAR wall-to-wall system"
+          name: "ALLEGRA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/ALLEGRA/ALLEGRA-770x855.jpg",
+          alt: "Ole Lighting ALLEGRA contemporary design"
         },
         {
-          name: "ILLA Esparto Series",
-          image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "Ole Lighting ILLA natural fiber collection"
+          name: "CELESTE Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/CELESTE/CELESTE-770x855.jpg",
+          alt: "Ole Lighting CELESTE elegant lighting"
         },
         {
-          name: "Sustainable Collection",
-          image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "Ole Lighting sustainable designs"
+          name: "MEDUSA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/MEDUSA/MEDUSA-770x855.jpg",
+          alt: "Ole Lighting MEDUSA award-winning design"
+        },
+        {
+          name: "NEXO Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/NEXO/NEXO-770x855.jpg",
+          alt: "Ole Lighting NEXO modular series"
+        },
+        {
+          name: "PAGODA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/PAGODA/PAGODA-770x855.jpg",
+          alt: "Ole Lighting PAGODA Asian-inspired collection"
+        },
+        {
+          name: "ILLA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/ILLA/ILLA-small-coleccion-770x855.jpg",
+          alt: "Ole Lighting ILLA esparto natural fiber collection"
         }
       ]
     },
@@ -143,19 +158,34 @@ export default function OurBrands() {
       catalogUrl: "https://view.publitas.com/bover/cat_indoor_2022_ce_usa",
       collections: [
         {
-          name: "Dome Collection",
-          image: "https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "Bover Dome handcrafted wooden pendants"
+          name: "Nans Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Nans-Portable-Outdoor-Table-Lamp-2_512x512.jpg",
+          alt: "Bover Nans hand-woven portable lamps"
         },
         {
-          name: "Mei Pleated Series",
-          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "Bover Mei pleated fabric collection"
+          name: "Garota Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Garota-Hang-Plug-In-Outdoor-Pendant-Light-2_512x631.jpg",
+          alt: "Bover Garota hang plug-in outdoor pendants"
         },
         {
-          name: "Outdoor Garota",
-          image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "Bover Garota outdoor lighting"
+          name: "Platet Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Platet-Outdoor-Wall-Light-A01-2_512x512.jpg",
+          alt: "Bover Platet industrial-inspired wall lights"
+        },
+        {
+          name: "Tanit Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Tanit-Portable-Table-Lamp-M29R-2_512x512.jpg",
+          alt: "Bover Tanit portable rechargeable table lamps"
+        },
+        {
+          name: "Drip/Drop Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-DripDrop-LED-Pendant-Light-S01L-2_512x652.jpg",
+          alt: "Bover Drip/Drop versatile LED pendants"
+        },
+        {
+          name: "Nut Collection",
+          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Nut-Outdoor-Wall-Light-A01-2_512x644.jpg",
+          alt: "Bover Nut outdoor wall lighting series"
         }
       ]
     },
@@ -169,19 +199,34 @@ export default function OurBrands() {
       catalogUrl: "https://panzeri.it/en/download/",
       collections: [
         {
-          name: "Jackie LED Collection",
-          image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "Panzeri Jackie LED dimmable lamps"
+          name: "Rendez-Vous Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-rendez-vous-new.jpg",
+          alt: "Panzeri Rendez-Vous contemporary design"
         },
         {
-          name: "Tubino Iconic Series",
-          image: "https://images.unsplash.com/photo-1524634126442-357e0eac3c14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "Panzeri Tubino torch-inspired collection"
+          name: "Tubino Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-tubino.jpg",
+          alt: "Panzeri Tubino torch-inspired series"
         },
         {
-          name: "432 Ways Modular",
-          image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "Panzeri 432 Ways modular system"
+          name: "432 Ways Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-432_ways-new.jpg",
+          alt: "Panzeri 432 Ways modular lighting system"
+        },
+        {
+          name: "Opuntia Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-opuntia.jpg",
+          alt: "Panzeri Opuntia organic form lighting"
+        },
+        {
+          name: "Hilow Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-hilow.jpg",
+          alt: "Panzeri Hilow architectural lighting"
+        },
+        {
+          name: "Carl Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-carl.jpg",
+          alt: "Panzeri Carl minimalist design series"
         }
       ]
     }
