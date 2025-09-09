@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Download, ExternalLink } from "lucide-react";
+import aEmotionalLogo from '@/assets/a-emotional_1757429085155.jpg';
+import oleLogo from '@/assets/ole-logo.png';
+import panzeriLogo from '@/assets/panzeri-logo.png';
 
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,7 +69,7 @@ export default function OurBrands() {
   const brands = [
     {
       name: "a·emotional light",
-      logoUrl: "/attached_assets/a-emotional_1757429085155.jpg",
+      logoUrl: aEmotionalLogo,
       description: "a·emotional light, emotion takes on a unique value. It's the value of craftsmanship, of the singular and the exclusive. Light is a medium for evoking emotions, as music or art does. This perspective leads us to perceive our designs as bespoke creations, individually handcrafted pieces meticulously designed to illuminate spaces, touch people's hearts, and capture special moments.",
       category: "",
       specialty: "",
@@ -75,40 +78,40 @@ export default function OurBrands() {
       catalogUrl: "https://drive.google.com/file/d/13UB8WrcGQANk4yh9J5HBhb26RXJxetxP/view?usp=drive_link",
       collections: [
         {
-          name: "Veiga Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Veiga-Pendant-Light-2_512x512.jpg",
-          alt: "Veiga pendant light by Isaac Piñeiro"
+          name: "Baleira Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BaleiraView-1.jpg",
+          alt: "Baleira handcrafted lighting collection"
         },
         {
           name: "Umbra Line Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Umbra-Line-Wall-Light-2_512x769.jpg",
-          alt: "Umbra Line wall light by Isaac Piñeiro"
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/UmbraLineView.jpg",
+          alt: "Umbra Line contemporary lighting series"
         },
         {
-          name: "Baleira Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Baleira-Pendant-Light-2_512x641.jpg",
-          alt: "Baleira pendant reinterpreting timeless geometry"
-        },
-        {
-          name: "Lisa Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Lisa-Wall-Light-2_512x513.jpg",
-          alt: "Lisa wall light advocating simplicity"
+          name: "Brétema Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BretemaView-1.jpg",
+          alt: "Brétema organic lighting designs"
         },
         {
           name: "Agasallo Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Agasallo-Floor-Lamp-2_512x641.jpg",
-          alt: "Agasallo floor lamp with organic fluidity"
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/agasallo-collection-lamps.jpg",
+          alt: "Agasallo gift-inspired lighting collection"
         },
         {
-          name: "Nebra Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/a-emotional-light-Nebra-Suspension-Light-2_512x408.jpg",
-          alt: "Nebra suspension light contemporary design"
+          name: "Veiga Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/VeigaView-1.jpg",
+          alt: "Veiga contemporary pendant design"
+        },
+        {
+          name: "Coral Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2019/06/coral_icono.jpg",
+          alt: "Coral nature-inspired lighting collection"
         }
       ]
     },
     {
       name: "Olé Lighting",
-      logoUrl: "/attached_assets/Screenshot 2025-09-09 15.15.08_1757429085165.png",
+      logoUrl: oleLogo,
       description: "Olé Lighting is a family business specialised in the design and manufacture of quality lamps from Valencia for the whole world. In Olé we are dedicated to creating our own non-conformist and efficient lighting solutions that give light to your ideas. We take care of lamps because they have the power to transform spaces, both indoors and outdoors. At Olé, we see light as a powerful force that transforms both spaces and emotions. That's why you'll find designs with soul, sustainable materials, customizable solutions, and a way of working deeply rooted in the heart of the Mediterranean.",
       category: "",
       specialty: "",
@@ -117,9 +120,9 @@ export default function OurBrands() {
       catalogUrl: "https://drive.google.com/drive/folders/1nfbTayrcQEE0Vj504vV-ktJq5vEWa3FO?usp=drive_link",
       collections: [
         {
-          name: "ALLEGRA Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/ALLEGRA/ALLEGRA-770x855.jpg",
-          alt: "Ole Lighting ALLEGRA contemporary design"
+          name: "AVATAR PLUS Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/AVATAR-PLUS/AVATAR-PLUS-ambiente-770x855.jpg",
+          alt: "Ole Lighting AVATAR PLUS ambient system"
         },
         {
           name: "CELESTE Collection",
@@ -132,19 +135,19 @@ export default function OurBrands() {
           alt: "Ole Lighting MEDUSA award-winning design"
         },
         {
-          name: "NEXO Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/NEXO/NEXO-770x855.jpg",
-          alt: "Ole Lighting NEXO modular series"
+          name: "LLUNA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/LLUNA/LLUNA-ambient-770x855.jpg",
+          alt: "Ole Lighting LLUNA ambient lunar design"
         },
         {
-          name: "PAGODA Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/PAGODA/PAGODA-770x855.jpg",
-          alt: "Ole Lighting PAGODA Asian-inspired collection"
+          name: "NATURA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/NATURE/NATURE-coleccion-770x855.jpg",
+          alt: "Ole Lighting NATURA natural inspiration"
         },
         {
-          name: "ILLA Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/ILLA/ILLA-small-coleccion-770x855.jpg",
-          alt: "Ole Lighting ILLA esparto natural fiber collection"
+          name: "SONORA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/SONORA/SONORA-770x855.jpg",
+          alt: "Ole Lighting SONORA acoustic lighting"
         }
       ]
     },
@@ -160,39 +163,39 @@ export default function OurBrands() {
       collections: [
         {
           name: "Nans Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Nans-Portable-Outdoor-Table-Lamp-2_512x512.jpg",
-          alt: "Bover Nans hand-woven portable lamps"
+          image: "https://bover.es/16989-home_default/nans-bag38-outdoor.jpg",
+          alt: "Bover Nans hand-woven bag outdoor series"
         },
         {
           name: "Garota Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Garota-Hang-Plug-In-Outdoor-Pendant-Light-2_512x631.jpg",
-          alt: "Bover Garota hang plug-in outdoor pendants"
+          image: "https://bover.es/10180-home_default/garota-s-02.jpg",
+          alt: "Bover Garota outdoor pendant lighting"
         },
         {
-          name: "Platet Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Platet-Outdoor-Wall-Light-A01-2_512x512.jpg",
-          alt: "Bover Platet industrial-inspired wall lights"
+          name: "Mediterrània Collection",
+          image: "https://bover.es/17907-home_default/mediterrania-52-a98.jpg",
+          alt: "Bover Mediterrània Mediterranean ribbon lighting"
         },
         {
-          name: "Tanit Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Tanit-Portable-Table-Lamp-M29R-2_512x512.jpg",
-          alt: "Bover Tanit portable rechargeable table lamps"
+          name: "Roda Collection",
+          image: "https://bover.es/9947-home_default/roda-s-200-v.jpg",
+          alt: "Bover Roda circular pendant series"
         },
         {
-          name: "Drip/Drop Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-DripDrop-LED-Pendant-Light-S01L-2_512x652.jpg",
-          alt: "Bover Drip/Drop versatile LED pendants"
+          name: "Amphora Collection",
+          image: "https://bover.es/10163-home_default/amphora-02.jpg",
+          alt: "Bover Amphora elegant floor lighting"
         },
         {
-          name: "Nut Collection",
-          image: "https://www.inspyerlighting.co.uk/cdn/shop/files/Bover-Nut-Outdoor-Wall-Light-A01-2_512x644.jpg",
-          alt: "Bover Nut outdoor wall lighting series"
+          name: "Mei Collection",
+          image: "https://bover.es/17937-home_default/mei-150.jpg",
+          alt: "Bover Mei pleated fabric pendant"
         }
       ]
     },
     {
       name: "Panzeri Lighting",
-      logoUrl: "/attached_assets/Screenshot 2025-09-09 15.26.59_1757429085163.png",
+      logoUrl: panzeriLogo,
       description: "Quality, tradition and innovation. These are the bedrock values of Panzeri, a company that has a 70-year history of producing lighting and selling the Made in Italy brand gracing the most exclusive interiors and exteriors worldwide. For 70 years Panzeri has been producing lighting for every specific need, creating the shape of light through Italian craftsmanship and cutting-edge technology with innovative lighting solutions that blend functionality and artistry.",
       category: "",
       specialty: "",
@@ -201,34 +204,34 @@ export default function OurBrands() {
       catalogUrl: "https://panzeri.it/en/download/",
       collections: [
         {
-          name: "Rendez-Vous Collection",
-          image: "https://panzeri.it/products/media/FPF/FPF-DI-rendez-vous-new.jpg",
-          alt: "Panzeri Rendez-Vous contemporary design"
+          name: "Ombra Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-ombra-new.jpg",
+          alt: "Panzeri Ombra shadow play lighting"
         },
         {
-          name: "Tubino Collection",
-          image: "https://panzeri.it/products/media/FPF/FPF-DI-tubino.jpg",
-          alt: "Panzeri Tubino torch-inspired series"
+          name: "Adamas Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-adamas-new.jpg",
+          alt: "Panzeri Adamas diamond-inspired series"
         },
         {
-          name: "432 Ways Collection",
-          image: "https://panzeri.it/products/media/FPF/FPF-DI-432_ways-new.jpg",
-          alt: "Panzeri 432 Ways modular lighting system"
+          name: "Superbold Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-superbold-new.jpg",
+          alt: "Panzeri Superbold bold architectural lighting"
+        },
+        {
+          name: "Zero Round Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-zero_round.jpg",
+          alt: "Panzeri Zero Round minimalist circular design"
+        },
+        {
+          name: "Muranè Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-murane.jpg",
+          alt: "Panzeri Muranè Venetian glass-inspired lighting"
         },
         {
           name: "Opuntia Collection",
           image: "https://panzeri.it/products/media/FPF/FPF-DI-opuntia.jpg",
-          alt: "Panzeri Opuntia organic form lighting"
-        },
-        {
-          name: "Hilow Collection",
-          image: "https://panzeri.it/products/media/FPF/FPF-DI-hilow.jpg",
-          alt: "Panzeri Hilow architectural lighting"
-        },
-        {
-          name: "Carl Collection",
-          image: "https://panzeri.it/products/media/FPF/FPF-DI-carl.jpg",
-          alt: "Panzeri Carl minimalist design series"
+          alt: "Panzeri Opuntia organic cactus-inspired forms"
         }
       ]
     }
@@ -301,7 +304,7 @@ export default function OurBrands() {
                         <img 
                           src={collection.image}
                           alt={collection.alt}
-                          className="w-full h-96 object-cover"
+                          className="w-full h-full min-h-[500px] object-cover"
                           data-testid={`img-collection-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${collectionIndex}`}
                         />
                         <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-4">
