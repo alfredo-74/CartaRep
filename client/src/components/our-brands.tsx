@@ -107,12 +107,13 @@ export default function OurBrands() {
       ]
     },
     {
-      name: "Ole Lighting",
-      category: "Sustainable design,",
-      specialty: "minimalist Mediterranean lighting",
-      tagline: "Lighting for the Earth",
+      name: "Olé Lighting",
+      description: "Olé Lighting is a family business specialised in the design and manufacture of quality lamps from Valencia for the whole world. In Olé we are dedicated to creating our own non-conformist and efficient lighting solutions that give light to your ideas. We take care of lamps because they have the power to transform spaces, both indoors and outdoors. At Olé, we see light as a powerful force that transforms both spaces and emotions. That's why you'll find designs with soul, sustainable materials, customizable solutions, and a way of working deeply rooted in the heart of the Mediterranean.",
+      category: "",
+      specialty: "",
+      tagline: "",
       website: "https://www.ole-lighting.com/en",
-      catalogUrl: "https://pdf.archiexpo.com/pdf/ole-lighting/catalogue-2022-2023-lighting-earth/52969-415939.html",
+      catalogUrl: "https://drive.google.com/drive/folders/1nfbTayrcQEE0Vj504vV-ktJq5vEWa3FO?usp=drive_link",
       collections: [
         {
           name: "AVATAR Collection",
@@ -133,11 +134,13 @@ export default function OurBrands() {
     },
     {
       name: "Bover Barcelona",
-      category: "Mediterranean luxury,",
-      specialty: "contemporary decorative lighting",
-      tagline: "Balance between design and timelessness",
+      logoUrl: "https://www.lumens.com/on/demandware.static/-/Sites-lumens-site-catalog/default/dwdbd27ad0/images/brand/logos/bover-logo.png",
+      description: "Based in Barcelona, Bover lighting is at the center of Spanish culture, creativity and innovation. The Bover look is cleanly modern yet romantic, with designs that incorporate unique details and materials like wicker, woven strips of steel and hand-pleated fabric. We seek designs that are timeless, products that possess a balance, that within ten years we will still enjoy. Every Bover lamp goes through a rigorous development process to make sure that it will continue to illuminate and catch eyes for many years.",
+      category: "",
+      specialty: "",
+      tagline: "",
       website: "https://bover.es/en/",
-      catalogUrl: "https://bover.es/en/",
+      catalogUrl: "https://view.publitas.com/bover/cat_indoor_2022_ce_usa",
       collections: [
         {
           name: "Dome Collection",
@@ -158,9 +161,10 @@ export default function OurBrands() {
     },
     {
       name: "Panzeri Lighting",
-      category: "Italian excellence,",
-      specialty: "70+ years of architectural lighting",
-      tagline: "Quality, Tradition, Innovation",
+      description: "Quality, tradition and innovation. These are the bedrock values of Panzeri, a company that has a 70-year history of producing lighting and selling the Made in Italy brand gracing the most exclusive interiors and exteriors worldwide. For 70 years Panzeri has been producing lighting for every specific need, creating the shape of light through Italian craftsmanship and cutting-edge technology with innovative lighting solutions that blend functionality and artistry.",
+      category: "",
+      specialty: "",
+      tagline: "",
       website: "https://panzeri.it/en/",
       catalogUrl: "https://panzeri.it/en/download/",
       collections: [
