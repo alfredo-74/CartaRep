@@ -66,7 +66,7 @@ export default function OurBrands() {
   const brands = [
     {
       name: "a·emotional light",
-      logoUrl: "https://www.lumens.com/on/demandware.static/-/Sites-lumens-site-catalog/default/dw3f6ad454/images/brand/logos/a-emotional-light-logo.png",
+      logoUrl: "/attached_assets/a-emotional_1757429085155.jpg",
       description: "a·emotional light, emotion takes on a unique value. It's the value of craftsmanship, of the singular and the exclusive. Light is a medium for evoking emotions, as music or art does. This perspective leads us to perceive our designs as bespoke creations, individually handcrafted pieces meticulously designed to illuminate spaces, touch people's hearts, and capture special moments.",
       category: "",
       specialty: "",
@@ -108,6 +108,7 @@ export default function OurBrands() {
     },
     {
       name: "Olé Lighting",
+      logoUrl: "/attached_assets/Screenshot 2025-09-09 15.15.08_1757429085165.png",
       description: "Olé Lighting is a family business specialised in the design and manufacture of quality lamps from Valencia for the whole world. In Olé we are dedicated to creating our own non-conformist and efficient lighting solutions that give light to your ideas. We take care of lamps because they have the power to transform spaces, both indoors and outdoors. At Olé, we see light as a powerful force that transforms both spaces and emotions. That's why you'll find designs with soul, sustainable materials, customizable solutions, and a way of working deeply rooted in the heart of the Mediterranean.",
       category: "",
       specialty: "",
@@ -191,6 +192,7 @@ export default function OurBrands() {
     },
     {
       name: "Panzeri Lighting",
+      logoUrl: "/attached_assets/Screenshot 2025-09-09 15.26.59_1757429085163.png",
       description: "Quality, tradition and innovation. These are the bedrock values of Panzeri, a company that has a 70-year history of producing lighting and selling the Made in Italy brand gracing the most exclusive interiors and exteriors worldwide. For 70 years Panzeri has been producing lighting for every specific need, creating the shape of light through Italian craftsmanship and cutting-edge technology with innovative lighting solutions that blend functionality and artistry.",
       category: "",
       specialty: "",
@@ -299,7 +301,7 @@ export default function OurBrands() {
                         <img 
                           src={collection.image}
                           alt={collection.alt}
-                          className="w-full h-64 object-cover"
+                          className="w-full h-96 object-cover"
                           data-testid={`img-collection-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${collectionIndex}`}
                         />
                         <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-4">
