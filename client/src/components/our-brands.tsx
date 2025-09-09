@@ -65,10 +65,11 @@ export default function OurBrands() {
 
   const brands = [
     {
-      name: "A-emotional Light",
-      category: "Emotion takes on unique value,",
-      specialty: "handcrafted bespoke lighting creations",
-      tagline: "Light is a medium for evoking emotions, as music or art does",
+      name: "a·emotional light",
+      description: "a·emotional light, emotion takes on a unique value. It's the value of craftsmanship, of the singular and the exclusive. Light is a medium for evoking emotions, as music or art does. This perspective leads us to perceive our designs as bespoke creations, individually handcrafted pieces meticulously designed to illuminate spaces, touch people's hearts, and capture special moments.",
+      category: "",
+      specialty: "",
+      tagline: "",
       website: "https://www.a-emotionallight.com/",
       catalogUrl: "https://drive.google.com/file/d/13UB8WrcGQANk4yh9J5HBhb26RXJxetxP/view?usp=drive_link",
       collections: [
@@ -202,15 +203,23 @@ export default function OurBrands() {
                 <h3 className="neon-text text-2xl font-bold mb-2" data-testid={`text-brand-name-${index}`}>
                   {brand.name}
                 </h3>
-                <p className={`${getRandomColor()} mb-2 font-medium`} data-testid={`text-brand-category-${index}`}>
-                  {brand.category}
-                </p>
-                <p className={`${getRandomColor()} text-sm mb-2`} data-testid={`text-brand-specialty-${index}`}>
-                  {brand.specialty}
-                </p>
-                <p className={`${getRandomColor()} text-sm italic font-light`} data-testid={`text-brand-tagline-${index}`}>
-                  "{brand.tagline}"
-                </p>
+                {brand.description ? (
+                  <p className={`${getRandomColor()} text-sm leading-relaxed font-light`} data-testid={`text-brand-description-${index}`}>
+                    {brand.description}
+                  </p>
+                ) : (
+                  <>
+                    <p className={`${getRandomColor()} mb-2 font-medium`} data-testid={`text-brand-category-${index}`}>
+                      {brand.category}
+                    </p>
+                    <p className={`${getRandomColor()} text-sm mb-2`} data-testid={`text-brand-specialty-${index}`}>
+                      {brand.specialty}
+                    </p>
+                    <p className={`${getRandomColor()} text-sm italic font-light`} data-testid={`text-brand-tagline-${index}`}>
+                      "{brand.tagline}"
+                    </p>
+                  </>
+                )}
               </div>
 
               {/* Collection Carousel */}
