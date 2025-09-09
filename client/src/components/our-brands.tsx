@@ -66,26 +66,41 @@ export default function OurBrands() {
   const brands = [
     {
       name: "A-emotional Light",
-      category: "Artisans of light,",
-      specialty: "nature-inspired artistic lamps",
-      tagline: "The light that thrills",
+      category: "Emotion takes on unique value,",
+      specialty: "handcrafted bespoke lighting creations",
+      tagline: "Light is a medium for evoking emotions, as music or art does",
       website: "https://www.a-emotionallight.com/",
-      catalogUrl: "https://www.a-emotionallight.com/a-emotional-light-releases-new-brand-image/",
+      catalogUrl: "https://drive.google.com/file/d/13UB8WrcGQANk4yh9J5HBhb26RXJxetxP/view?usp=drive_link",
       collections: [
         {
-          name: "Pendant Collection",
-          image: "https://images.unsplash.com/photo-1524634126442-357e0eac3c14?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "A-emotional Light pendant fixtures"
+          name: "Baleira Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BaleiraView-1.jpg",
+          alt: "Baleira handcrafted lighting collection"
         },
         {
-          name: "Artistic Series",
-          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "A-emotional Light artistic lamps"
+          name: "Umbra Line Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/UmbraLineView.jpg",
+          alt: "Umbra Line contemporary lighting series"
         },
         {
-          name: "Nature Inspired",
-          image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-          alt: "A-emotional Light nature-inspired designs"
+          name: "Brétema Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BretemaView-1.jpg",
+          alt: "Brétema organic lighting designs"
+        },
+        {
+          name: "Agasallo Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/agasallo-collection-lamps.jpg",
+          alt: "Agasallo gift-inspired lighting collection"
+        },
+        {
+          name: "Coral Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2019/06/coral_icono.jpg",
+          alt: "Coral nature-inspired lighting collection"
+        },
+        {
+          name: "Parga Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/parga-collection-lamps.jpg",
+          alt: "Parga sculptural lighting collection"
         }
       ]
     },
