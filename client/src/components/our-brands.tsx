@@ -66,6 +66,7 @@ export default function OurBrands() {
   const brands = [
     {
       name: "a·emotional light",
+      logoUrl: "https://www.lumens.com/on/demandware.static/-/Sites-lumens-site-catalog/default/dw3f6ad454/images/brand/logos/a-emotional-light-logo.png",
       description: "a·emotional light, emotion takes on a unique value. It's the value of craftsmanship, of the singular and the exclusive. Light is a medium for evoking emotions, as music or art does. This perspective leads us to perceive our designs as bespoke creations, individually handcrafted pieces meticulously designed to illuminate spaces, touch people's hearts, and capture special moments.",
       category: "",
       specialty: "",
@@ -200,9 +201,20 @@ export default function OurBrands() {
             >
               {/* Brand Header */}
               <div className="text-center mb-6">
-                <h3 className="neon-text text-2xl font-bold mb-2" data-testid={`text-brand-name-${index}`}>
-                  {brand.name}
-                </h3>
+                {brand.logoUrl ? (
+                  <div className="mb-4">
+                    <img 
+                      src={brand.logoUrl} 
+                      alt={`${brand.name} logo`}
+                      className="h-12 mx-auto filter brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                      data-testid={`img-brand-logo-${index}`}
+                    />
+                  </div>
+                ) : (
+                  <h3 className="neon-text text-2xl font-bold mb-2" data-testid={`text-brand-name-${index}`}>
+                    {brand.name}
+                  </h3>
+                )}
                 {brand.description ? (
                   <p className={`${getRandomColor()} text-sm leading-relaxed font-light`} data-testid={`text-brand-description-${index}`}>
                     {brand.description}
