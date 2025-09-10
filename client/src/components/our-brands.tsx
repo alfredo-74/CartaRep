@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Download, ExternalLink } from "lucide-react";
-import aEmotionalLogo from '@/assets/a-emotional_1757429085155.jpg';
+import aEmotionalLogo from '@/assets/a-emotional-logo.jpg';
 import oleLogo from '@/assets/ole-logo.png';
 import boverLogo from '@/assets/bover_barcelona_lights_logo_1757429085164.jpeg';
-import panzeriLogo from '@/assets/panzeri-logo.png';
+import panzeriLogo from '@/assets/panzeri-logo-new.png';
 
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
@@ -271,7 +271,7 @@ export default function OurBrands() {
                   </h3>
                 )}
                 {brand.description ? (
-                  <p className={`${getRandomColor()} text-sm leading-relaxed font-light`} data-testid={`text-brand-description-${index}`}>
+                  <p className="text-cyan-400 text-sm leading-relaxed font-light line-clamp-5" data-testid={`text-brand-description-${index}`}>
                     {brand.description}
                   </p>
                 ) : (
