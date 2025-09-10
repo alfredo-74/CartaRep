@@ -188,13 +188,13 @@
 
   .carousel-slides {
     display: flex;
-    width: 500%;
+    width: 300%;
     height: 100%;
-    animation: carousel 25s infinite linear;
+    animation: carousel 20s infinite linear;
   }
 
   .carousel-slide {
-    width: 20%;
+    width: 60%;
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -204,7 +204,7 @@
 
   @keyframes carousel {
     0% { transform: translateX(0%); }
-    100% { transform: translateX(-20%); }
+    100% { transform: translateX(-60%); }
   }
 
   /* Gradient Overlays */
