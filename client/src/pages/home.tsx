@@ -1,7 +1,6 @@
 import BackgroundCarousel from "@/components/background-carousel";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
-import WhoWeAre from "@/components/who-we-are";
 import OurBrands from "@/components/our-brands";
 import ServicesSection from "@/components/services-section";
 import ContactSection from "@/components/contact-section";
@@ -12,7 +11,6 @@ export default function Home() {
       <BackgroundCarousel />
       <Navigation />
       <HeroSection />
-      <WhoWeAre />
       <OurBrands />
       <ServicesSection />
       <ContactSection />

@@ -31,7 +31,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative pt-20" data-testid="hero-section">
+    <section id="about" className="min-h-screen flex items-center justify-center relative pt-20" data-testid="hero-section">
       <div className="container mx-auto px-6 text-center z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`}>
           <h1 className="neon-text text-6xl md:text-8xl font-neon font-black mb-6" data-testid="text-hero-title">
