@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Download, ExternalLink } from "lucide-react";
 import aEmotionalLogo from '@/assets/a-emotional_1757429085155.jpg';
 import oleLogo from '@/assets/ole-logo.png';
+import boverLogo from '@/assets/bover_barcelona_lights_logo_1757429085164.jpeg';
 import panzeriLogo from '@/assets/panzeri-logo.png';
 
 export default function OurBrands() {
@@ -153,7 +154,7 @@ export default function OurBrands() {
     },
     {
       name: "Bover Barcelona",
-      logoUrl: "https://www.lumens.com/on/demandware.static/-/Sites-lumens-site-catalog/default/dwdbd27ad0/images/brand/logos/bover-logo.png",
+      logoUrl: boverLogo,
       description: "Based in Barcelona, Bover lighting is at the center of Spanish culture, creativity and innovation. The Bover look is cleanly modern yet romantic, with designs that incorporate unique details and materials like wicker, woven strips of steel and hand-pleated fabric. We seek designs that are timeless, products that possess a balance, that within ten years we will still enjoy. Every Bover lamp goes through a rigorous development process to make sure that it will continue to illuminate and catch eyes for many years.",
       category: "",
       specialty: "",
