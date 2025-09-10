@@ -31,6 +31,146 @@ export async function sendEmail(params: EmailParams): Promise<boolean> {
   }
 }
 
+export async function sendContactNotification(
+  inquiryData: {
+    name: string;
+    email: string;
+    company?: string;
+    phone?: string;
+    message: string;
+  }
+): Promise<boolean> {
+  const subject = `New Contact Inquiry - CartaRep`;
+  
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <style>
+        body { 
+          font-family: 'Inter', Arial, sans-serif; 
+          line-height: 1.6; 
+          color: #333;
+          background-color: #000;
+          color: #fff;
+        }
+        .container { 
+          max-width: 600px; 
+          margin: 0 auto; 
+          padding: 20px;
+          background: linear-gradient(135deg, #000 0%, #111 100%);
+          border: 1px solid #00ffff30;
+        }
+        .header { 
+          text-align: center; 
+          margin-bottom: 30px;
+          border-bottom: 2px solid #00ffff;
+          padding-bottom: 20px;
+        }
+        .logo { 
+          font-size: 2rem; 
+          font-weight: bold; 
+          color: #fff;
+          margin-bottom: 10px;
+        }
+        .tagline { 
+          color: #00ffff; 
+          font-size: 1.1rem;
+        }
+        .content { 
+          margin-bottom: 30px; 
+        }
+        .inquiry-details {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(0, 255, 255, 0.3);
+          border-radius: 8px;
+          padding: 20px;
+          margin: 20px 0;
+        }
+        .detail-item {
+          margin: 10px 0;
+          padding: 10px;
+          background: rgba(0, 255, 255, 0.1);
+          border-radius: 4px;
+          color: #fff;
+        }
+        .detail-label {
+          color: #00ffff;
+          font-weight: bold;
+          display: inline-block;
+          width: 100px;
+        }
+        .message-text {
+          background: rgba(255, 255, 255, 0.1);
+          border-left: 4px solid #00ffff;
+          padding: 15px;
+          margin: 15px 0;
+          white-space: pre-wrap;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <div class="logo">CartaRep</div>
+          <div class="tagline">New Contact Inquiry</div>
+        </div>
+        
+        <div class="content">
+          <h2>📋 New Contact Form Submission</h2>
+          
+          <div class="inquiry-details">
+            <div class="detail-item">
+              <span class="detail-label">Name:</span> ${inquiryData.name}
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Email:</span> ${inquiryData.email}
+            </div>
+            ${inquiryData.company ? `
+            <div class="detail-item">
+              <span class="detail-label">Company:</span> ${inquiryData.company}
+            </div>
+            ` : ''}
+            ${inquiryData.phone ? `
+            <div class="detail-item">
+              <span class="detail-label">Phone:</span> ${inquiryData.phone}
+            </div>
+            ` : ''}
+          </div>
+          
+          <h3>💬 Message:</h3>
+          <div class="message-text">${inquiryData.message}</div>
+          
+          <p><strong>⏰ Submitted:</strong> ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })}</p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
+
+  const text = `
+New Contact Inquiry - CartaRep
+
+Name: ${inquiryData.name}
+Email: ${inquiryData.email}
+${inquiryData.company ? `Company: ${inquiryData.company}` : ''}
+${inquiryData.phone ? `Phone: ${inquiryData.phone}` : ''}
+
+Message:
+${inquiryData.message}
+
+Submitted: ${new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })}
+  `;
+
+  return await sendEmail({
+    to: 'anna@cartarep.com',
+    from: 'alfredo@cartarep.com',
+    subject,
+    html,
+    text
+  });
+}
+
 export async function sendCatalogueEmail(
   recipientEmail: string,
   recipientName: string,
@@ -187,7 +327,7 @@ This email was sent because you requested catalogue information through our webs
 
   return await sendEmail({
     to: recipientEmail,
-    from: 'catalogues@cartarep.com', // You should use a verified sender domain
+    from: 'alfredo@cartarep.com',
     subject,
     html,
     text
