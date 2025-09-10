@@ -17,6 +17,7 @@ import bretemaEuroluceImg from '@assets/General-View-Bretema-Euroluce-2025-plana
 import screenshotImg from '@assets/Screenshot 2025-01-04 184222_1757517578741.jpg';
 import tempoNewImg from '@assets/2405_NEWS24_TEMPO_00003_1757517578742.jpg';
 import eraNewImg from '@assets/2405_NEWS24_ERA_00005_1757517578743.jpg';
+import rosaNewImg from '@assets/rosa_1757517649972.jpg';
 
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
@@ -200,6 +201,11 @@ export default function OurBrands() {
           name: "Era Collection",
           image: eraNewImg,
           alt: "Era contemporary black pendant lighting"
+        },
+        {
+          name: "Rosa Collection",
+          image: rosaNewImg,
+          alt: "Rosa elegant pink pendant lighting collection"
         }
       ]
     },
