@@ -97,14 +97,19 @@ export default function BackgroundCarousel() {
   return (
     <div className="carousel-container" data-testid="background-carousel">
       <div className="carousel-slides">
-        {portfolioImages.map((image, index) => (
-          <div
-            key={index}
-            className="carousel-slide"
-            style={{ backgroundImage: `url('${image}')` }}
-            data-testid={`carousel-slide-${index}`}
-          />
-        ))}
+        {portfolioImages.length > 0 ? (
+          portfolioImages.map((image, index) => (
+            <div
+              key={index}
+              className="carousel-slide"
+              style={{ backgroundImage: `url('${image}')` }}
+              data-testid={`carousel-slide-${index}`}
+            />
+          ))
+        ) : (
+          // Fallback while images are loading
+          <div className="carousel-slide" style={{ backgroundColor: '#000' }} />
+        )}
       </div>
     </div>
   );
