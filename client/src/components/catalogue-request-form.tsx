@@ -45,6 +45,7 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
       brandName,
       requestedCatalogues: [],
       interests: "",
+      hardCopyRequested: false,
     },
   });
 
@@ -229,6 +230,32 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
                     ))}
                   </div>
                   <FormMessage className="text-red-400" />
+                </FormItem>
+              )}
+            />
+
+            {/* Hard Copy Request */}
+            <FormField
+              control={form.control}
+              name="hardCopyRequested"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0 p-4 border border-white/10 rounded-lg hover:border-cyan-500/30 transition-colors">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      className="border-white/30 data-[state=checked]:bg-cyan-500 data-[state=checked]:border-cyan-500"
+                      data-testid="checkbox-hard-copy-requested"
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel className="text-white font-medium cursor-pointer">
+                      Request Hard Copy Literature
+                    </FormLabel>
+                    <FormDescription className="text-gray-400 text-sm">
+                      Send physical catalogues and brochures to my address (address details will be requested separately)
+                    </FormDescription>
+                  </div>
                 </FormItem>
               )}
             />
