@@ -219,6 +219,14 @@
     opacity: 0.8;
   }
 
+  /* Line clamp utility */
+  .line-clamp-5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+
   /* Floating Shapes */
   .floating-shape {
     position: absolute;
