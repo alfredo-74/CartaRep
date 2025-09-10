@@ -20,6 +20,21 @@ import tempoImg from "@assets/2405_NEWS24_TEMPO_00003_1757513870532.jpg";
 import eraImg from "@assets/2405_NEWS24_ERA_00005_1757513870534.jpg";
 import adamas2Img from "@assets/adamas2_1757514144589.jpg";
 import eurolImg from "@assets/eurol_1757514144591.jpg";
+import agasalloImg from "@assets/agasallo_1757514220344.jpg";
+import umbraImg from "@assets/umbra_1757514220351.jpg";
+import coralImg from "@assets/coral_1757514220352.jpg";
+import roma1Img from "@assets/roma1_1757514220353.jpg";
+import zeroRoundImg from "@assets/zero round_1757514220355.jpg";
+import bellaImg from "@assets/bella_1757514220356.jpg";
+import romaImg from "@assets/roma_1757514220357.jpg";
+import adamas1Img from "@assets/adamas1_1757514220358.jpg";
+import adamasImg from "@assets/adamas_1757514220359.jpg";
+import ombraImg from "@assets/ombra_1757514220361.jpg";
+import muraneImg from "@assets/murane_1757514220362.jpg";
+import rendezvousImg from "@assets/rendez vous_1757514220364.jpg";
+import hilowImg from "@assets/hilow_1757514220365.jpg";
+import medusaAmbienteImg from "@assets/MEDUSA ambiente 34200 _1757514220366.jpg";
+import oficinasEstelecImg from "@assets/Oficinas ESTELEC by KeenDesign_1757514220367.jpg";
 
 export default function BackgroundCarousel() {
   // Utility function to shuffle array randomly
@@ -87,7 +102,22 @@ export default function BackgroundCarousel() {
     tempoImg,
     eraImg,
     adamas2Img,
-    eurolImg
+    eurolImg,
+    agasalloImg,
+    umbraImg,
+    coralImg,
+    roma1Img,
+    zeroRoundImg,
+    bellaImg,
+    romaImg,
+    adamas1Img,
+    adamasImg,
+    ombraImg,
+    muraneImg,
+    rendezvousImg,
+    hilowImg,
+    medusaAmbienteImg,
+    oficinasEstelecImg
   ];
 
   // State to hold the shuffled images
