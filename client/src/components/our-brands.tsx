@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Download, ExternalLink } from "lucide-react";
+import { CatalogueRequestForm } from "./catalogue-request-form";
 import aEmotionalLogo from '@/assets/a-emotional-final.jpg';
 import oleLogo from '@/assets/ole-logo.png';
 import boverLogo from '@/assets/bover-newest.jpg';
@@ -67,6 +68,32 @@ export default function OurBrands() {
     intervalRefs.current = {};
   };
 
+  const getBrandCatalogues = (brandName: string) => {
+    const catalogues: { [key: string]: Array<{ name: string; description: string }> } = {
+      "a·emotional light": [
+        { name: "Complete Product Catalogue", description: "Comprehensive overview of all a·emotional light collections and specifications" },
+        { name: "Technical Specifications", description: "Detailed technical drawings and installation guides" },
+        { name: "Project Portfolio", description: "Inspiring case studies and completed lighting projects" }
+      ],
+      "Olé Lighting": [
+        { name: "Indoor Collection Catalogue", description: "Complete indoor lighting solutions with technical details" },
+        { name: "Outdoor Collection Catalogue", description: "Weather-resistant outdoor lighting systems" },
+        { name: "Smart Lighting Guide", description: "IoT and smart lighting integration solutions" }
+      ],
+      "Bover Barcelona": [
+        { name: "Indoor Lighting Catalogue", description: "Modern Mediterranean lighting designs for interior spaces" },
+        { name: "Outdoor Collection", description: "Weather-resistant lighting for terraces and gardens" },
+        { name: "Design Process Book", description: "Behind-the-scenes look at Bover's design philosophy" }
+      ],
+      "Panzeri Lighting": [
+        { name: "Architectural Lighting Solutions", description: "Professional lighting for commercial and residential projects" },
+        { name: "LED Technology Guide", description: "Latest LED innovations and energy-efficient solutions" },
+        { name: "Custom Solutions Portfolio", description: "Bespoke lighting projects and customization options" }
+      ]
+    };
+    return catalogues[brandName] || [];
+  };
+
   const brands = [
     {
       name: "a·emotional light",
@@ -76,7 +103,6 @@ export default function OurBrands() {
       specialty: "",
       tagline: "",
       website: "https://www.a-emotionallight.com/",
-      catalogUrl: "https://drive.google.com/file/d/13UB8WrcGQANk4yh9J5HBhb26RXJxetxP/view?usp=drive_link",
       collections: [
         {
           name: "Baleira Collection",
@@ -118,7 +144,6 @@ export default function OurBrands() {
       specialty: "",
       tagline: "",
       website: "https://www.ole-lighting.com/en",
-      catalogUrl: "https://drive.google.com/drive/folders/1nfbTayrcQEE0Vj504vV-ktJq5vEWa3FO?usp=drive_link",
       collections: [
         {
           name: "AVATAR PLUS Collection",
@@ -175,7 +200,6 @@ export default function OurBrands() {
       specialty: "",
       tagline: "",
       website: "https://bover.es/en/",
-      catalogUrl: "https://view.publitas.com/bover/cat_indoor_2022_ce_usa",
       collections: [
         {
           name: "Nans Collection",
@@ -227,7 +251,6 @@ export default function OurBrands() {
       specialty: "",
       tagline: "",
       website: "https://panzeri.it/en/",
-      catalogUrl: "https://panzeri.it/en/download/",
       collections: [
         {
           name: "Ombra Collection",
@@ -371,16 +394,18 @@ export default function OurBrands() {
 
               {/* Action Buttons */}
               <div className="flex gap-4 justify-center">
-                <a
-                  href={brand.catalogUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all border border-white/20 hover:border-white/40"
-                  data-testid={`link-catalog-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                <CatalogueRequestForm
+                  brandName={brand.name}
+                  availableCatalogues={getBrandCatalogues(brand.name)}
                 >
-                  <Download className="w-4 h-4" />
-                  <span>Catalog</span>
-                </a>
+                  <button
+                    className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all border border-white/20 hover:border-white/40"
+                    data-testid={`button-request-catalog-${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>Request Catalog</span>
+                  </button>
+                </CatalogueRequestForm>
                 <a
                   href={brand.website}
                   target="_blank"

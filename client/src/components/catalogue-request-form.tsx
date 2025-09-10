@@ -143,6 +143,7 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
                       <Input 
                         placeholder="Your company name" 
                         {...field} 
+                        value={field.value || ""}
                         className="bg-black/50 border-white/20 text-white placeholder:text-gray-400"
                         data-testid="input-catalogue-company"
                       />
@@ -162,6 +163,7 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
                       <Input 
                         placeholder="e.g., Interior Designer, Architect" 
                         {...field} 
+                        value={field.value || ""}
                         className="bg-black/50 border-white/20 text-white placeholder:text-gray-400"
                         data-testid="input-catalogue-job-title"
                       />
@@ -243,6 +245,7 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
                       placeholder="Tell us about your current project or lighting needs..."
                       className="bg-black/50 border-white/20 text-white placeholder:text-gray-400 min-h-[80px]"
                       {...field} 
+                      value={field.value || ""}
                       data-testid="textarea-catalogue-interests"
                     />
                   </FormControl>
