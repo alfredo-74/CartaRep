@@ -63,7 +63,7 @@ export default function ContactSection() {
     onError: () => {
       toast({
         title: "Something went wrong",
-        description: "Please try again or contact us directly at ask@cartarep.com",
+        description: "Please try again or contact us directly at anna@cartarep.com",
         variant: "destructive",
       });
     },
