@@ -35,6 +35,19 @@ import rendezvousImg from "@assets/rendez vous_1757514220364.jpg";
 import hilowImg from "@assets/hilow_1757514220365.jpg";
 import medusaAmbienteImg from "@assets/MEDUSA ambiente 34200 _1757514220366.jpg";
 import oficinasEstelecImg from "@assets/Oficinas ESTELEC by KeenDesign_1757514220367.jpg";
+import medusaStudio2Img from "@assets/MEDUSA studio2_1757514418146.jpg";
+import sonoraAmbienteImg from "@assets/SONORA ambiente colgante gris_1757514418154.jpg";
+import katanaDetailImg from "@assets/KATANA detail_1757514418155.jpg";
+import pampaAmbienteImg from "@assets/PAMPA ambiente_1757514418156.jpg";
+import celesteOficinaImg from "@assets/CELESTE oficina horizontal_1757514418158.jpg";
+import candelaCuerdasImg from "@assets/CANDELA cuerdas 1200x1200_1757514418159.jpg";
+import nexoRestauranteImg from "@assets/NEXO restaurante 1200x1200_1757514418160.jpg";
+import pagodaColganteImg from "@assets/PAGODA Colgante Ambiente 1200x1200_1757514418161.jpg";
+import bretemaEuroluceImg from "@assets/General-View-Bretema-Euroluce-2025-plana_1757514418162.jpg";
+import screenshotImg from "@assets/Screenshot 2025-01-04 184222_1757514418163.jpg";
+import morganaOleImg from "@assets/MORGANA 31200_200 ambiente - Ole Lighting_1757514418165.jpg";
+import medusaShape2Img from "@assets/MEDUSA ambiente shape 2_1757514418166.jpg";
+import estelaAmbienteImg from "@assets/ESTELA ambiente_1757514418168.jpg";
 
 export default function BackgroundCarousel() {
   // Utility function to shuffle array randomly
@@ -117,7 +130,20 @@ export default function BackgroundCarousel() {
     rendezvousImg,
     hilowImg,
     medusaAmbienteImg,
-    oficinasEstelecImg
+    oficinasEstelecImg,
+    medusaStudio2Img,
+    sonoraAmbienteImg,
+    katanaDetailImg,
+    pampaAmbienteImg,
+    celesteOficinaImg,
+    candelaCuerdasImg,
+    nexoRestauranteImg,
+    pagodaColganteImg,
+    bretemaEuroluceImg,
+    screenshotImg,
+    morganaOleImg,
+    medusaShape2Img,
+    estelaAmbienteImg
   ];
 
   // State to hold the shuffled images
