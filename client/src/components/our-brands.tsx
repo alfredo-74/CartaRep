@@ -261,7 +261,7 @@ export default function OurBrands() {
                     <img 
                       src={brand.logoUrl} 
                       alt={`${brand.name} logo`}
-                      className="h-12 mx-auto filter brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                      className="h-12 mx-auto opacity-90 hover:opacity-100 transition-opacity"
                       data-testid={`img-brand-logo-${index}`}
                     />
                   </div>
