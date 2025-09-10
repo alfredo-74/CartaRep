@@ -428,11 +428,6 @@ export default function OurBrands() {
                           className="w-full h-full min-h-[500px] object-cover"
                           data-testid={`img-collection-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${collectionIndex}`}
                         />
-                        <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-4">
-                          <h4 className={`font-semibold ${getRandomColor()}`} data-testid={`text-collection-name-${collectionIndex}`}>
-                            {collection.name}
-                          </h4>
-                        </div>
                       </div>
                     ))}
                   </div>
