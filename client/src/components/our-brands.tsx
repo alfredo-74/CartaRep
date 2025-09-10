@@ -71,24 +71,29 @@ export default function OurBrands() {
   const getBrandCatalogues = (brandName: string) => {
     const catalogues: { [key: string]: Array<{ name: string; description: string }> } = {
       "a·emotional light": [
-        { name: "Complete Product Catalogue", description: "Comprehensive overview of all a·emotional light collections and specifications" },
-        { name: "Technical Specifications", description: "Detailed technical drawings and installation guides" },
-        { name: "Project Portfolio", description: "Inspiring case studies and completed lighting projects" }
+        { name: "NEW 2025 CATALOGUE", description: "Latest collection featuring new designs and handcrafted lighting pieces" },
+        { name: "2024 NEWS CATALOGUE", description: "Featured collections and new product launches from 2024" },
+        { name: "2023 CATALOGUE", description: "Complete product overview with technical specifications" },
+        { name: "Catalogue Press Kit", description: "High-resolution images and brand information for professionals" }
       ],
       "Olé Lighting": [
-        { name: "Indoor Collection Catalogue", description: "Complete indoor lighting solutions with technical details" },
-        { name: "Outdoor Collection Catalogue", description: "Weather-resistant outdoor lighting systems" },
-        { name: "Smart Lighting Guide", description: "IoT and smart lighting integration solutions" }
+        { name: "Catalogue 2025-2026", description: "Complete indoor and outdoor lighting solutions with latest designs" },
+        { name: "OUTDOORS CATALOGUE 2023", description: "Weather-resistant outdoor lighting systems and installations" }
       ],
       "Bover Barcelona": [
-        { name: "Indoor Lighting Catalogue", description: "Modern Mediterranean lighting designs for interior spaces" },
-        { name: "Outdoor Collection", description: "Weather-resistant lighting for terraces and gardens" },
-        { name: "Design Process Book", description: "Behind-the-scenes look at Bover's design philosophy" }
+        { name: "New 2025 Icons", description: "Latest iconic designs and product innovations for 2025" },
+        { name: "Indoor Catalogue", description: "Modern Mediterranean lighting designs for interior spaces" },
+        { name: "Outdoor Book", description: "Complete outdoor lighting collection for terraces and gardens" },
+        { name: "Working Catalogue 2025", description: "Professional lighting solutions for commercial spaces" },
+        { name: "Birdie Dossier", description: "Detailed specifications for the popular Birdie collection" },
+        { name: "Skybell Dossier", description: "Technical documentation for Skybell pendant systems" }
       ],
       "Panzeri Lighting": [
-        { name: "Architectural Lighting Solutions", description: "Professional lighting for commercial and residential projects" },
-        { name: "LED Technology Guide", description: "Latest LED innovations and energy-efficient solutions" },
-        { name: "Custom Solutions Portfolio", description: "Bespoke lighting projects and customization options" }
+        { name: "La Forma della Luce - 2022", description: "Complete lighting catalogue showcasing Italian craftsmanship" },
+        { name: "Technical Catalogue 2022", description: "Detailed technical specifications and installation guides" },
+        { name: "Panzeri Hilow", description: "Specialized documentation for Hilow adjustable systems" },
+        { name: "Light And Shapes 2019", description: "Design philosophy and architectural lighting solutions" },
+        { name: "Press Kit", description: "High-resolution images and company information for professionals" }
       ]
     };
     return catalogues[brandName] || [];
