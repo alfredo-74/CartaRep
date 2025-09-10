@@ -2,34 +2,26 @@
 
 /* Ollie Wollie Font Family */
 @font-face {
+  font-family: 'OllieWollie';
+  src: url('/attached_assets/OllieWollie-Regular_1757523310626.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ollie Wollie Family';
+  src: url('/attached_assets/OllieWollie-Regular_1757523310626.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Ollie Wollie';
   src: url('/attached_assets/OllieWollie-Regular_1757523310626.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Ollie Wollie';
-  src: url('/attached_assets/OllieWollie-Bold_1757521695519.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Ollie Wollie';
-  src: url('/attached_assets/OllieWollie-Italic_1757521695518.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Ollie Wollie';
-  src: url('/attached_assets/OllieWollie-BoldItalic_1757521695519.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -73,7 +65,7 @@
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --font-neon: 'Ollie Wollie', 'Jost', sans-serif;
+  --font-neon: 'OllieWollie', 'Ollie Wollie Family', 'Ollie Wollie', 'Jost', sans-serif;
   --radius: 0.75rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
@@ -123,7 +115,7 @@
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --font-neon: 'Ollie Wollie', 'Jost', sans-serif;
+  --font-neon: 'OllieWollie', 'Ollie Wollie Family', 'Ollie Wollie', 'Jost', sans-serif;
   --radius: 0.75rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
