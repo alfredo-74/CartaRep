@@ -190,7 +190,7 @@
     display: flex;
     width: 2600%; /* Total width for 26 images */
     height: 100%;
-    animation: carousel 80s infinite linear;
+    animation: carousel 160s infinite linear;
   }
 
   .carousel-slide {
