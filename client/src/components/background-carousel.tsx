@@ -18,6 +18,8 @@ import sculptureImg from "@assets/58a9e169-88a6-4e28-b72a-c98843674091_175751383
 import avatarMuseumImg from "@assets/AVATAR POP museum_1757513870530.jpg";
 import tempoImg from "@assets/2405_NEWS24_TEMPO_00003_1757513870532.jpg";
 import eraImg from "@assets/2405_NEWS24_ERA_00005_1757513870534.jpg";
+import adamas2Img from "@assets/adamas2_1757514144589.jpg";
+import eurolImg from "@assets/eurol_1757514144591.jpg";
 
 export default function BackgroundCarousel() {
   // Utility function to shuffle array randomly
@@ -83,7 +85,9 @@ export default function BackgroundCarousel() {
     sculptureImg,
     avatarMuseumImg,
     tempoImg,
-    eraImg
+    eraImg,
+    adamas2Img,
+    eurolImg
   ];
 
   // State to hold the shuffled images
