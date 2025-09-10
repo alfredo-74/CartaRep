@@ -1,5 +1,4 @@
 import BackgroundCarousel from "@/components/background-carousel";
-import FloatingShapes from "@/components/floating-shapes";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import OurBrands from "@/components/our-brands";
@@ -10,7 +9,6 @@ export default function Home() {
   return (
     <div className="min-h-screen text-foreground relative">
       <BackgroundCarousel />
-      <FloatingShapes />
       <Navigation />
       <HeroSection />
       <OurBrands />
