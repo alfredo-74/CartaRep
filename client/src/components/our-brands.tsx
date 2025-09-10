@@ -107,6 +107,36 @@ export default function OurBrands() {
           name: "Coral Collection",
           image: "https://www.a-emotionallight.com/wp-content/uploads/2019/06/coral_icono.jpg",
           alt: "Coral nature-inspired lighting collection"
+        },
+        {
+          name: "Aro Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/AroView.jpg",
+          alt: "Aro circular pendant lighting"
+        },
+        {
+          name: "Bend Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BendView.jpg",
+          alt: "Bend flexible lighting solutions"
+        },
+        {
+          name: "Bolet Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BoletView.jpg",
+          alt: "Bolet mushroom-inspired design"
+        },
+        {
+          name: "Lisa Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/LisaView.jpg",
+          alt: "Lisa minimalist wall lighting"
+        },
+        {
+          name: "Nebra Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/NebraView.jpg",
+          alt: "Nebra suspension lighting"
+        },
+        {
+          name: "Silo Collection",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/SiloView.jpg",
+          alt: "Silo industrial-inspired pendants"
         }
       ]
     },
@@ -149,6 +179,36 @@ export default function OurBrands() {
           name: "SONORA Collection",
           image: "https://www.ole-lighting.com/cdnassets/colecciones/SONORA/SONORA-770x855.jpg",
           alt: "Ole Lighting SONORA acoustic lighting"
+        },
+        {
+          name: "PAGODA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/PAGODA/PAGODA-770x855.jpg",
+          alt: "Ole Lighting PAGODA Asian-inspired collection"
+        },
+        {
+          name: "NEXO Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/NEXO/NEXO-770x855.jpg",
+          alt: "Ole Lighting NEXO modular series"
+        },
+        {
+          name: "ILLA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/ILLA/ILLA-small-coleccion-770x855.jpg",
+          alt: "Ole Lighting ILLA esparto natural fiber collection"
+        },
+        {
+          name: "CLUNIA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/CLUNIA/CLUNIA-coleccion-770x855.jpg",
+          alt: "Ole Lighting CLUNIA modern pendant series"
+        },
+        {
+          name: "ALLEGRA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/ALLEGRA/ALLEGRA-770x855.jpg",
+          alt: "Ole Lighting ALLEGRA contemporary design"
+        },
+        {
+          name: "KALA Collection",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/KALA/KALA-coleccion-770x855.jpg",
+          alt: "Ole Lighting KALA artistic lighting"
         }
       ]
     },
@@ -191,6 +251,36 @@ export default function OurBrands() {
           name: "Mei Collection",
           image: "https://bover.es/17937-home_default/mei-150.jpg",
           alt: "Bover Mei pleated fabric pendant"
+        },
+        {
+          name: "Drip/Drop Collection",
+          image: "https://bover.es/10148-home_default/dripdrop-s01l-02.jpg",
+          alt: "Bover Drip/Drop versatile LED pendants"
+        },
+        {
+          name: "Tanit Collection",
+          image: "https://bover.es/16999-home_default/tanit-m29r-outdoor.jpg",
+          alt: "Bover Tanit portable rechargeable table lamps"
+        },
+        {
+          name: "Platet Collection",
+          image: "https://bover.es/10176-home_default/platet-a01-outdoor.jpg",
+          alt: "Bover Platet industrial-inspired wall lights"
+        },
+        {
+          name: "Nut Collection",
+          image: "https://bover.es/10172-home_default/nut-a01-outdoor.jpg",
+          alt: "Bover Nut outdoor wall lighting series"
+        },
+        {
+          name: "Balloon Collection",
+          image: "https://bover.es/17903-home_default/balloon-150.jpg",
+          alt: "Bover Balloon whimsical pendant lighting"
+        },
+        {
+          name: "Cala Collection",
+          image: "https://bover.es/17915-home_default/cala-150.jpg",
+          alt: "Bover Cala organic pendant design"
         }
       ]
     },
@@ -233,6 +323,36 @@ export default function OurBrands() {
           name: "Opuntia Collection",
           image: "https://panzeri.it/products/media/FPF/FPF-DI-opuntia.jpg",
           alt: "Panzeri Opuntia organic cactus-inspired forms"
+        },
+        {
+          name: "432 Ways Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-432_ways-new.jpg",
+          alt: "Panzeri 432 Ways modular lighting system"
+        },
+        {
+          name: "Rendez-Vous Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-rendez-vous-new.jpg",
+          alt: "Panzeri Rendez-Vous contemporary design"
+        },
+        {
+          name: "Tubino Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-tubino.jpg",
+          alt: "Panzeri Tubino torch-inspired series"
+        },
+        {
+          name: "Hilow Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-hilow.jpg",
+          alt: "Panzeri Hilow architectural lighting"
+        },
+        {
+          name: "Carl Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-carl.jpg",
+          alt: "Panzeri Carl minimalist design series"
+        },
+        {
+          name: "Delta Collection",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-delta.jpg",
+          alt: "Panzeri Delta geometric lighting solutions"
         }
       ]
     }
