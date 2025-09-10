@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactInquirySchema, insertCatalogueRequestSchema } from "@shared/schema";
+import { sendCatalogueEmail } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -57,6 +58,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Create the catalogue request in storage
       const request = await storage.createCatalogueRequest(validatedData);
+      
+      // Send confirmation email to the lead
+      try {
+        await sendCatalogueEmail(
+          request.email,
+          request.name,
+          request.brandName,
+          request.requestedCatalogues
+        );
+        console.log(`Catalogue confirmation email sent to ${request.email} for ${request.brandName}`);
+      } catch (emailError) {
+        console.error("Failed to send catalogue email:", emailError);
+        // Don't fail the request if email fails - still save the lead
+      }
       
       res.status(201).json({ 
         success: true, 
