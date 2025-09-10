@@ -383,7 +383,7 @@ export default function OurBrands() {
                         <img 
                           src={collection.image}
                           alt={collection.alt}
-                          className="w-full h-full min-h-[500px] object-cover"
+                          className="w-full h-64 object-cover"
                           data-testid={`img-collection-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${collectionIndex}`}
                         />
                       </div>
