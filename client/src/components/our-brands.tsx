@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Download, ExternalLink } from "lucide-react";
-import aEmotionalLogo from '@/assets/a-emotional-new.jpeg';
+import aEmotionalLogo from '@/assets/a-emotional-final.jpg';
 import oleLogo from '@/assets/ole-logo.png';
 import boverLogo from '@/assets/bover-newest.jpg';
 import panzeriLogo from '@/assets/panzeri-logo-new.png';
