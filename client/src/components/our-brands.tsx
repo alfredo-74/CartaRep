@@ -6,6 +6,18 @@ import oleLogo from '@/assets/ole-logo.png';
 import boverLogo from '@/assets/bover-newest.jpg';
 import panzeriLogo from '@/assets/panzeri-logo-new.png';
 
+// New a-emotional light collection images
+import tondaNewImg from '@assets/tonda_1757517578733.jpg';
+import euroNewImg from '@assets/euro_1757517578734.jpg';
+import eurolNewImg from '@assets/eurol_1757517578736.jpg';
+import agasalloNewImg from '@assets/agasallo_1757517578737.jpg';
+import umbraNewImg from '@assets/umbra_1757517578738.jpg';
+import coralNewImg from '@assets/coral_1757517578739.jpg';
+import bretemaEuroluceImg from '@assets/General-View-Bretema-Euroluce-2025-plana_1757517578740.jpg';
+import screenshotImg from '@assets/Screenshot 2025-01-04 184222_1757517578741.jpg';
+import tempoNewImg from '@assets/2405_NEWS24_TEMPO_00003_1757517578742.jpg';
+import eraNewImg from '@assets/2405_NEWS24_ERA_00005_1757517578743.jpg';
+
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCarousel, setActiveCarousel] = useState<{ [key: string]: number }>({});
@@ -138,6 +150,56 @@ export default function OurBrands() {
           name: "Coral Collection",
           image: "https://www.a-emotionallight.com/wp-content/uploads/2019/06/coral_icono.jpg",
           alt: "Coral nature-inspired lighting collection"
+        },
+        {
+          name: "Tonda Collection",
+          image: tondaNewImg,
+          alt: "Tonda circular lighting with intricate patterns"
+        },
+        {
+          name: "Euro Collection",
+          image: euroNewImg,
+          alt: "Euro elegant sculptural lighting design"
+        },
+        {
+          name: "Eurol Collection",
+          image: eurolNewImg,
+          alt: "Eurol contemporary wall lighting series"
+        },
+        {
+          name: "Agasallo New",
+          image: agasalloNewImg,
+          alt: "Agasallo new handcrafted gift lighting collection"
+        },
+        {
+          name: "Umbra New",
+          image: umbraNewImg,
+          alt: "Umbra new circular halo lighting series"
+        },
+        {
+          name: "Coral New",
+          image: coralNewImg,
+          alt: "Coral new pendant lighting collection"
+        },
+        {
+          name: "Brétema Euroluce 2025",
+          image: bretemaEuroluceImg,
+          alt: "Brétema collection showcase at Euroluce 2025"
+        },
+        {
+          name: "Artisan Spotlight",
+          image: screenshotImg,
+          alt: "Behind the scenes of a-emotional light craftsmanship"
+        },
+        {
+          name: "Tempo Collection",
+          image: tempoNewImg,
+          alt: "Tempo rhythmic pleated lighting collection"
+        },
+        {
+          name: "Era Collection",
+          image: eraNewImg,
+          alt: "Era contemporary black pendant lighting"
         }
       ]
     },
