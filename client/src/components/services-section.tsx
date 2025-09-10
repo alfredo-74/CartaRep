@@ -26,7 +26,7 @@ export default function ServicesSection() {
     {
       icon: Lightbulb,
       title: "Bespoke Lighting",
-      description: "Customized lighting solutions tailored to your specific requirements and aesthetic vision.",
+      description: "Customised lighting solutions tailored to your specific requirements and aesthetic vision.",
       color: "text-primary"
     },
     {
