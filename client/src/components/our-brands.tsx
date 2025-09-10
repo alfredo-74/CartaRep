@@ -31,6 +31,19 @@ import skybellImg from '@assets/skybell_1757519174476.jpg';
 import nonLaImg from '@assets/non la_1757519174478.jpg';
 import boverNewImg from '@assets/bover_1757519174479.jpg';
 
+// New Panzeri Lighting collection images
+import adamas2Img from '@assets/adamas2_1757519446545.jpg';
+import roma1Img from '@assets/roma1_1757519446547.jpg';
+import zeroRoundNewImg from '@assets/zero round_1757519446548.jpg';
+import bellaImg from '@assets/bella_1757519446549.jpg';
+import romaNewImg from '@assets/roma_1757519446551.jpg';
+import adamas1Img from '@assets/adamas1_1757519446553.jpg';
+import adamasNewImg from '@assets/adamas_1757519446554.jpg';
+import ombraNewImg from '@assets/ombra_1757519446555.jpg';
+import muraneNewImg from '@assets/murane_1757519446556.jpg';
+import rendezVousNewImg from '@assets/rendez vous_1757519446557.jpg';
+import hilowNewImg from '@assets/hilow_1757519446558.jpg';
+
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCarousel, setActiveCarousel] = useState<{ [key: string]: number }>({});
@@ -446,6 +459,61 @@ export default function OurBrands() {
           name: "Delta Collection",
           image: "https://panzeri.it/products/media/FPF/FPF-DI-carl.jpg",
           alt: "Panzeri Delta geometric lighting solutions"
+        },
+        {
+          name: "Adamas Display",
+          image: adamas2Img,
+          alt: "Panzeri Adamas collection colorful honeycomb pendant lights"
+        },
+        {
+          name: "Roma Wall Series",
+          image: roma1Img,
+          alt: "Panzeri Roma cylindrical wall lighting installation"
+        },
+        {
+          name: "Zero Round System",
+          image: zeroRoundNewImg,
+          alt: "Panzeri Zero Round geometric pendant system"
+        },
+        {
+          name: "Bella Desk Collection",
+          image: bellaImg,
+          alt: "Panzeri Bella adjustable brass desk lamps"
+        },
+        {
+          name: "Roma Floor Collection",
+          image: romaNewImg,
+          alt: "Panzeri Roma cylindrical floor lamps in living space"
+        },
+        {
+          name: "Adamas Detail",
+          image: adamas1Img,
+          alt: "Panzeri Adamas honeycomb pattern close-up detail"
+        },
+        {
+          name: "Adamas Floor Lamp",
+          image: adamasNewImg,
+          alt: "Panzeri Adamas floor lamp in elegant interior setting"
+        },
+        {
+          name: "Ombra Table Lamp",
+          image: ombraNewImg,
+          alt: "Panzeri Ombra minimalist cylindrical table lamp"
+        },
+        {
+          name: "Muranè Glass Collection",
+          image: muraneNewImg,
+          alt: "Panzeri Muranè golden glass pendant cluster"
+        },
+        {
+          name: "Rendez-Vous System",
+          image: rendezVousNewImg,
+          alt: "Panzeri Rendez-Vous triangular pendant constellation"
+        },
+        {
+          name: "Hilow Linear System",
+          image: hilowNewImg,
+          alt: "Panzeri Hilow linear architectural lighting system"
         }
       ]
     }
