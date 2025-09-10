@@ -165,21 +165,6 @@ export default function OurBrands() {
           image: "https://www.ole-lighting.com/cdnassets/colecciones/ILLA/ILLA-small-coleccion-770x855.jpg",
           alt: "Ole Lighting ILLA esparto natural fiber collection"
         },
-        {
-          name: "CLUNIA Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/CELESTE/CELESTE-detail-770x855.jpg",
-          alt: "Ole Lighting CLUNIA modern pendant series"
-        },
-        {
-          name: "ALLEGRA Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/MEDUSA/MEDUSA-detail-770x855.jpg",
-          alt: "Ole Lighting ALLEGRA contemporary design"
-        },
-        {
-          name: "KALA Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/LLUNA/LLUNA-detail-770x855.jpg",
-          alt: "Ole Lighting KALA artistic lighting"
-        }
       ]
     },
     {
@@ -242,16 +227,6 @@ export default function OurBrands() {
           image: "https://bover.es/10172-home_default/nut-a01-outdoor.jpg",
           alt: "Bover Nut outdoor wall lighting series"
         },
-        {
-          name: "Balloon Collection",
-          image: "https://bover.es/16989-home_default/nans-bag38-detail.jpg",
-          alt: "Bover Balloon whimsical pendant lighting"
-        },
-        {
-          name: "Cala Collection",
-          image: "https://bover.es/10180-home_default/garota-s-detail.jpg",
-          alt: "Bover Cala organic pendant design"
-        }
       ]
     },
     {
