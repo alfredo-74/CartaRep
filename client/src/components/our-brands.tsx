@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Download, ExternalLink } from "lucide-react";
-import aEmotionalLogo from '@/assets/a-emotional-logo.jpg';
+import aEmotionalLogo from '@/assets/a-emotional-new.jpeg';
 import oleLogo from '@/assets/ole-logo.png';
-import boverLogo from '@/assets/bover_barcelona_lights_logo_1757429085164.jpeg';
+import boverLogo from '@/assets/bover-new.jpeg';
 import panzeriLogo from '@/assets/panzeri-logo-new.png';
 
 export default function OurBrands() {
