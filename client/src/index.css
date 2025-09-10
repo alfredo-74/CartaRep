@@ -188,23 +188,24 @@
 
   .carousel-slides {
     display: flex;
-    width: 500%;
+    width: 2600%; /* 26 images × 100% each */
     height: 100%;
-    animation: carousel 30s infinite linear;
+    animation: carousel 130s infinite linear; /* Longer duration for smooth transition */
   }
 
   .carousel-slide {
-    width: 20%;
+    width: 100vw; /* Full viewport width for each slide */
     height: 100%;
     background-size: cover;
     background-position: center;
     opacity: 0.15;
     background-repeat: no-repeat;
+    flex-shrink: 0; /* Prevent slides from shrinking */
   }
 
   @keyframes carousel {
     0% { transform: translateX(0%); }
-    100% { transform: translateX(-20%); }
+    100% { transform: translateX(-2500%); } /* Move through all 25 slides (26-1) */
   }
 
   /* Gradient Overlays */
