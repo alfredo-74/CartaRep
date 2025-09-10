@@ -107,36 +107,6 @@ export default function OurBrands() {
           name: "Coral Collection",
           image: "https://www.a-emotionallight.com/wp-content/uploads/2019/06/coral_icono.jpg",
           alt: "Coral nature-inspired lighting collection"
-        },
-        {
-          name: "Aro Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/aro-collection-lamps.jpg",
-          alt: "Aro circular pendant lighting"
-        },
-        {
-          name: "Bend Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/bend-collection-lamps.jpg",
-          alt: "Bend flexible lighting solutions"
-        },
-        {
-          name: "Bolet Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/bolet-collection-lamps.jpg",
-          alt: "Bolet mushroom-inspired design"
-        },
-        {
-          name: "Lisa Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/lisa-collection-lamps.jpg",
-          alt: "Lisa minimalist wall lighting"
-        },
-        {
-          name: "Nebra Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/nebra-collection-lamps.jpg",
-          alt: "Nebra suspension lighting"
-        },
-        {
-          name: "Silo Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/silo-collection-lamps.jpg",
-          alt: "Silo industrial-inspired pendants"
         }
       ]
     },
