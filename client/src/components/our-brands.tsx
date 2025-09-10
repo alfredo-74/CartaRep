@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { Download, ExternalLink } from "lucide-react";
 import { CatalogueRequestForm } from "./catalogue-request-form";
 import aEmotionalLogo from '@/assets/a-emotional-final.jpg';
@@ -44,6 +44,20 @@ import muraneNewImg from '@assets/murane_1757519446556.jpg';
 import rendezVousNewImg from '@assets/rendez vous_1757519446557.jpg';
 import hilowNewImg from '@assets/hilow_1757519446558.jpg';
 
+// New Olé Lighting collection images
+import medusaAmbienteImg from '@assets/MEDUSA ambiente 34200 _1757519669148.jpg';
+import estelecOfficeImg from '@assets/Oficinas ESTELEC by KeenDesign_1757519669155.jpg';
+import medusaStudioImg from '@assets/MEDUSA studio2_1757519669157.jpg';
+import sonoraAmbienteImg from '@assets/SONORA ambiente colgante gris_1757519669158.jpg';
+import katanaDetailImg from '@assets/KATANA detail_1757519669159.jpg';
+import pampaAmbienteImg from '@assets/PAMPA ambiente_1757519669160.jpg';
+import celesteOfficeImg from '@assets/CELESTE oficina horizontal_1757519669162.jpg';
+import candelaCuerdasImg from '@assets/CANDELA cuerdas 1200x1200_1757519669163.jpg';
+import nexoRestauranteImg from '@assets/NEXO restaurante 1200x1200_1757519669164.jpg';
+import pagodaColganteImg from '@assets/PAGODA Colgante Ambiente 1200x1200_1757519669165.jpg';
+import morganaAmbienteImg from '@assets/MORGANA 31200_200 ambiente - Ole Lighting_1757519669166.jpg';
+import medusaShapeImg from '@assets/MEDUSA ambiente shape 2_1757519669167.jpg';
+
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCarousel, setActiveCarousel] = useState<{ [key: string]: number }>({});
@@ -58,6 +72,16 @@ export default function OurBrands() {
   ];
 
   const getRandomColor = () => randomColors[Math.floor(Math.random() * randomColors.length)];
+
+  // Shuffle function for randomizing brand order
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -85,7 +109,7 @@ export default function OurBrands() {
   }, []);
 
   const startAutoScroll = () => {
-    brands.forEach((brand) => {
+    shuffledBrands.forEach((brand) => {
       if (intervalRefs.current[brand.name]) {
         clearInterval(intervalRefs.current[brand.name]);
       }
@@ -288,6 +312,66 @@ export default function OurBrands() {
           image: "https://www.ole-lighting.com/cdnassets/colecciones/ILLA/ILLA-small-coleccion-770x855.jpg",
           alt: "Ole Lighting ILLA esparto natural fiber collection"
         },
+        {
+          name: "Medusa Ambiente",
+          image: medusaAmbienteImg,
+          alt: "Olé Lighting Medusa pendant in luxurious marble living space"
+        },
+        {
+          name: "ESTELEC Office",
+          image: estelecOfficeImg,
+          alt: "Olé Lighting geometric pendant in modern stairway office"
+        },
+        {
+          name: "Medusa Studio",
+          image: medusaStudioImg,
+          alt: "Olé Lighting Medusa pendants in contemporary office workspace"
+        },
+        {
+          name: "Sonora Ambiente",
+          image: sonoraAmbienteImg,
+          alt: "Olé Lighting Sonora acoustic pendant system over conference table"
+        },
+        {
+          name: "Katana Detail",
+          image: katanaDetailImg,
+          alt: "Olé Lighting Katana linear suspension over reading area"
+        },
+        {
+          name: "Pampa Ambiente",
+          image: pampaAmbienteImg,
+          alt: "Olé Lighting Pampa modern linear pendants in boardroom"
+        },
+        {
+          name: "Celeste Office",
+          image: celesteOfficeImg,
+          alt: "Olé Lighting Celeste elegant horizontal pendant system"
+        },
+        {
+          name: "Candela Cuerdas",
+          image: candelaCuerdasImg,
+          alt: "Olé Lighting Candela portable rope-wrapped table lamps"
+        },
+        {
+          name: "Nexo Restaurante",
+          image: nexoRestauranteImg,
+          alt: "Olé Lighting Nexo wall sconce in upscale restaurant"
+        },
+        {
+          name: "Pagoda Colgante",
+          image: pagodaColganteImg,
+          alt: "Olé Lighting Pagoda woven pendant cluster in restaurant setting"
+        },
+        {
+          name: "Morgana Ambiente",
+          image: morganaAmbienteImg,
+          alt: "Olé Lighting Morgana slatted floor lamp in minimalist interior"
+        },
+        {
+          name: "Medusa Shape",
+          image: medusaShapeImg,
+          alt: "Olé Lighting Medusa geometric pendant in modern living room"
+        }
       ]
     },
     {
@@ -519,6 +603,8 @@ export default function OurBrands() {
     }
   ];
 
+  // Create a randomly shuffled brands array that persists on component mount
+  const shuffledBrands = useMemo(() => shuffleArray(brands), []);
 
   return (
     <section id="brands" className="py-32 relative z-10" ref={sectionRef} data-testid="brands-section">
@@ -528,7 +614,7 @@ export default function OurBrands() {
         </h2>
         
         <div className="grid lg:grid-cols-2 gap-12">
-          {brands.map((brand, index) => (
+          {shuffledBrands.map((brand, index) => (
             <div 
               key={brand.name}
               className={`glass-card p-8 rounded-2xl transition-all duration-1000 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`}
