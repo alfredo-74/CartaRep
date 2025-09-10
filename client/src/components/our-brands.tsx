@@ -19,6 +19,18 @@ import tempoNewImg from '@assets/2405_NEWS24_TEMPO_00003_1757517578742.jpg';
 import eraNewImg from '@assets/2405_NEWS24_ERA_00005_1757517578743.jpg';
 import rosaNewImg from '@assets/rosa_1757517649972.jpg';
 
+// New Bover Barcelona collection images
+import kandoImg from '@assets/kando_1757519174464.jpg';
+import nans3Img from '@assets/nans3_1757519174467.jpg';
+import mediImg from '@assets/medi_1757519174469.jpg';
+import nanas1Img from '@assets/nanas1_1757519174471.jpg';
+import bolImg from '@assets/bol_1757519174472.jpg';
+import nansNewImg from '@assets/nans_1757519174473.jpg';
+import drepImg from '@assets/drep_1757519174475.jpg';
+import skybellImg from '@assets/skybell_1757519174476.jpg';
+import nonLaImg from '@assets/non la_1757519174478.jpg';
+import boverNewImg from '@assets/bover_1757519174479.jpg';
+
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCarousel, setActiveCarousel] = useState<{ [key: string]: number }>({});
@@ -314,6 +326,56 @@ export default function OurBrands() {
           image: "https://bover.es/10172-home_default/nut-a01-outdoor.jpg",
           alt: "Bover Nut outdoor wall lighting series"
         },
+        {
+          name: "Kando Collection",
+          image: kandoImg,
+          alt: "Bover Kando outdoor luminous cylinders collection"
+        },
+        {
+          name: "Nans Outdoor Bar",
+          image: nans3Img,
+          alt: "Bover Nans woven pendant lights in outdoor bar setting"
+        },
+        {
+          name: "Medi Collection",
+          image: mediImg,
+          alt: "Bover Medi flowing organic pendant light"
+        },
+        {
+          name: "Nans Detail",
+          image: nanas1Img,
+          alt: "Bover Nans woven pendant light close-up detail"
+        },
+        {
+          name: "Bol Collection",
+          image: bolImg,
+          alt: "Bover Bol modular chandelier system for dining rooms"
+        },
+        {
+          name: "Nans Outdoor Dining",
+          image: nansNewImg,
+          alt: "Bover Nans spherical pendant lights in outdoor dining area"
+        },
+        {
+          name: "Drep Collection",
+          image: drepImg,
+          alt: "Bover Drep multi-pendant lights in modern stairway"
+        },
+        {
+          name: "Skybell System",
+          image: skybellImg,
+          alt: "Bover Skybell circular pendant system in hospitality space"
+        },
+        {
+          name: "Non La Collection",
+          image: nonLaImg,
+          alt: "Bover Non La conical pendant light in warm setting"
+        },
+        {
+          name: "Spline Installation",
+          image: boverNewImg,
+          alt: "Bover Spline cascading pendant lights installation"
+        }
       ]
     },
     {
