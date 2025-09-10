@@ -53,7 +53,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* CartaRep Logo */}
           <div className="flex items-center">
-            <span className="pink-neon-text text-2xl font-neon font-bold" data-testid="text-nav-brand">
+            <span className="pink-neon-text text-3xl font-neon font-bold" data-testid="text-nav-brand">
               CartaRep
             </span>
           </div>
