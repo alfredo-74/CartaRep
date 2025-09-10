@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Ollie Wollie Font Family */
+@font-face {
+  font-family: 'Ollie Wollie';
+  src: url('/attached_assets/OllieWollie-Regular_1757521695517.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ollie Wollie';
+  src: url('/attached_assets/OllieWollie-Bold_1757521695519.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ollie Wollie';
+  src: url('/attached_assets/OllieWollie-Italic_1757521695518.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ollie Wollie';
+  src: url('/attached_assets/OllieWollie-BoldItalic_1757521695519.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -40,7 +73,7 @@
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --font-neon: 'Jost', sans-serif;
+  --font-neon: 'Ollie Wollie', 'Jost', sans-serif;
   --radius: 0.75rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
@@ -90,7 +123,7 @@
   --font-sans: Inter, system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --font-neon: 'Jost', sans-serif;
+  --font-neon: 'Ollie Wollie', 'Jost', sans-serif;
   --radius: 0.75rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(180, 100%, 50%, 0.00);
