@@ -208,16 +208,6 @@ export default function OurBrands() {
           alt: "Bover Mei pleated fabric pendant"
         },
         {
-          name: "Drip/Drop Collection",
-          image: "https://bover.es/10148-home_default/dripdrop-s01l-02.jpg",
-          alt: "Bover Drip/Drop versatile LED pendants"
-        },
-        {
-          name: "Tanit Collection",
-          image: "https://bover.es/16999-home_default/tanit-m29r-outdoor.jpg",
-          alt: "Bover Tanit portable rechargeable table lamps"
-        },
-        {
           name: "Platet Collection",
           image: "https://bover.es/10176-home_default/platet-a01-outdoor.jpg",
           alt: "Bover Platet industrial-inspired wall lights"
