@@ -110,32 +110,32 @@ export default function OurBrands() {
         },
         {
           name: "Aro Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/AroView.jpg",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/aro-collection-lamps.jpg",
           alt: "Aro circular pendant lighting"
         },
         {
           name: "Bend Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BendView.jpg",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/bend-collection-lamps.jpg",
           alt: "Bend flexible lighting solutions"
         },
         {
           name: "Bolet Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/BoletView.jpg",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/bolet-collection-lamps.jpg",
           alt: "Bolet mushroom-inspired design"
         },
         {
           name: "Lisa Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/LisaView.jpg",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/lisa-collection-lamps.jpg",
           alt: "Lisa minimalist wall lighting"
         },
         {
           name: "Nebra Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/NebraView.jpg",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/nebra-collection-lamps.jpg",
           alt: "Nebra suspension lighting"
         },
         {
           name: "Silo Collection",
-          image: "https://www.a-emotionallight.com/wp-content/uploads/2024/08/SiloView.jpg",
+          image: "https://www.a-emotionallight.com/wp-content/uploads/2022/07/silo-collection-lamps.jpg",
           alt: "Silo industrial-inspired pendants"
         }
       ]
@@ -197,17 +197,17 @@ export default function OurBrands() {
         },
         {
           name: "CLUNIA Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/CLUNIA/CLUNIA-coleccion-770x855.jpg",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/CELESTE/CELESTE-detail-770x855.jpg",
           alt: "Ole Lighting CLUNIA modern pendant series"
         },
         {
           name: "ALLEGRA Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/ALLEGRA/ALLEGRA-770x855.jpg",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/MEDUSA/MEDUSA-detail-770x855.jpg",
           alt: "Ole Lighting ALLEGRA contemporary design"
         },
         {
           name: "KALA Collection",
-          image: "https://www.ole-lighting.com/cdnassets/colecciones/KALA/KALA-coleccion-770x855.jpg",
+          image: "https://www.ole-lighting.com/cdnassets/colecciones/LLUNA/LLUNA-detail-770x855.jpg",
           alt: "Ole Lighting KALA artistic lighting"
         }
       ]
@@ -274,12 +274,12 @@ export default function OurBrands() {
         },
         {
           name: "Balloon Collection",
-          image: "https://bover.es/17903-home_default/balloon-150.jpg",
+          image: "https://bover.es/16989-home_default/nans-bag38-detail.jpg",
           alt: "Bover Balloon whimsical pendant lighting"
         },
         {
           name: "Cala Collection",
-          image: "https://bover.es/17915-home_default/cala-150.jpg",
+          image: "https://bover.es/10180-home_default/garota-s-detail.jpg",
           alt: "Bover Cala organic pendant design"
         }
       ]
@@ -351,7 +351,7 @@ export default function OurBrands() {
         },
         {
           name: "Delta Collection",
-          image: "https://panzeri.it/products/media/FPF/FPF-DI-delta.jpg",
+          image: "https://panzeri.it/products/media/FPF/FPF-DI-carl.jpg",
           alt: "Panzeri Delta geometric lighting solutions"
         }
       ]
