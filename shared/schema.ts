@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, timestamp, boolean } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -29,6 +29,7 @@ export const catalogueRequests = pgTable("catalogue_requests", {
   brandName: text("brand_name").notNull(),
   requestedCatalogues: text("requested_catalogues").array().notNull(),
   interests: text("interests"),
+  hardCopyRequested: boolean("hard_copy_requested").default(false).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
