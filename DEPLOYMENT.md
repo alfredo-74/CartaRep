@@ -12,7 +12,7 @@ This guide explains how to deploy the CartaRep lighting consultancy website to N
 
 ## 🔧 Prerequisites
 
-- GitHub repository connected: https://github.com/alfredo-74/WebEnhance
+- GitHub repository connected: https://github.com/alfredo-74/CartaRep
 - Netlify account with GitHub integration
 - PostgreSQL database (if deploying backend)
 - SendGrid account for email functionality (if deploying backend)
@@ -34,7 +34,7 @@ Deploy frontend to Netlify and backend to a service like Heroku, Railway, or Ren
 1. Log in to [Netlify](https://app.netlify.com)
 2. Click "Add new site" > "Import an existing project"
 3. Choose "Deploy with GitHub"
-4. Select the `WebEnhance` repository
+4. Select the `CartaRep` repository
 5. Configure build settings (auto-populated from netlify.toml):
    - **Build command**: `npm run build`
    - **Publish directory**: `dist/public`
