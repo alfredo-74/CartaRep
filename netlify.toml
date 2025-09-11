@@ -1,86 +1,35 @@
-# Netlify Configuration for CartaRep Lighting Consultancy Website
-
 [build]
-  # Build command for Vite + React frontend
   command = "npm run build"
-  
-  # Directory containing the built static files
   publish = "dist/public"
-  
-  # Node.js version for builds
-  environment = { NODE_VERSION = "20" }
 
 [build.environment]
-  # Production environment
+  NODE_VERSION = "20"
   NODE_ENV = "production"
-  
-  # Skip source maps for production builds (optional, can be removed if source maps are needed)
-  GENERATE_SOURCEMAP = "false"
 
-# SPA routing configuration - redirect all routes to index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# API proxy redirects (if backend is hosted separately)
-# Uncomment and configure if backend is deployed elsewhere
-# [[redirects]]
-#   from = "/api/*"
-#   to = "https://your-backend-api.com/api/:splat"
-#   status = 200
-#   force = true
-
-# Headers for better performance and security
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Cache static assets
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache attached assets (fonts, images)
 [[headers]]
-  for = "/attached_assets/*"
+  for = "/fonts/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache fonts
-[[headers]]
-  for = "/*.woff2"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.woff"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.ttf"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.otf"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache images
 [[headers]]
   for = "/*.jpg"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
-
-[[headers]]
-  for = "/*.jpeg"
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
@@ -90,16 +39,6 @@
     Cache-Control = "public, max-age=604800"
 
 [[headers]]
-  for = "/*.svg"
+  for = "/*.ttf"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
-
-[[headers]]
-  for = "/*.webp"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
-
-# Functions configuration (if using Netlify Functions for backend)
-# [functions]
-#   directory = "netlify/functions"
-#   node_bundler = "esbuild"
+    Cache-Control = "public, max-age=31536000, immutable"
