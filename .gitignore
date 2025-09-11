@@ -1,6 +1,55 @@
-node_modules
-dist
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+server/public/
+build/
+*.local
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.production.local
+.env.development
+.env.development.local
+
+# IDE and OS files
 .DS_Store
-server/public
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+Thumbs.db
+
+# Vite
 vite.config.ts.*
+vite.config.js.timestamp-*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
 *.tar.gz
+*.zip
+
+# Netlify
+.netlify/
+
+# Local Netlify folder
+.netlify
