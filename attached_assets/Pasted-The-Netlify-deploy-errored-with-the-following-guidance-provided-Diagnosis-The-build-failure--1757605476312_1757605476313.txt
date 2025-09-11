@@ -1,0 +1,74 @@
+The Netlify deploy errored, with the following guidance provided:
+
+**Diagnosis:**
+The build failure is due to the command `vite build` not being recognized, leading to the error `sh: 1: vite: not found` at [line 68](#L68) in the build logs.
+
+**Solution:**
+To fix this issue, you need to ensure that the `vite` package is installed and available in your dependencies. Verify that `vite` is listed in your `package.json` file or was committed to the repository. If it's missing, you need to add `vite` as a dependency by running:
+```bash
+npm install vite
+```
+
+After adding `vite` as a dependency, retry the build to ensure it can be found and executed successfully.
+
+The relevant error logs are:
+
+Line 29: Started restoring cached node modules
+Line 30: Finished restoring cached node modules
+Line 31: Installing npm packages using npm version 10.8.2
+Line 32: up to date in 551ms
+Line 33: npm packages installed
+Line 34: Successfully installed dependencies
+Line 35: Starting build script
+Line 36: Detected 1 framework(s)
+Line 37: "vite" at version "5.4.19"
+Line 38: Section completed: initializing
+Line 39: Failed during stage 'building site': Build script returned non-zero exit code: 2
+Line 40: [96m[1m​[22m[39m
+Line 41: [96m[1mNetlify Build                                                 [22m[39m
+Line 42: [96m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 43: [36m[1m​[22m[39m
+Line 44: [36m[1m❯ Version[22m[39m
+Line 45:   @netlify/build 35.1.6
+Line 46: [36m[1m​[22m[39m
+Line 47: [36m[1m❯ Flags[22m[39m
+Line 48:   accountId: 68baa6315cfda67f60ddbd11
+Line 49:   baseRelDir: true
+Line 60:   production
+Line 61: [96m[1m​[22m[39m
+Line 62: [96m[1mbuild.command from netlify.toml                               [22m[39m
+Line 63: [96m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 64: ​
+Line 65: [36m$ npm run build[39m
+Line 66: > rest-express@1.0.0 build
+Line 67: > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+Line 68: sh: 1: vite: not found
+Line 69: [91m[1m​[22m[39m
+Line 70: [91m[1m"build.command" failed                                        [22m[39m
+Line 71: [91m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 72: ​
+Line 73:   [31m[1mError message[22m[39m
+Line 74:   Command failed with exit code 127: npm run build
+Line 75: ​
+Line 76:   [31m[1mError location[22m[39m
+Line 77:   In build.command from netlify.toml:
+Line 78:   npm run build
+Line 79: ​
+Line 80:   [31m[1mResolved config[22m[39m
+Line 81:   build:
+Line 82:     command: npm run build
+Line 83:     commandOrigin: config
+Line 84:     environment:
+Line 85:       - NODE_VERSION
+Line 86:       - NODE_ENV
+Line 87:     publish: /opt/build/repo/dist/public
+Line 88:     publishOrigin: config
+Line 89:   headers:
+Line 90:     - for: /*
+      values:
+        X-Content-Type-Options: nosniff
+        X-Frame-Options: DENY
+        X-XSS-Protection: 1; m
+Line 91: Build failed due to a user error: Build script returned non-zero exit code: 2
+Line 92: Failing build: Failed to build site
+Line 93: Finished processing build request in 15.773s
