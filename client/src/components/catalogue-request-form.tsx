@@ -7,12 +7,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { insertCatalogueRequestSchema } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Download, CheckCircle } from "lucide-react";
 import { z } from "zod";
+import emailjs from '@emailjs/browser';
+
+// Initialize EmailJS with your public key
+emailjs.init('Rbkf3KEL_S-ZotSOE');
 
 // Extend the schema to include multiple catalogues
 const catalogueRequestFormSchema = insertCatalogueRequestSchema.extend({
@@ -32,8 +34,8 @@ interface CatalogueRequestFormProps {
 
 export function CatalogueRequestForm({ brandName, availableCatalogues, children }: CatalogueRequestFormProps) {
   const [open, setOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  const queryClient = useQueryClient();
 
   const form = useForm<CatalogueRequestFormData>({
     resolver: zodResolver(catalogueRequestFormSchema),
@@ -49,29 +51,45 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
     },
   });
 
-  const mutation = useMutation({
-    mutationFn: (data: CatalogueRequestFormData) => 
-      apiRequest("/api/catalogue-request", "POST", data),
-    onSuccess: () => {
+  const onSubmit = async (data: CatalogueRequestFormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Send email using EmailJS
+      const templateParams = {
+        to_name: data.name,
+        to_email: data.email,
+        brand_name: brandName,
+        catalogues_list: data.requestedCatalogues.join(', '),
+        company: data.company || 'Not provided',
+        job_title: data.jobTitle || 'Not provided',
+        project_interests: data.interests || 'None specified',
+        hard_copy_requested: data.hardCopyRequested ? 'Yes' : 'No',
+        date: new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })
+      };
+
+      await emailjs.send(
+        'service_hye50c9', // Your Gmail service ID
+        'template_2tt7zih', // Template for alfredo@cartarep.com catalogue requests
+        templateParams
+      );
+
       toast({
         title: "Request Submitted Successfully!",
         description: "We'll send you the requested catalogues via email shortly.",
       });
       form.reset();
       setOpen(false);
-      queryClient.invalidateQueries({ queryKey: ["/api/catalogue-request"] });
-    },
-    onError: (error: any) => {
+    } catch (error) {
+      console.error('EmailJS error:', error);
       toast({
         title: "Request Failed",
-        description: error.message || "Something went wrong. Please try again.",
+        description: "Something went wrong. Please try again.",
         variant: "destructive",
       });
-    },
-  });
-
-  const onSubmit = (data: CatalogueRequestFormData) => {
-    mutation.mutate(data);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -297,11 +315,11 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
               </Button>
               <Button
                 type="submit"
-                disabled={mutation.isPending}
+                disabled={isSubmitting}
                 className="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white"
                 data-testid="button-catalogue-submit"
               >
-                {mutation.isPending ? (
+                {isSubmitting ? (
                   <>
                     <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
                     Submitting...

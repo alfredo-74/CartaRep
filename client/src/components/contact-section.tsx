@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Instagram, Linkedin, Send } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { insertContactInquirySchema } from "@shared/schema";
-import { apiRequest } from "../lib/queryClient";
 import { useToast } from "../hooks/use-toast";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -12,14 +10,18 @@ import { Textarea } from "./ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "./ui/form";
 import type { z } from "zod";
+import emailjs from '@emailjs/browser';
+
+// Initialize EmailJS with your public key
+emailjs.init('Rbkf3KEL_S-ZotSOE');
 
 type ContactFormData = z.infer<typeof insertContactInquirySchema>;
 
 export default function ContactSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
-  const queryClient = useQueryClient();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,27 +52,42 @@ export default function ContactSection() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: (data: ContactFormData) => apiRequest("POST", "/api/contact", data),
-    onSuccess: () => {
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        company: data.company || 'Not provided',
+        project_type: data.projectType,
+        budget_range: data.budget || 'Not specified',
+        message: data.message,
+        date: new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })
+      };
+
+      await emailjs.send(
+        'service_hye50c9', // Your Gmail service ID
+        'template_ucf5rac', // Template for anna@cartarep.com
+        templateParams
+      );
+
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you within 24 hours.",
       });
       form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contact"] });
-    },
-    onError: () => {
+    } catch (error) {
+      console.error('EmailJS error:', error);
       toast({
         title: "Something went wrong",
         description: "Please try again or contact us directly at anna@cartarep.com",
         variant: "destructive",
       });
-    },
-  });
-
-  const onSubmit = (data: ContactFormData) => {
-    contactMutation.mutate(data);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -212,10 +229,10 @@ export default function ContactSection() {
                 <Button 
                   type="submit" 
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                  disabled={contactMutation.isPending}
+                  disabled={isSubmitting}
                   data-testid="button-submit"
                 >
-                  {contactMutation.isPending ? (
+                  {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2"></div>
                       Sending...
