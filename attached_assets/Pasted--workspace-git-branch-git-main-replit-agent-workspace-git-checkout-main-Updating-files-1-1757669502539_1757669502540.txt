@@ -1,0 +1,182 @@
+~/workspace$ git branch
+* git
+  main
+  replit-agent
+~/workspace$ git checkout main
+Updating files: 100% (97/97), done.
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 116 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+~/workspace$ git pull origin main
+From https://github.com/alfredo-74/CartaRep
+ * branch            main       -> FETCH_HEAD
+Updating b60ee89..e799970
+Fast-forward
+ .env.example                                                                                                                                        |  78 +++++++++++++++++++++++++++++++++++++
+ .gitignore                                                                                                                                          |  57 +++++++++++++++++++++++++--
+ .replit                                                                                                                                             |   4 ++
+ DEPLOYMENT.md                                                                                                                                       | 216 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ attached_assets/2405_NEWS24_ERA_00005_1757514418172.jpg                                                                                             | Bin 14626476 -> 0 bytes
+ attached_assets/2405_NEWS24_TEMPO_00003_1757514418171.jpg                                                                                           | Bin 13994657 -> 0 bytes
+ attached_assets/AVATAR POP museum_1757514418169.jpg                                                                                                 | Bin 2582586 -> 0 bytes
+ attached_assets/CANDELA cuerdas 1200x1200_1757514418159.jpg                                                                                         | Bin 96893 -> 0 bytes
+ attached_assets/CELESTE oficina horizontal_1757514418158.jpg                                                                                        | Bin 245580 -> 0 bytes
+ attached_assets/ChatGPT Image Sep 4, 2025, 06_46_17 PM_1757009566710.png                                                                            | Bin 1959524 -> 0 bytes
+ attached_assets/ESTELA ambiente_1757514418168.jpg                                                                                                   | Bin 5633263 -> 0 bytes
+ attached_assets/General-View-Bretema-Euroluce-2025-plana_1757514418162.jpg                                                                          | Bin 116713 -> 0 bytes
+ attached_assets/KATANA detail_1757514418155.jpg                                                                                                     | Bin 150294 -> 0 bytes
+ attached_assets/MEDUSA ambiente 34200 _1757514220366.jpg                                                                                            | Bin 257258 -> 0 bytes
+ attached_assets/MEDUSA ambiente shape 2_1757514418166.jpg                                                                                           | Bin 5712834 -> 0 bytes
+ attached_assets/MEDUSA studio2_1757514418146.jpg                                                                                                    | Bin 110349 -> 0 bytes
+ attached_assets/MORGANA 31200_200 ambiente - Ole Lighting_1757514418165.jpg                                                                         | Bin 9727469 -> 0 bytes
+ attached_assets/NEXO restaurante 1200x1200_1757514418160.jpg                                                                                        | Bin 141948 -> 0 bytes
+ attached_assets/Oficinas ESTELEC by KeenDesign_1757514220367.jpg                                                                                    | Bin 163249 -> 0 bytes
+ attached_assets/OllieWollie-BoldItalic_1757521695519.ttf                                                                                            | Bin 36880 -> 0 bytes
+ attached_assets/OllieWollie-Bold_1757521695519.ttf                                                                                                  | Bin 32436 -> 0 bytes
+ attached_assets/OllieWollie-Italic_1757521695518.ttf                                                                                                | Bin 36092 -> 0 bytes
+ attached_assets/OllieWollie-Regular_1757523310626.ttf                                                                                               | Bin 31060 -> 0 bytes
+ attached_assets/PAGODA Colgante Ambiente 1200x1200_1757514418161.jpg                                                                                | Bin 229439 -> 0 bytes
+ attached_assets/PAMPA ambiente_1757514418156.jpg                                                                                                    | Bin 201226 -> 0 bytes
+ attached_assets/Pasted-The-Netlify-deploy-errored-with-the-following-guidance-provided-Diagnosis-The-build-failure--1757605291534_1757605291535.txt |  51 ++++++++++++++++++++++++
+ attached_assets/Pasted-The-Netlify-deploy-errored-with-the-following-guidance-provided-Diagnosis-The-build-failure--1757605476312_1757605476313.txt |  74 +++++++++++++++++++++++++++++++++++
+ attached_assets/R&C-Demo_1757266806935.otf                                                                                                          | Bin 172568 -> 0 bytes
+ attached_assets/SONORA ambiente colgante gris_1757514418154.jpg                                                                                     | Bin 244499 -> 0 bytes
+ attached_assets/Screenshot 2025-01-04 184222_1757514418163.jpg                                                                                      | Bin 168316 -> 0 bytes
+ attached_assets/Screenshot 2025-09-04 20.05.48_1757012768346.png                                                                                    | Bin 86175 -> 0 bytes
+ attached_assets/Screenshot 2025-09-09 15.15.08_1757429085165.png                                                                                    | Bin 9727 -> 0 bytes
+ attached_assets/Screenshot 2025-09-09 15.26.59_1757429085163.png                                                                                    | Bin 1587 -> 0 bytes
+ attached_assets/Screenshot 2025-09-10 10.11.27_1757495500192.png                                                                                    | Bin 170753 -> 0 bytes
+ attached_assets/Screenshot 2025-09-10 11.06.42_1757498806989.png                                                                                    | Bin 417078 -> 0 bytes
+ attached_assets/Screenshot 2025-09-10 12.29.13_1757503805868.png                                                                                    | Bin 386842 -> 0 bytes
+ attached_assets/Screenshot 2025-09-10 17.58.22_1757523509326.png                                                                                    | Bin 104449 -> 0 bytes
+ attached_assets/Screenshot 2025-09-10 18.00.47_1757523674667.png                                                                                    | Bin 9075 -> 0 bytes
+ attached_assets/Screenshot 2025-09-11 16.20.02_1757604097137.png                                                                                    | Bin 0 -> 979957 bytes
+ attached_assets/Screenshot 2025-09-11 16.20.07_1757604097130.png                                                                                    | Bin 0 -> 955478 bytes
+ attached_assets/a-emotional_1757429085155.jpg                                                                                                       | Bin 1398769 -> 0 bytes
+ attached_assets/a-emotional_1757495035640.jpg                                                                                                       | Bin 1398769 -> 0 bytes
+ attached_assets/a-emotional_1757495041474.jpg                                                                                                       | Bin 1398769 -> 0 bytes
+ attached_assets/a-emotional_1757496769938.jpeg                                                                                                      | Bin 19096 -> 0 bytes
+ attached_assets/a-emotional_1757497217308.jpg                                                                                                       | Bin 14102 -> 0 bytes
+ attached_assets/adamas1_1757514220358.jpg                                                                                                           | Bin 69670 -> 0 bytes
+ attached_assets/adamas2_1757514144589.jpg                                                                                                           | Bin 66670 -> 0 bytes
+ attached_assets/adamas_1757514220359.jpg                                                                                                            | Bin 142681 -> 0 bytes
+ attached_assets/agasallo_1757514220344.jpg                                                                                                          | Bin 123841 -> 0 bytes
+ attached_assets/bella_1757514220356.jpg                                                                                                             | Bin 43476 -> 0 bytes
+ attached_assets/bol_1757514144576.jpg                                                                                                               | Bin 165291 -> 0 bytes
+ attached_assets/bover (1)_1757497102856.jpg                                                                                                         | Bin 36716 -> 0 bytes
+ attached_assets/bover_1757496769940.jpeg                                                                                                            | Bin 19443 -> 0 bytes
+ attached_assets/bover_1757496954011.jpg                                                                                                             | Bin 33606 -> 0 bytes
+ attached_assets/bover_1757514144584.jpg                                                                                                             | Bin 76423 -> 0 bytes
+ attached_assets/bover_barcelona_lights_logo_1757429085164.jpeg                                                                                      | Bin 25976 -> 0 bytes
+ attached_assets/coral_1757514220352.jpg                                                                                                             | Bin 115534 -> 0 bytes
+ attached_assets/drep_1757514144579.jpg                                                                                                              | Bin 128803 -> 0 bytes
+ attached_assets/esignature_1757011490490.png                                                                                                        | Bin 109613 -> 0 bytes
+ attached_assets/euro_1757514144588.jpg                                                                                                              | Bin 69564 -> 0 bytes
+ attached_assets/eurol_1757514144591.jpg                                                                                                             | Bin 55140 -> 0 bytes
+ attached_assets/hilow_1757514220365.jpg                                                                                                             | Bin 116894 -> 0 bytes
+ attached_assets/kando_1757514144561.jpg                                                                                                             | Bin 453198 -> 0 bytes
+ attached_assets/logo_high_res_1757010923845.pxz                                                                                                     | Bin 5237161 -> 0 bytes
+ attached_assets/medi_1757514144573.jpg                                                                                                              | Bin 70253 -> 0 bytes
+ attached_assets/murane_1757514220362.jpg                                                                                                            | Bin 169498 -> 0 bytes
+ attached_assets/nanas1_1757514144574.jpg                                                                                                            | Bin 238347 -> 0 bytes
+ attached_assets/nans3_1757514144571.jpg                                                                                                             | Bin 303866 -> 0 bytes
+ attached_assets/nans_1757514144577.jpg                                                                                                              | Bin 245784 -> 0 bytes
+ attached_assets/non la_1757514144583.jpg                                                                                                            | Bin 108607 -> 0 bytes
+ attached_assets/ombra_1757514220361.jpg                                                                                                             | Bin 33632 -> 0 bytes
+ attached_assets/panzeri_1757495064222.png                                                                                                           | Bin 1587 -> 0 bytes
+ attached_assets/rendez vous_1757514220364.jpg                                                                                                       | Bin 130489 -> 0 bytes
+ attached_assets/roma1_1757514220353.jpg                                                                                                             | Bin 184099 -> 0 bytes
+ attached_assets/roma_1757514220357.jpg                                                                                                              | Bin 142117 -> 0 bytes
+ attached_assets/rosa_1757514144585.jpg                                                                                                              | Bin 26062 -> 0 bytes
+ attached_assets/skybell_1757514144581.jpg                                                                                                           | Bin 238937 -> 0 bytes
+ attached_assets/tonda_1757514144587.jpg                                                                                                             | Bin 113576 -> 0 bytes
+ attached_assets/umbra_1757514220351.jpg                                                                                                             | Bin 53392 -> 0 bytes
+ attached_assets/zero round_1757514220355.jpg                                                                                                        | Bin 60871 -> 0 bytes
+ attached_assets/OllieWollie-Regular_1757521695517.ttf => client/public/fonts/OllieWollie-Regular.ttf                                                | Bin
+ client/src/components/background-carousel.tsx                                                                                                       |  62 +++++++++++++++--------------
+ client/src/index.css                                                                                                                                |   2 +-
+ netlify.toml                                                                                                                                        |  43 +++++++++++++++++++++
+ 84 files changed, 550 insertions(+), 37 deletions(-)
+ create mode 100644 .env.example
+ create mode 100644 DEPLOYMENT.md
+ delete mode 100644 attached_assets/2405_NEWS24_ERA_00005_1757514418172.jpg
+ delete mode 100644 attached_assets/2405_NEWS24_TEMPO_00003_1757514418171.jpg
+ delete mode 100644 attached_assets/AVATAR POP museum_1757514418169.jpg
+ delete mode 100644 attached_assets/CANDELA cuerdas 1200x1200_1757514418159.jpg
+ delete mode 100644 attached_assets/CELESTE oficina horizontal_1757514418158.jpg
+ delete mode 100644 attached_assets/ChatGPT Image Sep 4, 2025, 06_46_17 PM_1757009566710.png
+ delete mode 100644 attached_assets/ESTELA ambiente_1757514418168.jpg
+ delete mode 100644 attached_assets/General-View-Bretema-Euroluce-2025-plana_1757514418162.jpg
+ delete mode 100644 attached_assets/KATANA detail_1757514418155.jpg
+ delete mode 100644 attached_assets/MEDUSA ambiente 34200 _1757514220366.jpg
+ delete mode 100644 attached_assets/MEDUSA ambiente shape 2_1757514418166.jpg
+ delete mode 100644 attached_assets/MEDUSA studio2_1757514418146.jpg
+ delete mode 100644 attached_assets/MORGANA 31200_200 ambiente - Ole Lighting_1757514418165.jpg
+ delete mode 100644 attached_assets/NEXO restaurante 1200x1200_1757514418160.jpg
+ delete mode 100644 attached_assets/Oficinas ESTELEC by KeenDesign_1757514220367.jpg
+ delete mode 100644 attached_assets/OllieWollie-BoldItalic_1757521695519.ttf
+ delete mode 100644 attached_assets/OllieWollie-Bold_1757521695519.ttf
+ delete mode 100644 attached_assets/OllieWollie-Italic_1757521695518.ttf
+ delete mode 100644 attached_assets/OllieWollie-Regular_1757523310626.ttf
+ delete mode 100644 attached_assets/PAGODA Colgante Ambiente 1200x1200_1757514418161.jpg
+ delete mode 100644 attached_assets/PAMPA ambiente_1757514418156.jpg
+ create mode 100644 attached_assets/Pasted-The-Netlify-deploy-errored-with-the-following-guidance-provided-Diagnosis-The-build-failure--1757605291534_1757605291535.txt
+ create mode 100644 attached_assets/Pasted-The-Netlify-deploy-errored-with-the-following-guidance-provided-Diagnosis-The-build-failure--1757605476312_1757605476313.txt
+ delete mode 100644 attached_assets/R&C-Demo_1757266806935.otf
+ delete mode 100644 attached_assets/SONORA ambiente colgante gris_1757514418154.jpg
+ delete mode 100644 attached_assets/Screenshot 2025-01-04 184222_1757514418163.jpg
+ delete mode 100644 attached_assets/Screenshot 2025-09-04 20.05.48_1757012768346.png
+ delete mode 100644 attached_assets/Screenshot 2025-09-09 15.15.08_1757429085165.png
+ delete mode 100644 attached_assets/Screenshot 2025-09-09 15.26.59_1757429085163.png
+ delete mode 100644 attached_assets/Screenshot 2025-09-10 10.11.27_1757495500192.png
+ delete mode 100644 attached_assets/Screenshot 2025-09-10 11.06.42_1757498806989.png
+ delete mode 100644 attached_assets/Screenshot 2025-09-10 12.29.13_1757503805868.png
+ delete mode 100644 attached_assets/Screenshot 2025-09-10 17.58.22_1757523509326.png
+ delete mode 100644 attached_assets/Screenshot 2025-09-10 18.00.47_1757523674667.png
+ create mode 100644 attached_assets/Screenshot 2025-09-11 16.20.02_1757604097137.png
+ create mode 100644 attached_assets/Screenshot 2025-09-11 16.20.07_1757604097130.png
+ delete mode 100644 attached_assets/a-emotional_1757429085155.jpg
+ delete mode 100644 attached_assets/a-emotional_1757495035640.jpg
+ delete mode 100644 attached_assets/a-emotional_1757495041474.jpg
+ delete mode 100644 attached_assets/a-emotional_1757496769938.jpeg
+ delete mode 100644 attached_assets/a-emotional_1757497217308.jpg
+ delete mode 100644 attached_assets/adamas1_1757514220358.jpg
+ delete mode 100644 attached_assets/adamas2_1757514144589.jpg
+ delete mode 100644 attached_assets/adamas_1757514220359.jpg
+ delete mode 100644 attached_assets/agasallo_1757514220344.jpg
+ delete mode 100644 attached_assets/bella_1757514220356.jpg
+ delete mode 100644 attached_assets/bol_1757514144576.jpg
+ delete mode 100644 attached_assets/bover (1)_1757497102856.jpg
+ delete mode 100644 attached_assets/bover_1757496769940.jpeg
+ delete mode 100644 attached_assets/bover_1757496954011.jpg
+ delete mode 100644 attached_assets/bover_1757514144584.jpg
+ delete mode 100644 attached_assets/bover_barcelona_lights_logo_1757429085164.jpeg
+ delete mode 100644 attached_assets/coral_1757514220352.jpg
+ delete mode 100644 attached_assets/drep_1757514144579.jpg
+ delete mode 100644 attached_assets/esignature_1757011490490.png
+ delete mode 100644 attached_assets/euro_1757514144588.jpg
+ delete mode 100644 attached_assets/eurol_1757514144591.jpg
+ delete mode 100644 attached_assets/hilow_1757514220365.jpg
+ delete mode 100644 attached_assets/kando_1757514144561.jpg
+ delete mode 100644 attached_assets/logo_high_res_1757010923845.pxz
+ delete mode 100644 attached_assets/medi_1757514144573.jpg
+ delete mode 100644 attached_assets/murane_1757514220362.jpg
+ delete mode 100644 attached_assets/nanas1_1757514144574.jpg
+ delete mode 100644 attached_assets/nans3_1757514144571.jpg
+ delete mode 100644 attached_assets/nans_1757514144577.jpg
+ delete mode 100644 attached_assets/non la_1757514144583.jpg
+ delete mode 100644 attached_assets/ombra_1757514220361.jpg
+ delete mode 100644 attached_assets/panzeri_1757495064222.png
+ delete mode 100644 attached_assets/rendez vous_1757514220364.jpg
+ delete mode 100644 attached_assets/roma1_1757514220353.jpg
+ delete mode 100644 attached_assets/roma_1757514220357.jpg
+ delete mode 100644 attached_assets/rosa_1757514144585.jpg
+ delete mode 100644 attached_assets/skybell_1757514144581.jpg
+ delete mode 100644 attached_assets/tonda_1757514144587.jpg
+ delete mode 100644 attached_assets/umbra_1757514220351.jpg
+ delete mode 100644 attached_assets/zero round_1757514220355.jpg
+ rename attached_assets/OllieWollie-Regular_1757521695517.ttf => client/public/fonts/OllieWollie-Regular.ttf (100%)
+ create mode 100644 netlify.toml
+~/workspace$ git push origin main
+Everything up-to-date
+~/workspace$ 
