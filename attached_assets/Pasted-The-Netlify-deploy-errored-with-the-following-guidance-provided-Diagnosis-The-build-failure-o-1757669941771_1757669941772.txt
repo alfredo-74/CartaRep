@@ -1,0 +1,69 @@
+The Netlify deploy errored, with the following guidance provided:
+
+### Diagnosis
+The build failure occurred because Rollup failed to resolve the import for `@emailjs/browser` in the file `client/src/components/contact-section.tsx`.
+
+The error indicates that the module `@emailjs/browser` needs to be added to `build.rollupOptions.external` explicitly.
+
+### Solution
+To resolve this issue:
+1. Verify that the package `@emailjs/browser` is included in the `package.json` file or has been committed to the repository.
+2. Add `@emailjs/browser` to the `build.rollupOptions.external` configuration.
+
+By explicitly adding `@emailjs/browser` to the `build.rollupOptions.external`, Rollup will treat it as an external dependency and not try to resolve it within the build.
+
+The relevant error logs are:
+
+Line 61: ​
+Line 62: [36m$ npm run build[39m
+Line 63: > rest-express@1.0.0 build
+Line 64: > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+Line 65: [36mvite v5.4.19 [32mbuilding for production...[36m[39m
+Line 66: transforming...
+Line 67: Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+Line 68:   npx update-browserslist-db@latest
+Line 69:   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Line 70: [32m✓[39m 49 modules transformed.
+Line 71: [31mx[39m Build failed in 1.20s
+Line 72: [31merror during build:
+Line 73: [31m[vite]: Rollup failed to resolve import "@emailjs/browser" from "/opt/build/repo/client/src/components/contact-section.tsx"
+Line 74: This is most likely unintended because it can break your application at runtime.
+Line 75: If you do want to externalize this module explicitly add it to
+Line 76: `build.rollupOptions.external`[31m
+Line 77:     at viteWarn (file:///opt/build/repo/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:65839:17)
+Line 78:     at onwarn (file:///opt/build/repo/node_modules/@vitejs/plugin-react/dist/index.mjs:280:9)
+Line 79:     at onRollupWarning (file:///opt/build/repo/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:65869:5)
+Line 80:     at onwarn (file:///opt/build/repo/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:65534:7)
+Line 81:     at file:///opt/build/repo/node_modules/rollup/dist/es/shared/node-entry.js:19452:13
+Line 82:     at Object.logger [as onLog] (file:///opt/build/repo/node_modules/rollup/dist/es/shared/node-entry.js:21178:9)
+Line 83:     at ModuleLoader.handleInvalidResolvedId (file:///opt/build/repo/node_modules/rollup/dist/es/shared/node-entry.js:20067:26)
+Line 84:     at file:///opt/build/repo/node_modules/rollup/dist/es/shared/node-entry.js:20025:26[39m
+Line 85: [91m[1m​[22m[39m
+Line 86: [91m[1m"build.command" failed                                        [22m[39m
+Line 87: [91m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 88: ​
+Line 89:   [31m[1mError message[22m[39m
+Line 90:   Command failed with exit code 1: npm run build
+Line 91: ​
+Line 92:   [31m[1mError location[22m[39m
+Line 93:   In build.command from netlify.toml:
+Line 94:   npm run build
+Line 95: ​
+Line 96:   [31m[1mResolved config[22m[39m
+Line 97:   build:
+Line 98:     command: npm run build
+Line 99:     commandOrigin: config
+Line 100:     environment:
+Line 101:       - NODE_VERSION
+Line 102:     publish: /opt/build/repo/dist/public
+Line 103:     publishOrigin: config
+Line 104:   headers:
+Line 105: Failed during stage 'building site': Build script returned non-zero exit code: 2
+Line 106:     - for: /*
+      values:
+        X-Content-Type-Options: nosniff
+        X-Frame-Options: DENY
+        X-XSS-Protection: 1; m
+Line 107: Build failed due to a user error: Build script returned non-zero exit code: 2
+Line 108: Failing build: Failed to build site
+Line 109: Finished processing build request in 19.833s
