@@ -165,7 +165,7 @@ export default function OurBrands() {
     {
       name: "a·emotional light",
       logoUrl: aEmotionalLogo,
-      description: "Emotion takes form through craftsmanship and design. Each piece is handcrafted, organic, and nature-inspired, blending art and light into unique creations that bring warmth, beauty, and individuality to residential and hospitality interiors.",
+      description: "A-emotional Light takes sculptural form through craftsmanship and design. Each handcrafted piece is organic and nature-inspired, blending art and light into unique creations that bring warmth, beauty, and individuality to residential and hospitality interiors.",
       category: "",
       specialty: "",
       tagline: "",

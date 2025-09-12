@@ -54,7 +54,7 @@ export default function Navigation() {
           {/* CartaRep Logo */}
           <div className="flex items-center">
             <span className="pink-neon-text text-3xl font-neon font-bold" data-testid="text-nav-brand">
-              CartaRep
+              CartaRep<sup className="text-xs">®</sup>
             </span>
           </div>
           

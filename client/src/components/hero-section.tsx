@@ -35,7 +35,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-6 text-center z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`}>
           <h1 className="neon-text text-6xl md:text-8xl font-neon font-black mb-6" data-testid="text-hero-title">
-            CartaRep
+            CartaRep<sup className="text-2xl md:text-3xl">®</sup>
           </h1>
           <p className={`text-xl md:text-2xl ${getRandomColor()} mb-8 max-w-3xl mx-auto font-medium`} data-testid="text-hero-subtitle">
             Design consultancy agency in the heart of London
