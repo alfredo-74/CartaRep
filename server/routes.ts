@@ -2,7 +2,6 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactInquirySchema, insertCatalogueRequestSchema } from "@shared/schema";
-import { sendCatalogueEmail, sendContactNotification } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -14,19 +13,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Create the contact inquiry in storage
       const inquiry = await storage.createContactInquiry(validatedData);
       
-      // Send notification email to Anna
-      try {
-        await sendContactNotification({
-          name: inquiry.name,
-          email: inquiry.email,
-          company: inquiry.company || undefined,
-          message: inquiry.message
-        });
-        console.log(`Contact notification email sent to anna@cartarep.com for inquiry from ${inquiry.email}`);
-      } catch (emailError) {
-        console.error("Failed to send contact notification email:", emailError);
-        // Don't fail the request if email fails - still save the inquiry
-      }
+      // Note: Email is now handled client-side via EmailJS
       
       res.status(201).json({ 
         success: true, 
@@ -73,19 +60,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Create the catalogue request in storage
       const request = await storage.createCatalogueRequest(validatedData);
       
-      // Send confirmation email to the lead
-      try {
-        await sendCatalogueEmail(
-          request.email,
-          request.name,
-          request.brandName,
-          request.requestedCatalogues
-        );
-        console.log(`Catalogue confirmation email sent to ${request.email} for ${request.brandName}`);
-      } catch (emailError) {
-        console.error("Failed to send catalogue email:", emailError);
-        // Don't fail the request if email fails - still save the lead
-      }
+      // Note: Email is now handled client-side via EmailJS
       
       res.status(201).json({ 
         success: true, 
