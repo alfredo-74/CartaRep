@@ -70,7 +70,7 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
 
       await emailjs.send(
         'service_hye50c9', // Your Gmail service ID
-        'template_2tt7zih', // Template for alfredo@cartarep.com catalogue requests
+        'template_wri7lv3', // Template for alfredo@cartarep.com catalogue requests
         templateParams
       );
 
