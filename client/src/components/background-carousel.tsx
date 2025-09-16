@@ -1,11 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 import { LazyBackground } from "./lazy-image";
 
-// Import available local images from client/src/assets
-import boverNewestImg from "../assets/bover-newest.jpg";
-import aEmotionalImg from "../assets/a-emotional-final.jpg";
-import oleLogo from "../assets/ole-logo.png";
-import panzeriLogo from "../assets/panzeri-logo-new.png";
+// Import lighting collection images from client/src/assets
+import eraImg from "../assets/2405_NEWS24_ERA_00005_1757517578743_1758039118793.jpg";
+import tempoImg from "../assets/2405_NEWS24_TEMPO_00003_1757517578742_1758039118793.jpg";
+import umbraImg from "../assets/umbra_1757517578738_1758039118797.jpg";
+import tondaImg from "../assets/tonda_1757517578733_1758039118797.jpg";
+import skybellImg from "../assets/skybell_1757513820674_1758039118797.jpg";
+import morganaImg from "../assets/MORGANA 31200_200 ambiente - Ole Lighting_1757519669166_1758039118794.jpg";
+import medusaImg from "../assets/MEDUSA ambiente shape 2_1757519669167_1758039118795.jpg";
+import zeroRoundImg from "../assets/zero round_1757519446548_1758039118796.jpg";
+import rendezVousImg from "../assets/rendez vous_1757519446557_1758039118798.jpg";
+import nansImg from "../assets/nans_1757519174473_1758039118799.jpg";
+import muraneImg from "../assets/murane_1757519446556_1758039118800.jpg";
+import rosaImg from "../assets/rosa_1757513820678_1758039118797.jpg";
 
 export default function BackgroundCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,16 +34,19 @@ export default function BackgroundCarousel() {
   // Performance optimization: Images are lazy-loaded on demand
   // Only visible + buffer images are loaded at any time
   const allImages = [
-    // Available local images
-    boverNewestImg,
-    aEmotionalImg,
-    oleLogo,
-    panzeriLogo,
-    // Create a more diverse carousel by repeating available images
-    boverNewestImg,
-    aEmotionalImg,
-    oleLogo,
-    panzeriLogo
+    // Beautiful lighting collection images from all brands
+    eraImg,           // a·emotional light Era collection
+    tempoImg,         // a·emotional light Tempo collection
+    umbraImg,         // a·emotional light Umbra collection
+    tondaImg,         // a·emotional light Tonda collection
+    morganaImg,       // Olé Lighting Morgana collection
+    medusaImg,        // Olé Lighting Medusa collection
+    skybellImg,       // Bover Skybell collection
+    nansImg,          // Bover Nans collection
+    zeroRoundImg,     // Panzeri Zero Round collection
+    rendezVousImg,    // Panzeri Rendez-Vous collection
+    muraneImg,        // Panzeri Muranè collection
+    rosaImg           // a·emotional light Rosa collection
   ];
 
   // Initialize with shuffled images on mount
