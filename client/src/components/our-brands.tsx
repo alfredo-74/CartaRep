@@ -7,8 +7,33 @@ import oleLogo from '@/assets/ole-logo.png';
 import boverLogo from '@/assets/bover-newest.jpg';
 import panzeriLogo from '@/assets/panzeri-logo-new.png';
 
-// Placeholder for collection images - using existing brand logos for now
-// Note: Additional collection images would need to be added to assets directory
+// Import lighting collection images
+import eraImg from '@/assets/2405_NEWS24_ERA_00005_1757517578743_1758039118793.jpg';
+import tempoImg from '@/assets/2405_NEWS24_TEMPO_00003_1757517578742_1758039118793.jpg';
+import umbraImg from '@/assets/umbra_1757517578738_1758039118797.jpg';
+import tondaImg from '@/assets/tonda_1757517578733_1758039118797.jpg';
+import rosaImg from '@/assets/rosa_1757513820678_1758039118797.jpg';
+
+// Olé Lighting collection images
+import morganaImg from '@/assets/MORGANA 31200_200 ambiente - Ole Lighting_1757519669166_1758039118794.jpg';
+import medusaImg from '@/assets/MEDUSA ambiente shape 2_1757519669167_1758039118795.jpg';
+import avatarPopImg from '@/assets/AVATAR POP museum_1757513870530_1758039118796.jpg';
+
+// Bover Barcelona collection images
+import skybellImg from '@/assets/skybell_1757513820674_1758039118797.jpg';
+import nansImg from '@/assets/nans_1757519174473_1758039118799.jpg';
+import nans3Img from '@/assets/nans3_1757513820666_1758039118799.jpg';
+import nanas1Img from '@/assets/nanas1_1757513820669_1758039118800.jpg';
+import nonLaImg from '@/assets/non la_1757519174478_1758039118799.jpg';
+import mediImg from '@/assets/medi_1757519174469_1758039118800.jpg';
+
+// Panzeri Lighting collection images
+import zeroRoundImg from '@/assets/zero round_1757519446548_1758039118796.jpg';
+import romaImg from '@/assets/roma_1757519446551_1758039118798.jpg';
+import roma1Img from '@/assets/roma1_1757519446547_1758039118798.jpg';
+import rendezVousImg from '@/assets/rendez vous_1757519446557_1758039118798.jpg';
+import ombraImg from '@/assets/ombra_1757519446555_1758039118799.jpg';
+import muraneImg from '@/assets/murane_1757519446556_1758039118800.jpg';
 
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
@@ -124,19 +149,29 @@ export default function OurBrands() {
       website: "https://www.a-emotionallight.com/",
       collections: [
         {
-          name: "Handcrafted Collection",
-          image: aEmotionalLogo,
-          alt: "a·emotional light handcrafted lighting collection"
+          name: "Era Collection",
+          image: eraImg,
+          alt: "a·emotional light Era contemporary black pendant lighting"
         },
         {
-          name: "Contemporary Series",
-          image: aEmotionalLogo,
-          alt: "a·emotional light contemporary lighting series"
+          name: "Tempo Collection",
+          image: tempoImg,
+          alt: "a·emotional light Tempo rhythmic pleated lighting collection"
         },
         {
-          name: "Organic Designs",
-          image: aEmotionalLogo,
-          alt: "a·emotional light organic lighting designs"
+          name: "Umbra Collection",
+          image: umbraImg,
+          alt: "a·emotional light Umbra circular halo lighting series"
+        },
+        {
+          name: "Tonda Collection",
+          image: tondaImg,
+          alt: "a·emotional light Tonda circular lighting with intricate patterns"
+        },
+        {
+          name: "Rosa Collection",
+          image: rosaImg,
+          alt: "a·emotional light Rosa elegant pink pendant lighting"
         }
       ]
     },
@@ -150,19 +185,19 @@ export default function OurBrands() {
       website: "https://www.ole-lighting.com/en",
       collections: [
         {
-          name: "Indoor Lighting Collection",
-          image: oleLogo,
-          alt: "Olé Lighting indoor lighting solutions"
+          name: "Morgana Collection",
+          image: morganaImg,
+          alt: "Olé Lighting Morgana slatted floor lamp in minimalist interior"
         },
         {
-          name: "Outdoor Lighting Series",
-          image: oleLogo,
-          alt: "Olé Lighting outdoor lighting systems"
+          name: "Medusa Collection",
+          image: medusaImg,
+          alt: "Olé Lighting Medusa geometric pendant in modern living room"
         },
         {
-          name: "Sustainable Designs",
-          image: oleLogo,
-          alt: "Olé Lighting sustainable lighting designs"
+          name: "Avatar Pop Collection",
+          image: avatarPopImg,
+          alt: "Olé Lighting Avatar Pop ambient system in museum setting"
         }
       ]
     },
@@ -176,19 +211,34 @@ export default function OurBrands() {
       website: "https://bover.es/en/",
       collections: [
         {
-          name: "Mediterranean Collection",
-          image: boverLogo,
-          alt: "Bover Mediterranean-inspired lighting collection"
+          name: "Skybell Collection",
+          image: skybellImg,
+          alt: "Bover Skybell circular pendant system in hospitality space"
         },
         {
-          name: "Outdoor Collection",
-          image: boverLogo,
-          alt: "Bover outdoor lighting collection"
+          name: "Nans Outdoor Collection",
+          image: nansImg,
+          alt: "Bover Nans spherical pendant lights in outdoor dining area"
         },
         {
-          name: "Contemporary Indoor Series",
-          image: boverLogo,
-          alt: "Bover contemporary indoor lighting series"
+          name: "Nans Bar Collection",
+          image: nans3Img,
+          alt: "Bover Nans woven pendant lights in Mediterranean bar setting"
+        },
+        {
+          name: "Nanas Detail Collection",
+          image: nanas1Img,
+          alt: "Bover Nanas woven pendant light close-up detail"
+        },
+        {
+          name: "Non La Collection",
+          image: nonLaImg,
+          alt: "Bover Non La conical pendant light in warm setting"
+        },
+        {
+          name: "Medi Collection",
+          image: mediImg,
+          alt: "Bover Medi flowing organic pendant light"
         }
       ]
     },
@@ -202,19 +252,34 @@ export default function OurBrands() {
       website: "https://panzeri.it/en/",
       collections: [
         {
-          name: "Italian Design Collection",
-          image: panzeriLogo,
-          alt: "Panzeri Italian design lighting collection"
+          name: "Zero Round Collection",
+          image: zeroRoundImg,
+          alt: "Panzeri Zero Round minimalist circular geometric pendant system"
         },
         {
-          name: "Architectural Series",
-          image: panzeriLogo,
-          alt: "Panzeri architectural lighting series"
+          name: "Roma Collection",
+          image: romaImg,
+          alt: "Panzeri Roma cylindrical floor lamps in living space"
         },
         {
-          name: "Decorative Lighting",
-          image: panzeriLogo,
-          alt: "Panzeri decorative lighting collection"
+          name: "Roma Wall Series",
+          image: roma1Img,
+          alt: "Panzeri Roma cylindrical wall lighting installation"
+        },
+        {
+          name: "Rendez-Vous Collection",
+          image: rendezVousImg,
+          alt: "Panzeri Rendez-Vous triangular pendant constellation"
+        },
+        {
+          name: "Ombra Collection",
+          image: ombraImg,
+          alt: "Panzeri Ombra minimalist cylindrical table lamp"
+        },
+        {
+          name: "Muranè Collection",
+          image: muraneImg,
+          alt: "Panzeri Muranè golden glass pendant cluster"
         }
       ]
     }
