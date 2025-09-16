@@ -36,11 +36,19 @@ import tondaImg from './tonda_1757517578733_1758039118797.jpg';
 import umbraImg from './umbra_1757517578738_1758039118797.jpg';
 import zeroRoundImg from './zero round_1757519446548_1758039118796.jpg';
 
-// Additional placeholder variables for collections not yet having dedicated images
-const nans3Img = boverLogo;
-const nanas1Img = boverLogo;
-const nonLaImg = boverLogo;
-const mediImg = boverLogo;
+// Bover Barcelona collection imports - Real lighting collection photos
+import kandoImg from './kando_1758044400030.jpg';
+import nans3NewImg from './nans3_1758044400032.jpg';
+import mediNewImg from './medi_1758044400033.jpg';
+import nanas1NewImg from './nanas1_1758044400034.jpg';
+import bolImg from './bol_1758044400035.jpg';
+import nansNewImg from './nans_1758044400036.jpg';
+import drepImg from './drep_1758044400037.jpg';
+import skybellNewImg from './skybell_1758044400038.jpg';
+import nonLaNewImg from './non la_1758044400039.jpg';
+import boverMultiImg from './bover_1758044400040.jpg';
+
+// Additional placeholder variables for Panzeri collections not yet having dedicated images
 const romaImg = panzeriLogo;
 const roma1Img = panzeriLogo;
 const ombraImg = panzeriLogo;
@@ -169,34 +177,54 @@ export const brandCollectionImages = {
   
   'Bover Barcelona': [
     {
-      name: "Skybell Collection",
-      image: skybellImg,
-      alt: "Bover Skybell collection - outdoor bell-shaped pendant lighting"
+      name: "Kando Collection",
+      image: kandoImg,
+      alt: "Bover Kando collection - outdoor poolside cylindrical lights creating ambient atmosphere"
     },
     {
-      name: "Nans Outdoor Collection",
-      image: nansImg,
-      alt: "Bover Nans Outdoor collection - wicker outdoor lighting design"
-    },
-    {
-      name: "Nans Bar Collection",
-      image: nans3Img,
-      alt: "Bover Nans Bar collection - sample placeholder image"
-    },
-    {
-      name: "Nanas Detail Collection",
-      image: nanas1Img,
-      alt: "Bover Nanas Detail collection - sample placeholder image"
-    },
-    {
-      name: "Non La Collection",
-      image: nonLaImg,
-      alt: "Bover Non La collection - sample placeholder image"
+      name: "Nans Collection",
+      image: nans3NewImg,
+      alt: "Bover Nans collection - outdoor pergola woven pendants in natural materials"
     },
     {
       name: "Medi Collection",
-      image: mediImg,
-      alt: "Bover Medi collection - sample placeholder image"
+      image: mediNewImg,
+      alt: "Bover Medi collection - flowing white sculptural pendant light with organic form"
+    },
+    {
+      name: "Nanas Detail Collection",
+      image: nanas1NewImg,
+      alt: "Bover Nanas collection - detailed woven pendant closeup showing craftsmanship"
+    },
+    {
+      name: "Bol Collection",
+      image: bolImg,
+      alt: "Bover Bol collection - black geometric sculptural pendants in modern interior"
+    },
+    {
+      name: "Nans Outdoor Collection",
+      image: nansNewImg,
+      alt: "Bover Nans Outdoor collection - spherical woven pendants for outdoor spaces"
+    },
+    {
+      name: "Drep Collection",
+      image: drepImg,
+      alt: "Bover Drep collection - small glass pendants creating stairway illumination"
+    },
+    {
+      name: "Skybell Collection",
+      image: skybellNewImg,
+      alt: "Bover Skybell collection - circular pendants creating hotel lobby ambiance"
+    },
+    {
+      name: "Non La Collection",
+      image: nonLaNewImg,
+      alt: "Bover Non La collection - conical pendant light inspired by Asian design"
+    },
+    {
+      name: "Woven Pendant Series",
+      image: boverMultiImg,
+      alt: "Bover woven pendant series - multiple pendants in curved arrangement showcasing craftsmanship"
     }
   ],
   
@@ -308,10 +336,17 @@ export {
   avatarPopImg,
   skybellImg,
   nansImg,
-  nans3Img,
-  nanas1Img,
-  nonLaImg,
-  mediImg,
+  // New Bover Barcelona collection images
+  kandoImg,
+  nans3NewImg,
+  mediNewImg,
+  nanas1NewImg,
+  bolImg,
+  nansNewImg,
+  drepImg,
+  skybellNewImg,
+  nonLaNewImg,
+  boverMultiImg,
   zeroRoundImg,
   romaImg,
   roma1Img,
