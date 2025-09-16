@@ -10,6 +10,18 @@ import boverLogo from './bover-newest.jpg';
 import panzeriLogo from './panzeri-logo-new.png';
 
 // Collection image imports - Real lighting collection photos
+// a·emotional light new collection imports
+import rosaNewImg from './rosa_1758043841364.jpg';
+import tondaNewImg from './tonda_1758043841368.jpg';
+import euroImg from './euro_1758043841369.jpg';
+import eurolImg from './eurol_1758043841370.jpg';
+import agasalloImg from './agasallo_1758043841371.jpg';
+import umbraNewImg from './umbra_1758043841373.jpg';
+import coralImg from './coral_1758043841374.jpg';
+import bretemaImg from './General-View-Bretema-Euroluce-2025-plana_1758043841375.jpg';
+import galleryImg from './Screenshot 2025-01-04 184222_1758043841376.jpg';
+
+// Other brand collection imports
 import eraImg from './2405_NEWS24_ERA_00005_1757517578743_1758039118793.jpg';
 import tempoImg from './2405_NEWS24_TEMPO_00003_1757517578742_1758039118793.jpg';
 import avatarPopImg from './AVATAR POP museum_1757513870530_1758039118796.jpg';
@@ -59,14 +71,18 @@ export interface Brand {
   collections: readonly LightingCollection[];
 }
 
-// Background carousel images - using all 13 collection images for maximum visual variety
+// Background carousel images - using all collection images for maximum visual variety
 export const backgroundCarouselImages: string[] = [
   // a·emotional light collections
-  eraImg,                  // Era Collection
-  tempoImg,               // Tempo Collection
-  umbraImg,               // Umbra Collection
-  tondaImg,               // Tonda Collection
-  rosaImg,                // Rosa Collection
+  rosaNewImg,             // Rosa Collection
+  tondaNewImg,            // Tonda Collection  
+  euroImg,                // Euro Collection
+  eurolImg,               // Eurol Collection
+  agasalloImg,            // Agasallo Collection
+  umbraNewImg,            // Umbra Collection
+  coralImg,               // Coral Collection
+  bretemaImg,             // Bretema Collection
+  galleryImg,             // Gallery Installation
   
   // Olé Lighting collections
   morganaImg,             // Morgana Collection
@@ -87,29 +103,49 @@ export const backgroundCarouselImages: string[] = [
 export const brandCollectionImages = {
   'a·emotional light': [
     {
-      name: "Era Collection",
-      image: eraImg,
-      alt: "a·emotional light Era collection - elegant modern lighting design"
-    },
-    {
-      name: "Tempo Collection",
-      image: tempoImg,
-      alt: "a·emotional light Tempo collection - contemporary artistic lighting"
-    },
-    {
-      name: "Umbra Collection",
-      image: umbraImg,
-      alt: "a·emotional light Umbra collection - sophisticated shadow play lighting"
+      name: "Rosa Collection",
+      image: rosaNewImg,
+      alt: "a·emotional light Rosa collection - elegant pink pendant lighting in modern interior"
     },
     {
       name: "Tonda Collection",
-      image: tondaImg,
-      alt: "a·emotional light Tonda collection - circular minimalist design"
+      image: tondaNewImg,
+      alt: "a·emotional light Tonda collection - circular wall lights with intricate pattern design"
     },
     {
-      name: "Rosa Collection",
-      image: rosaImg,
-      alt: "a·emotional light Rosa collection - organic floral inspired lighting"
+      name: "Euro Collection",
+      image: euroImg,
+      alt: "a·emotional light Euro collection - large sculptural white pendant light"
+    },
+    {
+      name: "Eurol Collection",
+      image: eurolImg,
+      alt: "a·emotional light Eurol collection - organic bag-shaped pendant lights"
+    },
+    {
+      name: "Agasallo Collection",
+      image: agasalloImg,
+      alt: "a·emotional light Agasallo collection - textured artisanal bag lights on concrete wall"
+    },
+    {
+      name: "Umbra Collection",
+      image: umbraNewImg,
+      alt: "a·emotional light Umbra collection - circular golden halo lighting design"
+    },
+    {
+      name: "Coral Collection",
+      image: coralImg,
+      alt: "a·emotional light Coral collection - pendant lights in modern living space"
+    },
+    {
+      name: "Bretema Collection",
+      image: bretemaImg,
+      alt: "a·emotional light Bretema collection - showroom display at Euroluce 2025"
+    },
+    {
+      name: "Gallery Installation",
+      image: galleryImg,
+      alt: "a·emotional light gallery installation - restaurant lighting design showcase"
     }
   ],
   
@@ -251,6 +287,17 @@ export {
   brandCollectionImages as collections,
   
   // Specific image sets for targeted imports
+  // a·emotional light collections
+  rosaNewImg,
+  tondaNewImg,
+  euroImg,
+  eurolImg,
+  agasalloImg,
+  umbraNewImg,
+  coralImg,
+  bretemaImg,
+  galleryImg,
+  // Legacy imports (keeping for potential backward compatibility)
   eraImg,
   tempoImg,
   umbraImg,
