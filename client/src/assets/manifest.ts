@@ -9,33 +9,50 @@ import oleLogo from './ole-logo.png';
 import boverLogo from './bover-newest.jpg';
 import panzeriLogo from './panzeri-logo-new.png';
 
-// a·emotional light collection images
-import eraImg from './2405_NEWS24_ERA_00005_1757517578743_1758039118793.jpg';
-import tempoImg from './2405_NEWS24_TEMPO_00003_1757517578742_1758039118793.jpg';
-import umbraImg from './umbra_1757517578738_1758039118797.jpg';
-import tondaImg from './tonda_1757517578733_1758039118797.jpg';
-import rosaImg from './rosa_1757513820678_1758039118797.jpg';
+// Simple placeholder images for brand collections (using brand logos as placeholders)
+// NOTE: These are temporary sample images until proper brand collection images are uploaded
+// a·emotional light collection placeholders
+const eraImg = aEmotionalLogo;
+const tempoImg = aEmotionalLogo;
+const umbraImg = aEmotionalLogo;
+const tondaImg = aEmotionalLogo;
+const rosaImg = aEmotionalLogo;
 
-// Olé Lighting collection images
-import morganaImg from './MORGANA 31200_200 ambiente - Ole Lighting_1757519669166_1758039118794.jpg';
-import medusaImg from './MEDUSA ambiente shape 2_1757519669167_1758039118795.jpg';
-import avatarPopImg from './AVATAR POP museum_1757513870530_1758039118796.jpg';
+// Olé Lighting collection placeholders
+const morganaImg = oleLogo;
+const medusaImg = oleLogo;
+const avatarPopImg = oleLogo;
 
-// Bover Barcelona collection images
-import skybellImg from './skybell_1757513820674_1758039118797.jpg';
-import nansImg from './nans_1757519174473_1758039118799.jpg';
-import nans3Img from './nans3_1757513820666_1758039118799.jpg';
-import nanas1Img from './nanas1_1757513820669_1758039118800.jpg';
-import nonLaImg from './non la_1757519174478_1758039118799.jpg';
-import mediImg from './medi_1757519174469_1758039118800.jpg';
+// Bover Barcelona collection placeholders
+const skybellImg = boverLogo;
+const nansImg = boverLogo;
+const nans3Img = boverLogo;
+const nanas1Img = boverLogo;
+const nonLaImg = boverLogo;
+const mediImg = boverLogo;
 
-// Panzeri Lighting collection images
-import zeroRoundImg from './zero round_1757519446548_1758039118796.jpg';
-import romaImg from './roma_1757519446551_1758039118798.jpg';
-import roma1Img from './roma1_1757519446547_1758039118798.jpg';
-import rendezVousImg from './rendez vous_1757519446557_1758039118798.jpg';
-import ombraImg from './ombra_1757519446555_1758039118799.jpg';
-import muraneImg from './murane_1757519446556_1758039118800.jpg';
+// Panzeri Lighting collection placeholders
+const zeroRoundImg = panzeriLogo;
+const romaImg = panzeriLogo;
+const roma1Img = panzeriLogo;
+const rendezVousImg = panzeriLogo;
+const ombraImg = panzeriLogo;
+const muraneImg = panzeriLogo;
+
+// Import actual lighting collection images for background carousel ONLY
+import eraCarouselImg from './2405_NEWS24_ERA_00005_1757517578743_1758039118793.jpg';
+import tempoCarouselImg from './2405_NEWS24_TEMPO_00003_1757517578742_1758039118793.jpg';
+import umbraCarouselImg from './umbra_1757517578738_1758039118797.jpg';
+import tondaCarouselImg from './tonda_1757517578733_1758039118797.jpg';
+import rosaCarouselImg from './rosa_1757513820678_1758039118797.jpg';
+import morganaCarouselImg from './MORGANA 31200_200 ambiente - Ole Lighting_1757519669166_1758039118794.jpg';
+import medusaCarouselImg from './MEDUSA ambiente shape 2_1757519669167_1758039118795.jpg';
+import avatarPopCarouselImg from './AVATAR POP museum_1757513870530_1758039118796.jpg';
+import skybellCarouselImg from './skybell_1757513820674_1758039118797.jpg';
+import nansCarouselImg from './nans_1757519174473_1758039118799.jpg';
+import zeroRoundCarouselImg from './zero round_1757519446548_1758039118796.jpg';
+import rendezVousCarouselImg from './rendez vous_1757519446557_1758039118798.jpg';
+import muraneCarouselImg from './murane_1757519446556_1758039118800.jpg';
 
 // Brand logos export
 export const brandLogos = {
@@ -62,56 +79,58 @@ export interface Brand {
 }
 
 // Curated background carousel images - optimized for visual impact
+// NOTE: This carousel uses actual lighting collection images and remains UNCHANGED
 export const backgroundCarouselImages: string[] = [
   // a·emotional light collections - Contemporary and artistic
-  eraImg,           // Era collection - striking black pendant
-  tempoImg,         // Tempo collection - rhythmic pleated design
-  umbraImg,         // Umbra collection - circular halo lighting
-  tondaImg,         // Tonda collection - intricate pattern work
-  rosaImg,          // Rosa collection - elegant pink pendant
+  eraCarouselImg,           // Era collection - striking black pendant
+  tempoCarouselImg,         // Tempo collection - rhythmic pleated design
+  umbraCarouselImg,         // Umbra collection - circular halo lighting
+  tondaCarouselImg,         // Tonda collection - intricate pattern work
+  rosaCarouselImg,          // Rosa collection - elegant pink pendant
   
   // Olé Lighting collections - Mediterranean sophistication
-  morganaImg,       // Morgana collection - slatted floor lamp
-  medusaImg,        // Medusa collection - geometric pendant
-  avatarPopImg,     // Avatar Pop collection - museum ambient system
+  morganaCarouselImg,       // Morgana collection - slatted floor lamp
+  medusaCarouselImg,        // Medusa collection - geometric pendant
+  avatarPopCarouselImg,     // Avatar Pop collection - museum ambient system
   
   // Bover Barcelona collections - Outdoor elegance
-  skybellImg,       // Skybell collection - circular pendant system
-  nansImg,          // Nans collection - spherical outdoor pendants
+  skybellCarouselImg,       // Skybell collection - circular pendant system
+  nansCarouselImg,          // Nans collection - spherical outdoor pendants
   
   // Panzeri Lighting collections - Italian craftsmanship
-  zeroRoundImg,     // Zero Round collection - minimalist geometric design
-  rendezVousImg,    // Rendez-Vous collection - triangular constellation
-  muraneImg         // Muranè collection - golden glass cluster
+  zeroRoundCarouselImg,     // Zero Round collection - minimalist geometric design
+  rendezVousCarouselImg,    // Rendez-Vous collection - triangular constellation
+  muraneCarouselImg         // Muranè collection - golden glass cluster
 ];
 
-// Brand collections organized by brand - complete product catalog
+// Brand collections organized by brand - TEMPORARY PLACEHOLDERS
+// NOTE: Using brand logos as simple placeholder images until proper collection images are uploaded
 export const brandCollectionImages = {
   'a·emotional light': [
     {
       name: "Era Collection",
       image: eraImg,
-      alt: "a·emotional light Era contemporary black pendant lighting"
+      alt: "a·emotional light Era collection - sample placeholder image"
     },
     {
       name: "Tempo Collection",
       image: tempoImg,
-      alt: "a·emotional light Tempo rhythmic pleated lighting collection"
+      alt: "a·emotional light Tempo collection - sample placeholder image"
     },
     {
       name: "Umbra Collection",
       image: umbraImg,
-      alt: "a·emotional light Umbra circular halo lighting series"
+      alt: "a·emotional light Umbra collection - sample placeholder image"
     },
     {
       name: "Tonda Collection",
       image: tondaImg,
-      alt: "a·emotional light Tonda circular lighting with intricate patterns"
+      alt: "a·emotional light Tonda collection - sample placeholder image"
     },
     {
       name: "Rosa Collection",
       image: rosaImg,
-      alt: "a·emotional light Rosa elegant pink pendant lighting"
+      alt: "a·emotional light Rosa collection - sample placeholder image"
     }
   ],
   
@@ -119,17 +138,17 @@ export const brandCollectionImages = {
     {
       name: "Morgana Collection",
       image: morganaImg,
-      alt: "Olé Lighting Morgana slatted floor lamp in minimalist interior"
+      alt: "Olé Lighting Morgana collection - sample placeholder image"
     },
     {
       name: "Medusa Collection",
       image: medusaImg,
-      alt: "Olé Lighting Medusa geometric pendant in modern living room"
+      alt: "Olé Lighting Medusa collection - sample placeholder image"
     },
     {
       name: "Avatar Pop Collection",
       image: avatarPopImg,
-      alt: "Olé Lighting Avatar Pop ambient system in museum setting"
+      alt: "Olé Lighting Avatar Pop collection - sample placeholder image"
     }
   ],
   
@@ -137,32 +156,32 @@ export const brandCollectionImages = {
     {
       name: "Skybell Collection",
       image: skybellImg,
-      alt: "Bover Skybell circular pendant system in hospitality space"
+      alt: "Bover Skybell collection - sample placeholder image"
     },
     {
       name: "Nans Outdoor Collection",
       image: nansImg,
-      alt: "Bover Nans spherical pendant lights in outdoor dining area"
+      alt: "Bover Nans Outdoor collection - sample placeholder image"
     },
     {
       name: "Nans Bar Collection",
       image: nans3Img,
-      alt: "Bover Nans woven pendant lights in Mediterranean bar setting"
+      alt: "Bover Nans Bar collection - sample placeholder image"
     },
     {
       name: "Nanas Detail Collection",
       image: nanas1Img,
-      alt: "Bover Nanas woven pendant light close-up detail"
+      alt: "Bover Nanas Detail collection - sample placeholder image"
     },
     {
       name: "Non La Collection",
       image: nonLaImg,
-      alt: "Bover Non La conical pendant light in warm setting"
+      alt: "Bover Non La collection - sample placeholder image"
     },
     {
       name: "Medi Collection",
       image: mediImg,
-      alt: "Bover Medi flowing organic pendant light"
+      alt: "Bover Medi collection - sample placeholder image"
     }
   ],
   
@@ -170,32 +189,32 @@ export const brandCollectionImages = {
     {
       name: "Zero Round Collection",
       image: zeroRoundImg,
-      alt: "Panzeri Zero Round minimalist circular geometric pendant system"
+      alt: "Panzeri Zero Round collection - sample placeholder image"
     },
     {
       name: "Roma Collection",
       image: romaImg,
-      alt: "Panzeri Roma cylindrical floor lamps in living space"
+      alt: "Panzeri Roma collection - sample placeholder image"
     },
     {
       name: "Roma Wall Series",
       image: roma1Img,
-      alt: "Panzeri Roma cylindrical wall lighting installation"
+      alt: "Panzeri Roma Wall series - sample placeholder image"
     },
     {
       name: "Rendez-Vous Collection",
       image: rendezVousImg,
-      alt: "Panzeri Rendez-Vous triangular pendant constellation"
+      alt: "Panzeri Rendez-Vous collection - sample placeholder image"
     },
     {
       name: "Ombra Collection",
       image: ombraImg,
-      alt: "Panzeri Ombra minimalist cylindrical table lamp"
+      alt: "Panzeri Ombra collection - sample placeholder image"
     },
     {
       name: "Muranè Collection",
       image: muraneImg,
-      alt: "Panzeri Muranè golden glass pendant cluster"
+      alt: "Panzeri Muranè collection - sample placeholder image"
     }
   ]
 } as const;
