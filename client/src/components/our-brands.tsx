@@ -2,38 +2,7 @@ import { useEffect, useRef, useState, useMemo } from "react";
 import { Download, ExternalLink } from "lucide-react";
 import { CatalogueRequestForm } from "./catalogue-request-form";
 import { LazyImage } from "./lazy-image";
-import aEmotionalLogo from '@/assets/a-emotional-final.jpg';
-import oleLogo from '@/assets/ole-logo.png';
-import boverLogo from '@/assets/bover-newest.jpg';
-import panzeriLogo from '@/assets/panzeri-logo-new.png';
-
-// Import lighting collection images
-import eraImg from '@/assets/2405_NEWS24_ERA_00005_1757517578743_1758039118793.jpg';
-import tempoImg from '@/assets/2405_NEWS24_TEMPO_00003_1757517578742_1758039118793.jpg';
-import umbraImg from '@/assets/umbra_1757517578738_1758039118797.jpg';
-import tondaImg from '@/assets/tonda_1757517578733_1758039118797.jpg';
-import rosaImg from '@/assets/rosa_1757513820678_1758039118797.jpg';
-
-// Olé Lighting collection images
-import morganaImg from '@/assets/MORGANA 31200_200 ambiente - Ole Lighting_1757519669166_1758039118794.jpg';
-import medusaImg from '@/assets/MEDUSA ambiente shape 2_1757519669167_1758039118795.jpg';
-import avatarPopImg from '@/assets/AVATAR POP museum_1757513870530_1758039118796.jpg';
-
-// Bover Barcelona collection images
-import skybellImg from '@/assets/skybell_1757513820674_1758039118797.jpg';
-import nansImg from '@/assets/nans_1757519174473_1758039118799.jpg';
-import nans3Img from '@/assets/nans3_1757513820666_1758039118799.jpg';
-import nanas1Img from '@/assets/nanas1_1757513820669_1758039118800.jpg';
-import nonLaImg from '@/assets/non la_1757519174478_1758039118799.jpg';
-import mediImg from '@/assets/medi_1757519174469_1758039118800.jpg';
-
-// Panzeri Lighting collection images
-import zeroRoundImg from '@/assets/zero round_1757519446548_1758039118796.jpg';
-import romaImg from '@/assets/roma_1757519446551_1758039118798.jpg';
-import roma1Img from '@/assets/roma1_1757519446547_1758039118798.jpg';
-import rendezVousImg from '@/assets/rendez vous_1757519446557_1758039118798.jpg';
-import ombraImg from '@/assets/ombra_1757519446555_1758039118799.jpg';
-import muraneImg from '@/assets/murane_1757519446556_1758039118800.jpg';
+import { brandsData, validateCarouselImages } from '@/assets/manifest';
 
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
@@ -91,6 +60,12 @@ export default function OurBrands() {
         clearInterval(intervalRefs.current[brand.name]);
       }
       
+      // Safety guard: Only start carousel for brands with multiple collections
+      if (!validateCarouselImages(brand.collections.map(c => c.image))) {
+        console.warn(`OurBrands: Brand "${brand.name}" has insufficient collections for carousel operation`);
+        return;
+      }
+      
       intervalRefs.current[brand.name] = setInterval(() => {
         setActiveCarousel(prev => ({
           ...prev,
@@ -138,155 +113,8 @@ export default function OurBrands() {
     return catalogues[brandName] || [];
   };
 
-  const brands = [
-    {
-      name: "a·emotional light",
-      logoUrl: aEmotionalLogo,
-      description: "A-emotional Light takes sculptural form through craftsmanship and design. Each handcrafted piece is organic and nature-inspired, blending art and light into unique creations that bring warmth, beauty, and individuality to residential and hospitality interiors.",
-      category: "",
-      specialty: "",
-      tagline: "",
-      website: "https://www.a-emotionallight.com/",
-      collections: [
-        {
-          name: "Era Collection",
-          image: eraImg,
-          alt: "a·emotional light Era contemporary black pendant lighting"
-        },
-        {
-          name: "Tempo Collection",
-          image: tempoImg,
-          alt: "a·emotional light Tempo rhythmic pleated lighting collection"
-        },
-        {
-          name: "Umbra Collection",
-          image: umbraImg,
-          alt: "a·emotional light Umbra circular halo lighting series"
-        },
-        {
-          name: "Tonda Collection",
-          image: tondaImg,
-          alt: "a·emotional light Tonda circular lighting with intricate patterns"
-        },
-        {
-          name: "Rosa Collection",
-          image: rosaImg,
-          alt: "a·emotional light Rosa elegant pink pendant lighting"
-        }
-      ]
-    },
-    {
-      name: "Olé Lighting",
-      logoUrl: oleLogo,
-      description: "Olé designs soulful lighting with sustainable materials and creative solutions. Mediterranean-inspired, each collection transforms indoor and outdoor spaces with originality and efficiency, creating lighting experiences that combine design and comfort.",
-      category: "",
-      specialty: "",
-      tagline: "",
-      website: "https://www.ole-lighting.com/en",
-      collections: [
-        {
-          name: "Morgana Collection",
-          image: morganaImg,
-          alt: "Olé Lighting Morgana slatted floor lamp in minimalist interior"
-        },
-        {
-          name: "Medusa Collection",
-          image: medusaImg,
-          alt: "Olé Lighting Medusa geometric pendant in modern living room"
-        },
-        {
-          name: "Avatar Pop Collection",
-          image: avatarPopImg,
-          alt: "Olé Lighting Avatar Pop ambient system in museum setting"
-        }
-      ]
-    },
-    {
-      name: "Bover Barcelona",
-      logoUrl: boverLogo,
-      description: "Bover blends contemporary lines with timeless charm. Using materials like wicker, woven steel, and hand-pleated fabric, each design is crafted for outdoor spaces while versatile enough for interiors, delivering elegance, durability, and character across any project.",
-      category: "",
-      specialty: "",
-      tagline: "",
-      website: "https://bover.es/en/",
-      collections: [
-        {
-          name: "Skybell Collection",
-          image: skybellImg,
-          alt: "Bover Skybell circular pendant system in hospitality space"
-        },
-        {
-          name: "Nans Outdoor Collection",
-          image: nansImg,
-          alt: "Bover Nans spherical pendant lights in outdoor dining area"
-        },
-        {
-          name: "Nans Bar Collection",
-          image: nans3Img,
-          alt: "Bover Nans woven pendant lights in Mediterranean bar setting"
-        },
-        {
-          name: "Nanas Detail Collection",
-          image: nanas1Img,
-          alt: "Bover Nanas woven pendant light close-up detail"
-        },
-        {
-          name: "Non La Collection",
-          image: nonLaImg,
-          alt: "Bover Non La conical pendant light in warm setting"
-        },
-        {
-          name: "Medi Collection",
-          image: mediImg,
-          alt: "Bover Medi flowing organic pendant light"
-        }
-      ]
-    },
-    {
-      name: "Panzeri Lighting",
-      logoUrl: panzeriLogo,
-      description: "For over 70 years, Panzeri has combined Italian tradition and innovation in decorative and architectural lighting. Its designs balance creativity, quality, and timeless style, enhancing interiors and exteriors worldwide with refined, iconic solutions.",
-      category: "",
-      specialty: "",
-      tagline: "",
-      website: "https://panzeri.it/en/",
-      collections: [
-        {
-          name: "Zero Round Collection",
-          image: zeroRoundImg,
-          alt: "Panzeri Zero Round minimalist circular geometric pendant system"
-        },
-        {
-          name: "Roma Collection",
-          image: romaImg,
-          alt: "Panzeri Roma cylindrical floor lamps in living space"
-        },
-        {
-          name: "Roma Wall Series",
-          image: roma1Img,
-          alt: "Panzeri Roma cylindrical wall lighting installation"
-        },
-        {
-          name: "Rendez-Vous Collection",
-          image: rendezVousImg,
-          alt: "Panzeri Rendez-Vous triangular pendant constellation"
-        },
-        {
-          name: "Ombra Collection",
-          image: ombraImg,
-          alt: "Panzeri Ombra minimalist cylindrical table lamp"
-        },
-        {
-          name: "Muranè Collection",
-          image: muraneImg,
-          alt: "Panzeri Muranè golden glass pendant cluster"
-        }
-      ]
-    }
-  ];
-
-  // Create a randomly shuffled brands array that persists on component mount
-  const shuffledBrands = useMemo(() => shuffleArray(brands), []);
+  // Create shuffled brands array using manifest data
+  const shuffledBrands = useMemo(() => shuffleArray(brandsData), []);
 
   return (
     <section id="brands" className="pt-24 pb-32 relative z-10" ref={sectionRef} data-testid="brands-section">
@@ -320,23 +148,9 @@ export default function OurBrands() {
                     {brand.name}
                   </h3>
                 )}
-                {brand.description ? (
-                  <p className="text-cyan-400 text-sm leading-relaxed font-light line-clamp-5" data-testid={`text-brand-description-${index}`}>
-                    {brand.description}
-                  </p>
-                ) : (
-                  <>
-                    <p className={`${getRandomColor()} mb-2 font-medium`} data-testid={`text-brand-category-${index}`}>
-                      {brand.category}
-                    </p>
-                    <p className={`${getRandomColor()} text-sm mb-2`} data-testid={`text-brand-specialty-${index}`}>
-                      {brand.specialty}
-                    </p>
-                    <p className={`${getRandomColor()} text-sm italic font-light`} data-testid={`text-brand-tagline-${index}`}>
-                      "{brand.tagline}"
-                    </p>
-                  </>
-                )}
+                <p className="text-cyan-400 text-sm leading-relaxed font-light line-clamp-5" data-testid={`text-brand-description-${index}`}>
+                  {brand.description}
+                </p>
               </div>
 
               {/* Collection Carousel */}
