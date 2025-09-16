@@ -2,7 +2,6 @@ import BackgroundCarousel from "@/components/background-carousel";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import OurBrands from "@/components/our-brands";
-import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <OurBrands />
-      <ContactSection />
       
       {/* Footer */}
       <footer className="py-12 border-t border-border relative z-10">

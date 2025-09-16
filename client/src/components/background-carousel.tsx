@@ -1,11 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { LazyBackground } from "./lazy-image";
 
-// Import available local images from client/src/assets
-import boverNewestImg from "../assets/bover-newest.jpg";
-import aEmotionalImg from "../assets/a-emotional-final.jpg";
-import oleLogo from "../assets/ole-logo.png";
-import panzeriLogo from "../assets/panzeri-logo-new.png";
+// Image imports removed - placeholder carousel
 
 export default function BackgroundCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,17 +21,8 @@ export default function BackgroundCarousel() {
 
   // Performance optimization: Images are lazy-loaded on demand
   // Only visible + buffer images are loaded at any time
-  const allImages = [
-    // Available local images
-    boverNewestImg,
-    aEmotionalImg,
-    oleLogo,
-    panzeriLogo,
-    // Create a more diverse carousel by repeating available images
-    boverNewestImg,
-    aEmotionalImg,
-    oleLogo,
-    panzeriLogo
+  const allImages: string[] = [
+    // Image array cleared - ready for new images
   ];
 
   // Initialize with shuffled images on mount
