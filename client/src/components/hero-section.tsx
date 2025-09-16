@@ -28,7 +28,7 @@ export default function HeroSection() {
             Design consultancy agency in the heart of London
           </p>
           <p className={`text-lg md:text-xl ${getRandomColor()} mb-16 max-w-5xl mx-auto leading-relaxed`} data-testid="text-hero-description">
-            With over 15 years of expertise in specification, design, and lighting, CartaRep® is a trusted consultancy supporting architects, specifiers, contractors, and businesses.
+            With over 15 years of expertise in specification, design, and lighting, CartaRep® is a trusted consultancy supporting architects, specifiers, contractors, and businesses. We deliver bespoke project specifications, technical guidance, and tailored solutions that bring creativity, functionality, and efficiency to design projects across London and beyond.
           </p>
           
           {/* Services Section - Integrated into Hero */}
