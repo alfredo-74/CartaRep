@@ -68,10 +68,6 @@ import panzeriOmbra from './panzeri-ombra.jpg';
 import panzeriRoma from './panzeri-roma.jpg';
 import panzeriRoma2 from './panzeri-roma2.jpg';
 
-// Updated real image variables (no longer placeholders)
-const romaImg = panzeriRoma;
-const roma1Img = panzeriRoma2;
-const ombraImg = panzeriOmbra;
 
 // Brand logos export
 export const brandLogos = {
@@ -335,12 +331,12 @@ export const brandCollectionImages = {
     },
     {
       name: "Roma Collection",
-      image: romaImg,
+      image: panzeriRoma,
       alt: "Panzeri Roma collection - elegant Italian-inspired architectural lighting"
     },
     {
       name: "Roma Wall Series",
-      image: roma1Img,
+      image: panzeriRoma2,
       alt: "Panzeri Roma Wall series - sophisticated wall-mounted lighting solutions"
     },
     {
@@ -350,7 +346,7 @@ export const brandCollectionImages = {
     },
     {
       name: "Ombra Collection",
-      image: ombraImg,
+      image: panzeriOmbra,
       alt: "Panzeri Ombra collection - dramatic shadow-play lighting with geometric forms"
     },
     {
@@ -487,9 +483,9 @@ export {
   panzeriAdamas2,
   panzeriBella,
   panzeriHillow,
-  romaImg,
-  roma1Img,
-  ombraImg
+  panzeriRoma,
+  panzeriRoma2,
+  panzeriOmbra
 };
 
 /**

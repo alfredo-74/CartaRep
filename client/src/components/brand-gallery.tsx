@@ -43,10 +43,19 @@ export default function BrandGallery({
   }, []);
 
   // Smooth scroll to specific position - scroll exactly one item at a time
-  const scrollTo = useCallback((direction: 'left' | 'right') => {
+  const scrollTo = useCallback((direction: 'left' | 'right' | 'start') => {
     if (!scrollContainerRef.current) return;
 
     const container = scrollContainerRef.current;
+    
+    if (direction === 'start') {
+      container.scrollTo({
+        left: 0,
+        behavior: 'smooth'
+      });
+      return;
+    }
+
     const itemWidth = container.clientWidth; // Full container width = one item width
     const currentScroll = container.scrollLeft;
     
@@ -205,6 +214,26 @@ export default function BrandGallery({
           data-testid={`gallery-nav-right-${testIdPrefix}`}
         >
           <ChevronRight className="w-5 h-5" />
+        </button>
+      )}
+
+      {/* Back to start arrow - appears when at the end */}
+      {!canScrollRight && canScrollLeft && collections.length > 1 && (
+        <button
+          onClick={() => scrollTo('start')}
+          className={cn(
+            "absolute right-2 top-1/2 -translate-y-1/2 z-10",
+            "w-10 h-10 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/30",
+            "flex items-center justify-center text-primary",
+            "hover:bg-primary/20 hover:border-primary/50 transition-all duration-200",
+            "focus:bg-primary/20 focus:border-primary/50 focus:ring-2 focus:ring-primary/60",
+            "opacity-0 scale-90",
+            (isHovered || isFocused) && "opacity-100 scale-100"
+          )}
+          aria-label="Back to first collection"
+          data-testid={`gallery-nav-start-${testIdPrefix}`}
+        >
+          <ChevronLeft className="w-5 h-5" />
         </button>
       )}
 
