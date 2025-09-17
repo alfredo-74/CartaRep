@@ -23,8 +23,6 @@ import aEmotionalBretema from './a-emotional-bretema.jpg';
 import aEmotionalGallery from './a-emotional-gallery.jpg';
 
 // Olé Lighting collection imports - ALL OPTIMIZED
-import oleEra from './ole-era.jpg';
-import oleTempo from './ole-tempo.jpg';
 import oleAvatarPop from './ole-avatar-pop.jpg';
 import oleMedusa from './ole-medusa.jpg';
 import oleMorgana from './ole-morgana.jpg';
@@ -116,8 +114,6 @@ export const backgroundCarouselImages: string[] = [
   oleMorgana,                 // Morgana Collection - 72KB
   oleMedusa,                  // Medusa Collection - 56KB
   oleAvatarPop,               // Avatar Pop Collection - 52KB
-  oleEra,                     // Era Collection - 72KB
-  oleTempo,                   // Tempo Collection - 48KB
   oleCandela,                 // NEW: Candela Collection - warm ceramic elegance
   oleCeleste,                 // NEW: Celeste Collection - celestial natural forms
   oleKatana,                  // NEW: Katana Collection - sleek Japanese precision
@@ -213,16 +209,6 @@ export const brandCollectionImages = {
       name: "Avatar Pop Collection",
       image: oleAvatarPop,
       alt: "Olé Lighting Avatar Pop collection - playful contemporary design"
-    },
-    {
-      name: "Era Collection",
-      image: oleEra,
-      alt: "Olé Lighting Era collection - modern design with timeless appeal"
-    },
-    {
-      name: "Tempo Collection",
-      image: oleTempo,
-      alt: "Olé Lighting Tempo collection - dynamic contemporary lighting solutions"
     },
     {
       name: "Candela Collection",
@@ -452,8 +438,6 @@ export {
   aEmotionalGallery,
   
   // Olé Lighting collections - EXPANDED
-  oleEra,
-  oleTempo,
   oleAvatarPop,
   oleMedusa,
   oleMorgana,

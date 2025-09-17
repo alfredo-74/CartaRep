@@ -136,7 +136,7 @@ export default function BrandGallery({
       {/* Horizontal scrolling container */}
       <div
         ref={scrollContainerRef}
-        className="flex gap-4 overflow-x-auto scroll-smooth brand-gallery-container"
+        className="flex gap-4 overflow-x-auto scroll-smooth brand-gallery-container w-[calc(1.5*280px+0.5*1rem)] sm:w-[calc(1.5*280px+0.5*1rem)] md:w-[calc(2.5*280px+1.5*1rem)] lg:w-[calc(3.5*280px+2.5*1rem)] max-w-full"
         style={{
           scrollSnapType: 'x mandatory',
           WebkitOverflowScrolling: 'touch', // Enable momentum scrolling on iOS
@@ -152,12 +152,9 @@ export default function BrandGallery({
         {collections.map((collection, index) => (
           <div
             key={`${collection.name}-${index}`}
-            className="flex-shrink-0 relative group"
+            className="flex-shrink-0 relative group w-[280px] sm:w-[280px] md:w-[280px] lg:w-[280px]"
             style={{
-              scrollSnapAlign: 'start',
-              // Responsive width: 1-2 items mobile, 2-3 tablet, 3-4 desktop
-              width: 'clamp(280px, calc(100vw - 8rem), 320px)',
-              minWidth: '280px'
+              scrollSnapAlign: 'start'
             }}
             role="listitem"
             data-testid={`gallery-item-${testIdPrefix}-${index}`}
