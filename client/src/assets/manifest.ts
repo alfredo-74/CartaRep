@@ -21,6 +21,8 @@ import aEmotionalUmbra from './a-emotional-umbra.jpg';
 import aEmotionalCoral from './a-emotional-coral.jpg';
 import aEmotionalBretema from './a-emotional-bretema.jpg';
 import aEmotionalGallery from './a-emotional-gallery.jpg';
+import aEmotionalOnn from './a-emotional-onn.jpg';
+import aEmotionalTempo from './a-emotional-tempo.jpg';
 
 // Olé Lighting collection imports - ALL OPTIMIZED
 import oleAvatarPop from './ole-avatar-pop.jpg';
@@ -99,7 +101,7 @@ export interface Brand {
 // ALL IMAGES OPTIMIZED FOR INSTANT LOADING (under 100KB each)
 // EXPANDED with new Olé and Panzeri collections for enhanced visual diversity
 export const backgroundCarouselImages: string[] = [
-  // a·emotional light collections
+  // a·emotional light collections - ALL AVAILABLE IMAGES
   aEmotionalRosa,             // Rosa Collection - 28KB
   aEmotionalTonda,            // Tonda Collection - 48KB
   aEmotionalEuro,             // Euro Collection - 68KB
@@ -109,21 +111,26 @@ export const backgroundCarouselImages: string[] = [
   aEmotionalCoral,            // Coral Collection - 48KB
   aEmotionalBretema,          // Bretema Collection - 20KB
   aEmotionalGallery,          // Gallery Installation - 47KB
+  aEmotionalLogo,             // Final Collection - premium lighting showcase
+  aEmotionalOnn,              // Onn Collection - minimalist elegance
+  aEmotionalTempo,            // Tempo Collection - rhythmic design elements
   
-  // Olé Lighting collections - EXPANDED
+  // Olé Lighting collections - ALL AVAILABLE IMAGES
   oleMorgana,                 // Morgana Collection - 72KB
   oleMedusa,                  // Medusa Collection - 56KB
   oleAvatarPop,               // Avatar Pop Collection - 52KB
-  oleCandela,                 // NEW: Candela Collection - warm ceramic elegance
-  oleCeleste,                 // NEW: Celeste Collection - celestial natural forms
-  oleKatana,                  // NEW: Katana Collection - sleek Japanese precision
-  oleMedusa2,                 // NEW: Medusa2 Collection - organic sculptural forms
-  oleMorgana2,                // NEW: Morgana2 Collection - enhanced Mediterranean charm
-  oleNexo,                    // NEW: Nexo Collection - modular connected lighting
-  olePagoda,                  // NEW: Pagoda Collection - tiered oriental elegance
-  oleSonora,                  // NEW: Sonora Collection - acoustic sound wave design
+  oleCandela,                 // Candela Collection - warm ceramic elegance
+  oleCeleste,                 // Celeste Collection - celestial natural forms
+  oleKatana,                  // Katana Collection - sleek Japanese precision
+  oleMedusa2,                 // Medusa2 Collection - organic sculptural forms
+  oleMedusa3,                 // Medusa3 Collection - refined jellyfish inspiration
+  oleMorgana2,                // Morgana2 Collection - enhanced Mediterranean charm
+  oleNexo,                    // Nexo Collection - modular connected lighting
+  olePagoda,                  // Pagoda Collection - tiered oriental elegance
+  olePampa,                   // Pampa Collection - grassland-inspired natural forms
+  oleSonora,                  // Sonora Collection - acoustic sound wave design
   
-  // Bover Barcelona collections
+  // Bover Barcelona collections - ALL AVAILABLE IMAGES
   boverSkybell,               // Skybell Collection - 100KB
   boverNans,                  // Nans Collection - 96KB
   boverKando,                 // Kando Collection - 64KB
@@ -131,16 +138,23 @@ export const backgroundCarouselImages: string[] = [
   boverBol,                   // Bol Collection - 60KB
   boverDrep,                  // Drep Collection - 52KB
   boverNonLa,                 // Non La Collection - 36KB
+  boverMulti,                 // Multi Collection - versatile modular lighting
+  boverNanasDetail,           // Nanas Detail - close-up artisanal craftsmanship
+  boverNansOutdoor,           // Nans Outdoor - weather-resistant elegance
+  boverLogo,                  // Newest Collection - contemporary Barcelona design
   
-  // Panzeri Lighting collections - EXPANDED
+  // Panzeri Lighting collections - ALL AVAILABLE IMAGES
   panzeriZeroRound,           // Zero Round Collection - 60KB
   panzeriRendezVous,          // Rendez-Vous Collection - 45KB
   panzeriMurane,              // Muranè Collection - 68KB
-  panzeriAdamas,              // NEW: Adamas Collection - diamond crystal luxury
-  panzeriBella,               // NEW: Bella Collection - flowing Italian elegance
-  panzeriHillow,              // NEW: Hillow Collection - organic hill-inspired shapes
-  panzeriRoma,                // NEW: Roma Collection - architectural Italian design
-  panzeriOmbra                // NEW: Ombra Collection - dramatic shadow-play
+  panzeriAdamas,              // Adamas Collection - diamond crystal luxury
+  panzeriAdamas1,             // Adamas Variant 1 - alternate crystal formations
+  panzeriAdamas2,             // Adamas Variant 2 - enhanced crystal geometry
+  panzeriBella,               // Bella Collection - flowing Italian elegance
+  panzeriHillow,              // Hillow Collection - organic hill-inspired shapes
+  panzeriRoma,                // Roma Collection - architectural Italian design
+  panzeriRoma2,               // Roma Variant - alternative architectural forms
+  panzeriOmbra                // Ombra Collection - dramatic shadow-play
 ];
 
 // Brand collections organized by brand - using real collection images where available
@@ -436,6 +450,8 @@ export {
   aEmotionalCoral,
   aEmotionalBretema,
   aEmotionalGallery,
+  aEmotionalOnn,
+  aEmotionalTempo,
   
   // Olé Lighting collections - EXPANDED
   oleAvatarPop,
