@@ -19,6 +19,16 @@ export default function BrandGallery({
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+
+  // Guard against empty collections
+  if (!collections || collections.length === 0) {
+    return (
+      <div className={cn("text-center text-white/60 py-8", className)}>
+        <p>No collections available</p>
+      </div>
+    );
+  }
 
   // Generate consistent testId prefix
   const testIdPrefix = brandName.toLowerCase().replace(/\s+/g, '-');
@@ -55,9 +65,9 @@ export default function BrandGallery({
     });
   }, [collections.length]);
 
-  // Handle keyboard navigation
+  // Handle keyboard navigation - now based on focus instead of hover
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (!isHovered) return;
+    if (!isFocused && !isHovered) return;
     
     switch (event.key) {
       case 'ArrowLeft':
@@ -68,8 +78,21 @@ export default function BrandGallery({
         event.preventDefault();
         scrollTo('right');
         break;
+      case 'Home':
+        event.preventDefault();
+        if (scrollContainerRef.current) {
+          scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        }
+        break;
+      case 'End':
+        event.preventDefault();
+        if (scrollContainerRef.current) {
+          const container = scrollContainerRef.current;
+          container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+        }
+        break;
     }
-  }, [isHovered, scrollTo]);
+  }, [isFocused, isHovered, scrollTo]);
 
   // Set up event listeners
   useEffect(() => {
@@ -103,6 +126,11 @@ export default function BrandGallery({
       className={cn("relative", className)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
+      tabIndex={0}
+      role="region"
+      aria-label={`${brandName} collections gallery`}
       data-testid={`brand-gallery-${testIdPrefix}`}
     >
       {/* Horizontal scrolling container */}
@@ -117,6 +145,8 @@ export default function BrandGallery({
           msOverflowStyle: 'none',
           scrollbarWidth: 'none'
         } as React.CSSProperties}
+        role="list"
+        aria-label={`${brandName} lighting collections`}
         data-testid={`gallery-container-${testIdPrefix}`}
       >
         {collections.map((collection, index) => (
@@ -129,6 +159,7 @@ export default function BrandGallery({
               width: 'clamp(280px, calc(100vw - 8rem), 320px)',
               minWidth: '280px'
             }}
+            role="listitem"
             data-testid={`gallery-item-${testIdPrefix}-${index}`}
           >
             {/* Image container with glass-card styling */}
@@ -163,8 +194,9 @@ export default function BrandGallery({
             "w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20",
             "flex items-center justify-center text-white",
             "hover:bg-white/20 hover:border-white/40 transition-all duration-200",
+            "focus:bg-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/50",
             "opacity-0 scale-90",
-            isHovered && "opacity-100 scale-100"
+            (isHovered || isFocused) && "opacity-100 scale-100"
           )}
           aria-label="Previous collections"
           data-testid={`gallery-nav-left-${testIdPrefix}`}
@@ -182,8 +214,9 @@ export default function BrandGallery({
             "w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20",
             "flex items-center justify-center text-white",
             "hover:bg-white/20 hover:border-white/40 transition-all duration-200",
+            "focus:bg-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/50",
             "opacity-0 scale-90",
-            isHovered && "opacity-100 scale-100"
+            (isHovered || isFocused) && "opacity-100 scale-100"
           )}
           aria-label="Next collections"
           data-testid={`gallery-nav-right-${testIdPrefix}`}

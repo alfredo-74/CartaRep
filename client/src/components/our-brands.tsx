@@ -1,23 +1,14 @@
-import { useEffect, useRef, useState, useMemo } from "react";
+import React, { useRef, useState, useMemo, useEffect } from "react";
 import { Download, ExternalLink } from "lucide-react";
 import { CatalogueRequestForm } from "./catalogue-request-form";
 import { LazyImage } from "./lazy-image";
-import { brandsData, validateCarouselImages } from '@/assets/manifest';
+import BrandGallery from "./brand-gallery";
+import { brandsData } from '@/assets/manifest';
 
 export default function OurBrands() {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeCarousel, setActiveCarousel] = useState<{ [key: string]: number }>({});
   const sectionRef = useRef<HTMLDivElement>(null);
-  const intervalRefs = useRef<{ [key: string]: NodeJS.Timeout }>({});
 
-  // Generate random colors for text elements
-  const randomColors = [
-    'text-cyan-400', 'text-emerald-400', 'text-purple-400', 'text-pink-400', 
-    'text-yellow-400', 'text-orange-400', 'text-red-400', 'text-blue-400',
-    'text-teal-400', 'text-violet-400', 'text-rose-400', 'text-lime-400'
-  ];
-
-  const getRandomColor = () => randomColors[Math.floor(Math.random() * randomColors.length)];
 
   // Shuffle function for randomizing brand order
   const shuffleArray = <T,>(array: T[]): T[] => {
@@ -29,16 +20,12 @@ export default function OurBrands() {
     return shuffled;
   };
 
+  // Intersection observer to trigger fade-in animations when section becomes visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Start auto-scrolling for all brand carousels
-          startAutoScroll();
-        } else {
-          // Stop auto-scrolling when not visible
-          stopAutoScroll();
         }
       },
       { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
@@ -50,37 +37,8 @@ export default function OurBrands() {
 
     return () => {
       observer.disconnect();
-      stopAutoScroll();
     };
   }, []);
-
-  const startAutoScroll = () => {
-    shuffledBrands.forEach((brand) => {
-      if (intervalRefs.current[brand.name]) {
-        clearInterval(intervalRefs.current[brand.name]);
-      }
-      
-      // Safety guard: Only start carousel for brands with multiple collections
-      if (!validateCarouselImages(brand.collections.map(c => c.image))) {
-        console.warn(`OurBrands: Brand "${brand.name}" has insufficient collections for carousel operation`);
-        return;
-      }
-      
-      intervalRefs.current[brand.name] = setInterval(() => {
-        setActiveCarousel(prev => ({
-          ...prev,
-          [brand.name]: ((prev[brand.name] || 0) + 1) % brand.collections.length
-        }));
-      }, 3000 + Math.random() * 2000); // Random interval between 3-5 seconds
-    });
-  };
-
-  const stopAutoScroll = () => {
-    Object.values(intervalRefs.current).forEach(interval => {
-      if (interval) clearInterval(interval);
-    });
-    intervalRefs.current = {};
-  };
 
   const getBrandCatalogues = (brandName: string) => {
     const catalogues: { [key: string]: Array<{ name: string; description: string }> } = {
@@ -153,30 +111,13 @@ export default function OurBrands() {
                 </p>
               </div>
 
-              {/* Collection Carousel */}
-              <div className="relative mb-6">
-                <div className="overflow-hidden rounded-xl">
-                  <div 
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{ transform: `translateX(-${(activeCarousel[brand.name] || 0) * 100}%)` }}
-                  >
-                    {brand.collections.map((collection, collectionIndex) => (
-                      <div 
-                        key={collectionIndex}
-                        className="w-full flex-shrink-0"
-                        data-testid={`carousel-slide-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${collectionIndex}`}
-                      >
-                        <LazyImage 
-                          src={collection.image}
-                          alt={collection.alt}
-                          className="w-full h-64 object-cover"
-                          priority={collectionIndex === (activeCarousel[brand.name] || 0) && index < 2}
-                          testId={`img-collection-${brand.name.toLowerCase().replace(/\s+/g, '-')}-${collectionIndex}`}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              {/* Brand Gallery */}
+              <div className="mb-6">
+                <BrandGallery 
+                  collections={brand.collections}
+                  brandName={brand.name}
+                  className=""
+                />
               </div>
 
               {/* Action Buttons */}
