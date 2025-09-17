@@ -111,7 +111,6 @@ export const backgroundCarouselImages: string[] = [
   aEmotionalCoral,            // Coral Collection - 48KB
   aEmotionalBretema,          // Bretema Collection - 20KB
   aEmotionalGallery,          // Gallery Installation - 47KB
-  aEmotionalLogo,             // Final Collection - premium lighting showcase
   aEmotionalOnn,              // Onn Collection - minimalist elegance
   aEmotionalTempo,            // Tempo Collection - rhythmic design elements
   
@@ -141,7 +140,6 @@ export const backgroundCarouselImages: string[] = [
   boverMulti,                 // Multi Collection - versatile modular lighting
   boverNanasDetail,           // Nanas Detail - close-up artisanal craftsmanship
   boverNansOutdoor,           // Nans Outdoor - weather-resistant elegance
-  boverLogo,                  // Newest Collection - contemporary Barcelona design
   
   // Panzeri Lighting collections - ALL AVAILABLE IMAGES
   panzeriZeroRound,           // Zero Round Collection - 60KB
