@@ -29,6 +29,18 @@ import oleAvatarPop from './ole-avatar-pop.jpg';
 import oleMedusa from './ole-medusa.jpg';
 import oleMorgana from './ole-morgana.jpg';
 
+// NEW Olé Lighting collection imports - ALL OPTIMIZED
+import oleCandela from './ole-candela.jpg';
+import oleCeleste from './ole-celeste.jpg';
+import oleKatana from './ole-katana.jpg';
+import oleMedusa2 from './ole-medusa2.jpg';
+import oleMedusa3 from './ole-medusa3.jpg';
+import oleMorgana2 from './ole-morgana2.jpg';
+import oleNexo from './ole-nexo.jpg';
+import olePagoda from './ole-pagoda.jpg';
+import olePampa from './ole-pampa.jpg';
+import oleSonora from './ole-sonora.jpg';
+
 // Bover Barcelona collection imports - ALL OPTIMIZED  
 import boverKando from './bover-kando.jpg';
 import boverNansOutdoor from './bover-nans-outdoor.jpg';
@@ -46,10 +58,20 @@ import panzeriZeroRound from './panzeri-zero-round.jpg';
 import panzeriRendezVous from './panzeri-rendez-vous.jpg';
 import panzeriMurane from './panzeri-murane.jpg';
 
-// Additional placeholder variables for Panzeri collections not yet having dedicated images
-const romaImg = panzeriLogo;
-const roma1Img = panzeriLogo;
-const ombraImg = panzeriLogo;
+// NEW Panzeri Lighting collection imports - ALL OPTIMIZED
+import panzeriAdamas from './panzeri-adamas.jpg';
+import panzeriAdamas1 from './panzeri-adamas1.jpg';
+import panzeriAdamas2 from './panzeri-adamas2.jpg';
+import panzeriBella from './panzeri-bella.jpg';
+import panzeriHillow from './panzeri-hillow.jpg';
+import panzeriOmbra from './panzeri-ombra.jpg';
+import panzeriRoma from './panzeri-roma.jpg';
+import panzeriRoma2 from './panzeri-roma2.jpg';
+
+// Updated real image variables (no longer placeholders)
+const romaImg = panzeriRoma;
+const roma1Img = panzeriRoma2;
+const ombraImg = panzeriOmbra;
 
 // Brand logos export
 export const brandLogos = {
