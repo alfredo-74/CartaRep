@@ -99,6 +99,7 @@ export interface Brand {
 
 // Background carousel images - using all collection images for maximum visual variety
 // ALL IMAGES OPTIMIZED FOR INSTANT LOADING (under 100KB each)
+// EXPANDED with new Olé and Panzeri collections for enhanced visual diversity
 export const backgroundCarouselImages: string[] = [
   // a·emotional light collections
   aEmotionalRosa,             // Rosa Collection - 28KB
@@ -111,12 +112,20 @@ export const backgroundCarouselImages: string[] = [
   aEmotionalBretema,          // Bretema Collection - 20KB
   aEmotionalGallery,          // Gallery Installation - 47KB
   
-  // Olé Lighting collections
+  // Olé Lighting collections - EXPANDED
   oleMorgana,                 // Morgana Collection - 72KB
   oleMedusa,                  // Medusa Collection - 56KB
   oleAvatarPop,               // Avatar Pop Collection - 52KB
   oleEra,                     // Era Collection - 72KB
   oleTempo,                   // Tempo Collection - 48KB
+  oleCandela,                 // NEW: Candela Collection - warm ceramic elegance
+  oleCeleste,                 // NEW: Celeste Collection - celestial natural forms
+  oleKatana,                  // NEW: Katana Collection - sleek Japanese precision
+  oleMedusa2,                 // NEW: Medusa2 Collection - organic sculptural forms
+  oleMorgana2,                // NEW: Morgana2 Collection - enhanced Mediterranean charm
+  oleNexo,                    // NEW: Nexo Collection - modular connected lighting
+  olePagoda,                  // NEW: Pagoda Collection - tiered oriental elegance
+  oleSonora,                  // NEW: Sonora Collection - acoustic sound wave design
   
   // Bover Barcelona collections
   boverSkybell,               // Skybell Collection - 100KB
@@ -127,10 +136,15 @@ export const backgroundCarouselImages: string[] = [
   boverDrep,                  // Drep Collection - 52KB
   boverNonLa,                 // Non La Collection - 36KB
   
-  // Panzeri Lighting collections
+  // Panzeri Lighting collections - EXPANDED
   panzeriZeroRound,           // Zero Round Collection - 60KB
   panzeriRendezVous,          // Rendez-Vous Collection - 45KB
-  panzeriMurane               // Muranè Collection - 68KB
+  panzeriMurane,              // Muranè Collection - 68KB
+  panzeriAdamas,              // NEW: Adamas Collection - diamond crystal luxury
+  panzeriBella,               // NEW: Bella Collection - flowing Italian elegance
+  panzeriHillow,              // NEW: Hillow Collection - organic hill-inspired shapes
+  panzeriRoma,                // NEW: Roma Collection - architectural Italian design
+  panzeriOmbra                // NEW: Ombra Collection - dramatic shadow-play
 ];
 
 // Brand collections organized by brand - using real collection images where available
@@ -209,6 +223,56 @@ export const brandCollectionImages = {
       name: "Tempo Collection",
       image: oleTempo,
       alt: "Olé Lighting Tempo collection - dynamic contemporary lighting solutions"
+    },
+    {
+      name: "Candela Collection",
+      image: oleCandela,
+      alt: "Olé Lighting Candela collection - warm candle-inspired pendants with ceramic elegance"
+    },
+    {
+      name: "Celeste Collection",
+      image: oleCeleste,
+      alt: "Olé Lighting Celeste collection - celestial-inspired hanging lights with natural forms"
+    },
+    {
+      name: "Katana Collection",
+      image: oleKatana,
+      alt: "Olé Lighting Katana collection - sleek linear lighting with Japanese precision"
+    },
+    {
+      name: "Medusa2 Collection",
+      image: oleMedusa2,
+      alt: "Olé Lighting Medusa2 collection - organic sculptural forms with flowing tentacle design"
+    },
+    {
+      name: "Medusa3 Collection",
+      image: oleMedusa3,
+      alt: "Olé Lighting Medusa3 collection - refined jellyfish-inspired pendants in modern setting"
+    },
+    {
+      name: "Morgana2 Collection",
+      image: oleMorgana2,
+      alt: "Olé Lighting Morgana2 collection - enhanced Mediterranean charm with warm textures"
+    },
+    {
+      name: "Nexo Collection",
+      image: oleNexo,
+      alt: "Olé Lighting Nexo collection - modular connected lighting for contemporary spaces"
+    },
+    {
+      name: "Pagoda Collection",
+      image: olePagoda,
+      alt: "Olé Lighting Pagoda collection - tiered oriental-inspired lighting with layered elegance"
+    },
+    {
+      name: "Pampa Collection",
+      image: olePampa,
+      alt: "Olé Lighting Pampa collection - earthy natural materials with grassland inspiration"
+    },
+    {
+      name: "Sonora Collection",
+      image: oleSonora,
+      alt: "Olé Lighting Sonora collection - acoustic-inspired design with sound wave aesthetics"
     }
   ],
   
@@ -274,12 +338,12 @@ export const brandCollectionImages = {
     {
       name: "Roma Collection",
       image: romaImg,
-      alt: "Panzeri Roma collection - sample placeholder image"
+      alt: "Panzeri Roma collection - elegant Italian-inspired architectural lighting"
     },
     {
       name: "Roma Wall Series",
       image: roma1Img,
-      alt: "Panzeri Roma Wall series - sample placeholder image"
+      alt: "Panzeri Roma Wall series - sophisticated wall-mounted lighting solutions"
     },
     {
       name: "Rendez-Vous Collection",
@@ -289,12 +353,37 @@ export const brandCollectionImages = {
     {
       name: "Ombra Collection",
       image: ombraImg,
-      alt: "Panzeri Ombra collection - sample placeholder image"
+      alt: "Panzeri Ombra collection - dramatic shadow-play lighting with geometric forms"
     },
     {
       name: "Muranè Collection",
       image: panzeriMurane,
       alt: "Panzeri Muranè collection - Venetian glass inspired lighting"
+    },
+    {
+      name: "Adamas Collection",
+      image: panzeriAdamas,
+      alt: "Panzeri Adamas collection - diamond-inspired crystal pendant lighting with luxury appeal"
+    },
+    {
+      name: "Adamas Pro Collection",
+      image: panzeriAdamas1,
+      alt: "Panzeri Adamas Pro collection - professional-grade crystal lighting for commercial spaces"
+    },
+    {
+      name: "Adamas Studio Collection",
+      image: panzeriAdamas2,
+      alt: "Panzeri Adamas Studio collection - refined crystal pendants for residential interiors"
+    },
+    {
+      name: "Bella Collection",
+      image: panzeriBella,
+      alt: "Panzeri Bella collection - beautiful flowing forms with Italian elegance and grace"
+    },
+    {
+      name: "Hillow Collection",
+      image: panzeriHillow,
+      alt: "Panzeri Hillow collection - organic hill-inspired shapes with natural textures"
     }
   ]
 } as const;
@@ -362,12 +451,22 @@ export {
   aEmotionalBretema,
   aEmotionalGallery,
   
-  // Olé Lighting collections  
+  // Olé Lighting collections - EXPANDED
   oleEra,
   oleTempo,
   oleAvatarPop,
   oleMedusa,
   oleMorgana,
+  oleCandela,
+  oleCeleste,
+  oleKatana,
+  oleMedusa2,
+  oleMedusa3,
+  oleMorgana2,
+  oleNexo,
+  olePagoda,
+  olePampa,
+  oleSonora,
   
   // Bover Barcelona collections
   boverKando,
@@ -381,10 +480,15 @@ export {
   boverNonLa,
   boverMulti,
   
-  // Panzeri Lighting collections
+  // Panzeri Lighting collections - EXPANDED
   panzeriZeroRound,
   panzeriRendezVous,
   panzeriMurane,
+  panzeriAdamas,
+  panzeriAdamas1,
+  panzeriAdamas2,
+  panzeriBella,
+  panzeriHillow,
   romaImg,
   roma1Img,
   ombraImg
