@@ -42,28 +42,23 @@ export default function BrandGallery({
     setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
   }, []);
 
-  // Smooth scroll to specific position
+  // Smooth scroll to specific position - scroll exactly one item at a time
   const scrollTo = useCallback((direction: 'left' | 'right') => {
     if (!scrollContainerRef.current) return;
 
     const container = scrollContainerRef.current;
-    const itemWidth = container.scrollWidth / collections.length;
+    const itemWidth = container.clientWidth; // Full container width = one item width
     const currentScroll = container.scrollLeft;
     
-    // Calculate scroll distance based on responsive layout
-    const viewportWidth = window.innerWidth;
-    const itemsPerView = viewportWidth >= 1024 ? 3.5 : viewportWidth >= 768 ? 2.5 : 1.5;
-    const scrollDistance = itemWidth * itemsPerView;
-    
     const targetScroll = direction === 'left' 
-      ? Math.max(0, currentScroll - scrollDistance)
-      : Math.min(container.scrollWidth - container.clientWidth, currentScroll + scrollDistance);
+      ? Math.max(0, currentScroll - itemWidth)
+      : Math.min(container.scrollWidth - container.clientWidth, currentScroll + itemWidth);
 
     container.scrollTo({
       left: targetScroll,
       behavior: 'smooth'
     });
-  }, [collections.length]);
+  }, []);
 
   // Handle keyboard navigation - now based on focus instead of hover
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
@@ -136,7 +131,7 @@ export default function BrandGallery({
       {/* Horizontal scrolling container */}
       <div
         ref={scrollContainerRef}
-        className="flex gap-4 overflow-x-auto scroll-smooth brand-gallery-container w-[calc(1.5*280px+0.5*1rem)] sm:w-[calc(1.5*280px+0.5*1rem)] md:w-[calc(2.5*280px+1.5*1rem)] lg:w-[calc(3.5*280px+2.5*1rem)] max-w-full"
+        className="flex overflow-x-auto scroll-smooth brand-gallery-container w-full"
         style={{
           scrollSnapType: 'x mandatory',
           WebkitOverflowScrolling: 'touch', // Enable momentum scrolling on iOS
@@ -152,7 +147,7 @@ export default function BrandGallery({
         {collections.map((collection, index) => (
           <div
             key={`${collection.name}-${index}`}
-            className="flex-shrink-0 relative group w-[280px] sm:w-[280px] md:w-[280px] lg:w-[280px]"
+            className="flex-shrink-0 relative group w-full"
             style={{
               scrollSnapAlign: 'start'
             }}
@@ -164,19 +159,10 @@ export default function BrandGallery({
               <LazyImage
                 src={collection.image}
                 alt={collection.alt}
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 priority={index < 4} // Prioritize first 4 images
                 testId={`gallery-image-${testIdPrefix}-${index}`}
               />
-              
-              {/* Collection name overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h4 className="text-white font-medium text-sm leading-tight">
-                    {collection.name}
-                  </h4>
-                </div>
-              </div>
             </div>
           </div>
         ))}
