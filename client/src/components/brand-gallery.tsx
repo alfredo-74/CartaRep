@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { LazyImage } from "./lazy-image";
 import { cn } from "@/lib/utils";
 import type { LightingCollection } from "@/assets/manifest";
 
@@ -165,12 +164,12 @@ export default function BrandGallery({
           >
             {/* Image container with glass-card styling */}
             <div className="relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300">
-              <LazyImage
+              <img
                 src={collection.image}
                 alt={collection.alt}
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                priority={index < 4} // Prioritize first 4 images
-                testId={`gallery-image-${testIdPrefix}-${index}`}
+                loading={index < 4 ? "eager" : "lazy"} // Prioritize first 4 images
+                data-testid={`gallery-image-${testIdPrefix}-${index}`}
               />
             </div>
           </div>
