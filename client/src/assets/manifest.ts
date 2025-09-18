@@ -199,6 +199,16 @@ export const brandCollectionImages = {
       name: "Gallery Installation",
       image: aEmotionalGallery,
       alt: "a·emotional light gallery installation - restaurant lighting design showcase"
+    },
+    {
+      name: "Onn Collection",
+      image: aEmotionalOnn,
+      alt: "a·emotional light Onn collection - minimalist elegance with clean geometric forms"
+    },
+    {
+      name: "Tempo Collection",
+      image: aEmotionalTempo,
+      alt: "a·emotional light Tempo collection - rhythmic design elements with dynamic lighting patterns"
     }
   ],
   
