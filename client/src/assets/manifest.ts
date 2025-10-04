@@ -10,6 +10,7 @@ import aEmotionalLogo from './a-emotional-final.jpg';
 import oleLogo from './ole-logo.png';
 import boverLogo from './bover-newest.jpg';
 import panzeriLogo from './panzeri-logo-new.png';
+import bluxLogo from './blux-logo.jpg';
 
 // a·emotional light collection imports - ALL OPTIMIZED
 import aEmotionalRosa from './a-emotional-rosa.jpg';
@@ -68,13 +69,25 @@ import panzeriOmbra from './panzeri-ombra.jpg';
 import panzeriRoma from './panzeri-roma.jpg';
 import panzeriRoma2 from './panzeri-roma2.jpg';
 
+// Blux Lighting collection imports - ALL OPTIMIZED
+import bluxAnvil from './blux-anvil.jpg';
+import bluxAspen from './blux-aspen.jpg';
+import bluxBlokinline from './blux-blokinline.jpg';
+import bluxCeiling from './blux-ceiling.jpg';
+import bluxBeaded from './blux-beaded.jpg';
+import bluxCastle from './blux-castle.jpg';
+import bluxTable from './blux-table.jpg';
+import bluxBerry from './blux-berry.jpg';
+import bluxOutdoor from './blux-outdoor.jpg';
+import bluxFloor from './blux-floor.jpg';
 
 // Brand logos export
 export const brandLogos = {
   'a·emotional light': aEmotionalLogo,
   'Olé Lighting': oleLogo,
   'Bover Barcelona': boverLogo,
-  'Panzeri Lighting': panzeriLogo
+  'Panzeri Lighting': panzeriLogo,
+  'Blux Lighting': bluxLogo
 } as const;
 
 // Collection interface for type safety
@@ -148,7 +161,19 @@ export const backgroundCarouselImages: string[] = [
   panzeriHillow,              // Hillow Collection - organic hill-inspired shapes
   panzeriRoma,                // Roma Collection - architectural Italian design
   panzeriRoma2,               // Roma Variant - alternative architectural forms
-  panzeriOmbra                // Ombra Collection - dramatic shadow-play
+  panzeriOmbra,               // Ombra Collection - dramatic shadow-play
+  
+  // Blux Lighting collections - ALL AVAILABLE IMAGES
+  bluxAnvil,                  // Anvil Collection - architectural pendant lighting
+  bluxAspen,                  // Aspen Collection - modern minimalist design
+  bluxBlokinline,             // Blokinline Collection - modular LED systems
+  bluxCeiling,                // Ceiling Collection - contemporary flush mounts
+  bluxBeaded,                 // Beaded Collection - decorative suspension lights
+  bluxCastle,                 // Castle Collection - elegant architectural fixtures
+  bluxTable,                  // Table Collection - decorative desk lighting
+  bluxBerry,                  // Berry Collection - organic forms and shapes
+  bluxOutdoor,                // Outdoor Collection - weather-resistant wall lights
+  bluxFloor                   // Floor Collection - sculptural standing lamps
 ];
 
 // Brand collections organized by brand - using real collection images where available
@@ -389,6 +414,59 @@ export const brandCollectionImages = {
       image: panzeriHillow,
       alt: "Panzeri Hillow collection - organic hill-inspired shapes with natural textures"
     }
+  ],
+  
+  'Blux Lighting': [
+    {
+      name: "Anvil Collection",
+      image: bluxAnvil,
+      alt: "Blux Anvil collection - architectural pendant lighting with modular design systems"
+    },
+    {
+      name: "Aspen Collection",
+      image: bluxAspen,
+      alt: "Blux Aspen collection - modern minimalist lighting with clean geometric forms"
+    },
+    {
+      name: "Blokinline Collection",
+      image: bluxBlokinline,
+      alt: "Blux Blokinline collection - modular LED tube systems for contemporary spaces"
+    },
+    {
+      name: "Ceiling Collection",
+      image: bluxCeiling,
+      alt: "Blux ceiling collection - contemporary flush mount and recessed lighting solutions"
+    },
+    {
+      name: "Beaded Collection",
+      image: bluxBeaded,
+      alt: "Blux Beaded collection - decorative suspension lights with textured details"
+    },
+    {
+      name: "Castle Collection",
+      image: bluxCastle,
+      alt: "Blux Castle collection - elegant architectural fixtures with refined aesthetics"
+    },
+    {
+      name: "Table Collection",
+      image: bluxTable,
+      alt: "Blux table collection - decorative desk and ambient lighting for workspaces"
+    },
+    {
+      name: "Berry Collection",
+      image: bluxBerry,
+      alt: "Blux Berry collection - organic forms inspired by nature with playful design"
+    },
+    {
+      name: "Outdoor Collection",
+      image: bluxOutdoor,
+      alt: "Blux outdoor collection - weather-resistant wall lights for exterior spaces"
+    },
+    {
+      name: "Floor Collection",
+      image: bluxFloor,
+      alt: "Blux floor collection - sculptural standing lamps with modern aesthetics"
+    }
   ]
 } as const;
 
@@ -421,6 +499,13 @@ export const brandsData: Brand[] = [
     description: "For over 70 years, Panzeri has combined Italian tradition and innovation in decorative and architectural lighting. Its designs balance creativity, quality, and timeless style, enhancing interiors and exteriors worldwide with refined, iconic solutions.",
     website: "https://panzeri.it/en/",
     collections: brandCollectionImages['Panzeri Lighting']
+  },
+  {
+    name: "Blux Lighting",
+    logoUrl: bluxLogo,
+    description: "Blux combines Spanish craftsmanship with innovative design to create contemporary lighting solutions. From decorative to architectural and outdoor collections, each piece reflects modern aesthetics with functional excellence for residential and commercial spaces.",
+    website: "https://bluxlighting.com/",
+    collections: brandCollectionImages['Blux Lighting']
   }
 ];
 
@@ -495,7 +580,19 @@ export {
   panzeriHillow,
   panzeriRoma,
   panzeriRoma2,
-  panzeriOmbra
+  panzeriOmbra,
+  
+  // Blux Lighting collections
+  bluxAnvil,
+  bluxAspen,
+  bluxBlokinline,
+  bluxCeiling,
+  bluxBeaded,
+  bluxCastle,
+  bluxTable,
+  bluxBerry,
+  bluxOutdoor,
+  bluxFloor
 };
 
 /**

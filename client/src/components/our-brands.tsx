@@ -66,6 +66,11 @@ export default function OurBrands() {
         { name: "Panzeri Hilow", description: "Specialized documentation for Hilow adjustable systems" },
         { name: "Light And Shapes 2019", description: "Design philosophy and architectural lighting solutions" },
         { name: "Press Kit", description: "High-resolution images and company information for professionals" }
+      ],
+      "Blux Lighting": [
+        { name: "New Collections 2025", description: "Latest collection featuring innovative designs and contemporary lighting solutions" },
+        { name: "General Catalogue", description: "Complete product overview with decorative, architectural and outdoor collections" },
+        { name: "BrandBook B.lux", description: "Brand identity, design philosophy and company information for professionals" }
       ]
     };
     return catalogues[brandName] || [];
