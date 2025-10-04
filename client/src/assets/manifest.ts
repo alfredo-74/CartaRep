@@ -70,16 +70,16 @@ import panzeriRoma from './panzeri-roma.jpg';
 import panzeriRoma2 from './panzeri-roma2.jpg';
 
 // Blux Lighting collection imports - ALL OPTIMIZED
-import bluxAnvil from './blux-anvil.jpg';
-import bluxAspen from './blux-aspen.jpg';
-import bluxBlokinline from './blux-blokinline.jpg';
-import bluxCeiling from './blux-ceiling.jpg';
-import bluxBeaded from './blux-beaded.jpg';
-import bluxCastle from './blux-castle.jpg';
-import bluxTable from './blux-table.jpg';
-import bluxBerry from './blux-berry.jpg';
-import bluxOutdoor from './blux-outdoor.jpg';
-import bluxFloor from './blux-floor.jpg';
+import bluxProduct01 from './blux-product-01.jpg';
+import bluxProduct02 from './blux-product-02.jpg';
+import bluxProduct03 from './blux-product-03.jpg';
+import bluxProduct04 from './blux-product-04.jpg';
+import bluxProduct05 from './blux-product-05.jpg';
+import bluxProduct06 from './blux-product-06.jpg';
+import bluxProduct07 from './blux-product-07.jpg';
+import bluxProduct08 from './blux-product-08.jpg';
+import bluxProduct09 from './blux-product-09.jpg';
+import bluxProduct10 from './blux-product-10.jpg';
 
 // Brand logos export
 export const brandLogos = {
@@ -164,16 +164,16 @@ export const backgroundCarouselImages: string[] = [
   panzeriOmbra,               // Ombra Collection - dramatic shadow-play
   
   // Blux Lighting collections - ALL AVAILABLE IMAGES
-  bluxAnvil,                  // Anvil Collection - architectural pendant lighting
-  bluxAspen,                  // Aspen Collection - modern minimalist design
-  bluxBlokinline,             // Blokinline Collection - modular LED systems
-  bluxCeiling,                // Ceiling Collection - contemporary flush mounts
-  bluxBeaded,                 // Beaded Collection - decorative suspension lights
-  bluxCastle,                 // Castle Collection - elegant architectural fixtures
-  bluxTable,                  // Table Collection - decorative desk lighting
-  bluxBerry,                  // Berry Collection - organic forms and shapes
-  bluxOutdoor,                // Outdoor Collection - weather-resistant wall lights
-  bluxFloor                   // Floor Collection - sculptural standing lamps
+  bluxProduct01,              // Lite Hole Collection - contemporary ceiling pendant
+  bluxProduct02,              // Keshi Collection - modern table lamp
+  bluxProduct03,              // C-Ball Number Collection - architectural wall sconces
+  bluxProduct04,              // Crosshatch Number Collection - elegant wall lighting
+  bluxProduct05,              // Beira Collection - minimalist table lamp
+  bluxProduct06,              // Aspen Pendant Collection - colorful modular pendants
+  bluxProduct07,              // Aspen Detail Collection - elegant craftsmanship
+  bluxProduct08,              // Aspen Pro Collection - premium brass detailing
+  bluxProduct09,              // Aspen Ceiling Collection - architectural ceiling mount
+  bluxProduct10               // Outdoor Architectural Collection - urban courtyard lighting
 ];
 
 // Brand collections organized by brand - using real collection images where available
@@ -418,54 +418,54 @@ export const brandCollectionImages = {
   
   'Blux Lighting': [
     {
-      name: "Anvil Collection",
-      image: bluxAnvil,
-      alt: "Blux Anvil collection - architectural pendant lighting with modular design systems"
+      name: "Lite Hole Collection",
+      image: bluxProduct01,
+      alt: "Blux Lite Hole - contemporary ceiling pendant with circular LED design and warm ambient lighting"
     },
     {
-      name: "Aspen Collection",
-      image: bluxAspen,
-      alt: "Blux Aspen collection - modern minimalist lighting with clean geometric forms"
+      name: "Keshi Collection",
+      image: bluxProduct02,
+      alt: "Blux Keshi - modern table lamp with sculptural form and soft illumination for living spaces"
     },
     {
-      name: "Blokinline Collection",
-      image: bluxBlokinline,
-      alt: "Blux Blokinline collection - modular LED tube systems for contemporary spaces"
+      name: "C-Ball Number Collection",
+      image: bluxProduct03,
+      alt: "Blux C-Ball Number - architectural wall sconces with spherical design for corridor and hallway lighting"
     },
     {
-      name: "Ceiling Collection",
-      image: bluxCeiling,
-      alt: "Blux ceiling collection - contemporary flush mount and recessed lighting solutions"
+      name: "Crosshatch Number Collection",
+      image: bluxProduct04,
+      alt: "Blux Crosshatch Number - elegant wall lighting with textured details and custom numbering for hospitality spaces"
     },
     {
-      name: "Beaded Collection",
-      image: bluxBeaded,
-      alt: "Blux Beaded collection - decorative suspension lights with textured details"
+      name: "Beira Collection",
+      image: bluxProduct05,
+      alt: "Blux Beira - minimalist table lamp with translucent cylindrical shade and refined aesthetic"
     },
     {
-      name: "Castle Collection",
-      image: bluxCastle,
-      alt: "Blux Castle collection - elegant architectural fixtures with refined aesthetics"
+      name: "Aspen Pendant Collection",
+      image: bluxProduct06,
+      alt: "Blux Aspen - colorful pendant lights with modular cylindrical design and decorative brass accents"
     },
     {
-      name: "Table Collection",
-      image: bluxTable,
-      alt: "Blux table collection - decorative desk and ambient lighting for workspaces"
+      name: "Aspen Detail Collection",
+      image: bluxProduct07,
+      alt: "Blux Aspen detail - soft pink shade showing elegant form and quality craftsmanship"
     },
     {
-      name: "Berry Collection",
-      image: bluxBerry,
-      alt: "Blux Berry collection - organic forms inspired by nature with playful design"
+      name: "Aspen Pro Collection",
+      image: bluxProduct08,
+      alt: "Blux Aspen Pro - close-up of brass detailing and premium finish on cylindrical pendant fixture"
     },
     {
-      name: "Outdoor Collection",
-      image: bluxOutdoor,
-      alt: "Blux outdoor collection - weather-resistant wall lights for exterior spaces"
+      name: "Aspen Ceiling Collection",
+      image: bluxProduct09,
+      alt: "Blux Aspen ceiling mount - architectural detail showing decorative brass ring and lighting effects"
     },
     {
-      name: "Floor Collection",
-      image: bluxFloor,
-      alt: "Blux floor collection - sculptural standing lamps with modern aesthetics"
+      name: "Outdoor Architectural Collection",
+      image: bluxProduct10,
+      alt: "Blux outdoor architectural lighting - weather-resistant fixtures illuminating contemporary urban courtyard space"
     }
   ]
 } as const;
@@ -583,16 +583,16 @@ export {
   panzeriOmbra,
   
   // Blux Lighting collections
-  bluxAnvil,
-  bluxAspen,
-  bluxBlokinline,
-  bluxCeiling,
-  bluxBeaded,
-  bluxCastle,
-  bluxTable,
-  bluxBerry,
-  bluxOutdoor,
-  bluxFloor
+  bluxProduct01,
+  bluxProduct02,
+  bluxProduct03,
+  bluxProduct04,
+  bluxProduct05,
+  bluxProduct06,
+  bluxProduct07,
+  bluxProduct08,
+  bluxProduct09,
+  bluxProduct10
 };
 
 /**
