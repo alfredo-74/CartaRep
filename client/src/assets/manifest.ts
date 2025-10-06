@@ -164,16 +164,16 @@ export const backgroundCarouselImages: string[] = [
   panzeriOmbra,               // Ombra Collection - dramatic shadow-play
   
   // Blux Lighting collections - ALL AVAILABLE IMAGES
-  bluxProduct01,              // Lite Hole Collection - contemporary ceiling pendant
-  bluxProduct02,              // Keshi Collection - modern table lamp
-  bluxProduct03,              // C-Ball Number Collection - architectural wall sconces
-  bluxProduct04,              // Crosshatch Number Collection - elegant wall lighting
-  bluxProduct05,              // Beira Collection - minimalist table lamp
-  bluxProduct06,              // Aspen Pendant Collection - colorful modular pendants
-  bluxProduct07,              // Aspen Detail Collection - elegant craftsmanship
-  bluxProduct08,              // Aspen Pro Collection - premium brass detailing
-  bluxProduct09,              // Aspen Ceiling Collection - architectural ceiling mount
-  bluxProduct10               // Outdoor Architectural Collection - urban courtyard lighting
+  bluxProduct01,              // Tree Series S Collection - layered pendant over modern table
+  bluxProduct02,              // Canfranc Collection - hospitality lighting installation
+  bluxProduct03,              // Overlay S Collection - tiered geometric pendant
+  bluxProduct04,              // Misko SH Collection - linear pendant with glass spheres
+  bluxProduct05,              // Kupetz Collection - dramatic cascading pendants
+  bluxProduct06,              // Keshi T Collection - sculptural table lamps
+  bluxProduct07,              // Ilde Max Collection - statement chandelier with glass bulbs
+  bluxProduct08,              // C-Ball Number Collection - golden wall sconces
+  bluxProduct09,              // Berry S Collection - adjustable minimalist pendants
+  bluxProduct10               // Anvil System Collection - modular wooden beam lighting
 ];
 
 // Brand collections organized by brand - using real collection images where available
