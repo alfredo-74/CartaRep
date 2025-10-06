@@ -418,54 +418,54 @@ export const brandCollectionImages = {
   
   'Blux Lighting': [
     {
-      name: "Lite Hole Collection",
+      name: "Tree Series S Collection",
       image: bluxProduct01,
-      alt: "Blux Lite Hole - contemporary ceiling pendant with circular LED design and warm ambient lighting"
+      alt: "Blux Tree Series S - contemporary pendant light with layered design creating warm ambient illumination over modern table setting"
     },
     {
-      name: "Keshi Collection",
+      name: "Canfranc Collection",
       image: bluxProduct02,
-      alt: "Blux Keshi - modern table lamp with sculptural form and soft illumination for living spaces"
+      alt: "Blux Canfranc - elegant hospitality lighting installation with multiple pendant fixtures creating sophisticated dining atmosphere"
+    },
+    {
+      name: "Overlay S Collection",
+      image: bluxProduct03,
+      alt: "Blux Overlay S - tiered pendant light with multi-layered geometric design in warm metallic tones for modern interiors"
+    },
+    {
+      name: "Misko SH Collection",
+      image: bluxProduct04,
+      alt: "Blux Misko SH - linear pendant lighting with spherical glass elements suspended over contemporary dining table"
+    },
+    {
+      name: "Kupetz Collection",
+      image: bluxProduct05,
+      alt: "Blux Kupetz - dramatic decorative pendant lights with cascading arrangement in vibrant architectural spaces"
+    },
+    {
+      name: "Keshi T Collection",
+      image: bluxProduct06,
+      alt: "Blux Keshi T - modern table lamps with sculptural black wire structure and marble base for sophisticated settings"
+    },
+    {
+      name: "Ilde Max Collection",
+      image: bluxProduct07,
+      alt: "Blux Ilde Max - statement chandelier with multiple glass bulbs and red cable detail for contemporary interiors"
     },
     {
       name: "C-Ball Number Collection",
-      image: bluxProduct03,
-      alt: "Blux C-Ball Number - architectural wall sconces with spherical design for corridor and hallway lighting"
-    },
-    {
-      name: "Crosshatch Number Collection",
-      image: bluxProduct04,
-      alt: "Blux Crosshatch Number - elegant wall lighting with textured details and custom numbering for hospitality spaces"
-    },
-    {
-      name: "Beira Collection",
-      image: bluxProduct05,
-      alt: "Blux Beira - minimalist table lamp with translucent cylindrical shade and refined aesthetic"
-    },
-    {
-      name: "Aspen Pendant Collection",
-      image: bluxProduct06,
-      alt: "Blux Aspen - colorful pendant lights with modular cylindrical design and decorative brass accents"
-    },
-    {
-      name: "Aspen Detail Collection",
-      image: bluxProduct07,
-      alt: "Blux Aspen detail - soft pink shade showing elegant form and quality craftsmanship"
-    },
-    {
-      name: "Aspen Pro Collection",
       image: bluxProduct08,
-      alt: "Blux Aspen Pro - close-up of brass detailing and premium finish on cylindrical pendant fixture"
+      alt: "Blux C-Ball Number - architectural wall sconces with golden finish for corridor and hallway hospitality lighting"
     },
     {
-      name: "Aspen Ceiling Collection",
+      name: "Berry S Collection",
       image: bluxProduct09,
-      alt: "Blux Aspen ceiling mount - architectural detail showing decorative brass ring and lighting effects"
+      alt: "Blux Berry S - adjustable pendant lights with minimalist black design and focused directional illumination"
     },
     {
-      name: "Outdoor Architectural Collection",
+      name: "Anvil System Collection",
       image: bluxProduct10,
-      alt: "Blux outdoor architectural lighting - weather-resistant fixtures illuminating contemporary urban courtyard space"
+      alt: "Blux Anvil System - modular pendant lighting with wooden beam and spherical glass fixtures for architectural spaces"
     }
   ]
 } as const;
