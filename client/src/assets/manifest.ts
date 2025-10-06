@@ -11,6 +11,7 @@ import oleLogo from './ole-logo.png';
 import boverLogo from './bover-newest.jpg';
 import panzeriLogo from './panzeri-logo-new.png';
 import bluxLogo from './blux-logo.jpg';
+import martinelliLogo from './martinelli-logo.jpg';
 
 // a·emotional light collection imports - ALL OPTIMIZED
 import aEmotionalRosa from './a-emotional-rosa.jpg';
@@ -81,13 +82,26 @@ import bluxProduct08 from './blux-brand-8.jpg';
 import bluxProduct09 from './blux-brand-9.jpg';
 import bluxProduct10 from './blux-brand-10.jpg';
 
+// Martinelli Luce collection imports - ALL OPTIMIZED
+import martinelliAvro from './martinelli-avro.jpg';
+import martinelliAmb03 from './martinelli-amb03.jpg';
+import martinelliRoll from './martinelli-roll.jpg';
+import martinelliMarx from './martinelli-marx.jpg';
+import martinelliCyborg from './martinelli-cyborg.jpg';
+import martinelliParadis from './martinelli-paradis.jpg';
+import martinelliComics from './martinelli-comics.jpg';
+import martinelliGrammoluce from './martinelli-grammoluce.jpg';
+import martinelliGrammoluce2 from './martinelli-grammoluce2.jpg';
+import martinelliCobra from './martinelli-cobra.jpg';
+
 // Brand logos export
 export const brandLogos = {
   'a·emotional light': aEmotionalLogo,
   'Olé Lighting': oleLogo,
   'Bover Barcelona': boverLogo,
   'Panzeri Lighting': panzeriLogo,
-  'Blux Lighting': bluxLogo
+  'Blux Lighting': bluxLogo,
+  'Martinelli Luce': martinelliLogo
 } as const;
 
 // Collection interface for type safety
@@ -173,7 +187,19 @@ export const backgroundCarouselImages: string[] = [
   bluxProduct07,              // Ilde Max Collection - statement chandelier with glass bulbs
   bluxProduct08,              // C-Ball Number Collection - golden wall sconces
   bluxProduct09,              // Berry S Collection - adjustable minimalist pendants
-  bluxProduct10               // Anvil System Collection - modular wooden beam lighting
+  bluxProduct10,              // Anvil System Collection - modular wooden beam lighting
+  
+  // Martinelli Luce collections - ALL AVAILABLE IMAGES
+  martinelliAvro,             // Avro Collection - iconic Italian pendant design
+  martinelliAmb03,            // Amb03 Collection - dramatic cascading light installation
+  martinelliRoll,             // Roll Collection - elegant wall-mounted lighting
+  martinelliMarx,             // Marx Collection - architectural wood and metal design
+  martinelliCyborg,           // Cyborg Collection - sculptural modern lighting forms
+  martinelliParadis,          // Paradis Collection - mushroom-shaped elegant table lamp
+  martinelliComics,           // Comics Collection - classic white table lamp design
+  martinelliGrammoluce,       // Grammoluce Collection - transparent dome lighting
+  martinelliGrammoluce2,      // Grammoluce Variant - innovative interactive design
+  martinelliCobra             // Cobra Collection - iconic red table lamp design
 ];
 
 // Brand collections organized by brand - using real collection images where available
@@ -467,6 +493,59 @@ export const brandCollectionImages = {
       image: bluxProduct10,
       alt: "Blux Anvil System - modular pendant lighting with wooden beam and spherical glass fixtures for architectural spaces"
     }
+  ],
+  
+  'Martinelli Luce': [
+    {
+      name: "Avro Collection",
+      image: martinelliAvro,
+      alt: "Martinelli Luce Avro - iconic orange pendant light with distinctive UFO-inspired design creating modern ambiance"
+    },
+    {
+      name: "Amb03 Collection",
+      image: martinelliAmb03,
+      alt: "Martinelli Luce Amb03 - dramatic cascading light installation with flowing wave patterns in contemporary space"
+    },
+    {
+      name: "Roll Collection",
+      image: martinelliRoll,
+      alt: "Martinelli Luce Roll - elegant black and white wall-mounted lighting with geometric minimalist design"
+    },
+    {
+      name: "Marx Collection",
+      image: martinelliMarx,
+      alt: "Martinelli Luce Marx - architectural wall lamp combining wood, metal and brushed steel elements"
+    },
+    {
+      name: "Cyborg Collection",
+      image: martinelliCyborg,
+      alt: "Martinelli Luce Cyborg - sculptural modern floor lamps with organic arch forms in contemporary setting"
+    },
+    {
+      name: "Paradis Collection",
+      image: martinelliParadis,
+      alt: "Martinelli Luce Paradis - elegant mushroom-shaped table lamp with white shade and bronze base"
+    },
+    {
+      name: "Comics Collection",
+      image: martinelliComics,
+      alt: "Martinelli Luce Comics - classic white table lamp with sculptural form in historic interior setting"
+    },
+    {
+      name: "Grammoluce Collection",
+      image: martinelliGrammoluce,
+      alt: "Martinelli Luce Grammoluce - innovative transparent dome table lamp with interactive design"
+    },
+    {
+      name: "Grammoluce Interactive",
+      image: martinelliGrammoluce2,
+      alt: "Martinelli Luce Grammoluce - close-up view showing innovative interactive lighting mechanism"
+    },
+    {
+      name: "Cobra Collection",
+      image: martinelliCobra,
+      alt: "Martinelli Luce Cobra - iconic red spherical table lamp with curved design in rustic setting"
+    }
   ]
 } as const;
 
@@ -506,6 +585,13 @@ export const brandsData: Brand[] = [
     description: "Blux combines Spanish craftsmanship with innovative design to create contemporary lighting solutions. From decorative to architectural and outdoor collections, each piece reflects modern aesthetics with functional excellence for residential and commercial spaces.",
     website: "https://bluxlighting.com/",
     collections: brandCollectionImages['Blux Lighting']
+  },
+  {
+    name: "Martinelli Luce",
+    logoUrl: martinelliLogo,
+    description: "Martinelli Luce creates iconic Italian lighting that unites geometry, nature, and innovation. With a legacy of bold, timeless design, each collection blends creativity and technology, shaping interiors with character, precision, and enduring style.",
+    website: "https://martinelliluce.it/en/",
+    collections: brandCollectionImages['Martinelli Luce']
   }
 ];
 
