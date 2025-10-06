@@ -163,11 +163,11 @@ export default function BrandGallery({
             data-testid={`gallery-item-${testIdPrefix}-${index}`}
           >
             {/* Image container with glass-card styling */}
-            <div className="relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300">
+            <div className="brand-window relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300">
               <img
                 src={collection.image}
                 alt={collection.alt}
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                className="brand-window-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 loading={index < 4 ? "eager" : "lazy"} // Prioritize first 4 images
                 data-testid={`gallery-image-${testIdPrefix}-${index}`}
               />

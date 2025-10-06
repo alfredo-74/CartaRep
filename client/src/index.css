@@ -439,4 +439,29 @@
   .brand-gallery-container::-webkit-scrollbar {
     display: none;
   }
+
+  /* Brand Window - Full height image container */
+  .brand-window {
+    height: clamp(500px, 60vh, 1000px); /* Mobile: 500px to 1000px based on viewport */
+  }
+
+  @media (min-width: 768px) {
+    .brand-window {
+      height: clamp(550px, 65vh, 1050px); /* Tablet: 550px to 1050px */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .brand-window {
+      height: clamp(600px, 70vh, 1100px); /* Desktop: 600px to 1100px */
+    }
+  }
+
+  /* All images inside .brand-window automatically fill height and crop width */
+  .brand-window img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%; /* Keep light fittings slightly above center */
+  }
 }
