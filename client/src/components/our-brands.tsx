@@ -71,6 +71,18 @@ export default function OurBrands() {
         { name: "New Collections 2025", description: "Latest collection featuring innovative designs and contemporary lighting solutions" },
         { name: "General Catalogue", description: "Complete product overview with decorative, architectural and outdoor collections" },
         { name: "BrandBook B.lux", description: "Brand identity, design philosophy and company information for professionals" }
+      ],
+      "Martinelli Luce": [
+        { name: "LAMPS CATALOGUE", description: "Complete collection of iconic Italian lamps and lighting designs" },
+        { name: "Architectural Catalogue", description: "Professional architectural lighting solutions and systems" },
+        { name: "Small Talks Brochure", description: "Latest 2025 collection featuring intimate lighting solutions" },
+        { name: "Noura Brochure", description: "Contemporary pendant collection with organic forms" },
+        { name: "Proposals 2025", description: "New design proposals and product innovations for 2025" },
+        { name: "Pipistrello Collection", description: "Documentation for the iconic Pipistrello lamp series" },
+        { name: "Metafora Collection", description: "Philosophical approach to lighting design and architecture" },
+        { name: "Infinita Collection", description: "Continuous lighting design with flowing aesthetics" },
+        { name: "Multidot Collection", description: "Modular dotted lighting patterns and configurations" },
+        { name: "AVRO Brochure", description: "Technical documentation for the distinctive AVRO pendant system" }
       ]
     };
     return catalogues[brandName] || [];
