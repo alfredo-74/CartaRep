@@ -70,16 +70,16 @@ import panzeriRoma from './panzeri-roma.jpg';
 import panzeriRoma2 from './panzeri-roma2.jpg';
 
 // Blux Lighting collection imports - ALL OPTIMIZED
-import bluxProduct01 from './blux-product-01.jpg';
-import bluxProduct02 from './blux-product-02.jpg';
-import bluxProduct03 from './blux-product-03.jpg';
-import bluxProduct04 from './blux-product-04.jpg';
-import bluxProduct05 from './blux-product-05.jpg';
-import bluxProduct06 from './blux-product-06.jpg';
-import bluxProduct07 from './blux-product-07.jpg';
-import bluxProduct08 from './blux-product-08.jpg';
-import bluxProduct09 from './blux-product-09.jpg';
-import bluxProduct10 from './blux-product-10.jpg';
+import bluxProduct01 from './blux-brand-1.jpg';
+import bluxProduct02 from './blux-brand-2.jpg';
+import bluxProduct03 from './blux-brand-3.jpg';
+import bluxProduct04 from './blux-brand-4.jpg';
+import bluxProduct05 from './blux-brand-5.jpg';
+import bluxProduct06 from './blux-brand-6.jpg';
+import bluxProduct07 from './blux-brand-7.jpg';
+import bluxProduct08 from './blux-brand-8.jpg';
+import bluxProduct09 from './blux-brand-9.jpg';
+import bluxProduct10 from './blux-brand-10.jpg';
 
 // Brand logos export
 export const brandLogos = {
