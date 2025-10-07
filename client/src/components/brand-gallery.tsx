@@ -139,11 +139,13 @@ export default function BrandGallery({
       {/* Horizontal scrolling container */}
       <div
         ref={scrollContainerRef}
-        className="flex overflow-x-auto scroll-smooth brand-gallery-container w-full"
+        className="flex overflow-x-auto scroll-smooth brand-gallery-container w-full touch-pan-x"
         style={{
           scrollSnapType: 'x mandatory',
           WebkitOverflowScrolling: 'touch', // Enable momentum scrolling on iOS
           scrollBehavior: 'smooth',
+          overscrollBehaviorX: 'contain', // Prevent overscroll on mobile
+          touchAction: 'pan-x', // Allow horizontal touch scrolling only
           // Hide scrollbar
           msOverflowStyle: 'none',
           scrollbarWidth: 'none'
