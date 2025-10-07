@@ -95,7 +95,8 @@ export default function Navigation() {
           {/* Mobile Menu Toggle */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-2xl"
+            className="md:hidden text-2xl p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             data-testid="button-mobile-menu-toggle"
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
@@ -104,24 +105,24 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4" data-testid="mobile-menu">
+          <div className="md:hidden mt-4 pb-4 space-y-2" data-testid="mobile-menu">
             <button 
               onClick={() => scrollToSection('services')}
-              className={`block w-full text-left ${getRandomColor()} hover:text-primary transition-colors font-medium`}
+              className={`block w-full text-left py-3 px-4 ${getRandomColor()} hover:text-primary transition-colors font-medium text-base`}
               data-testid="button-mobile-nav-services"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('brands')}
-              className={`block w-full text-left ${getRandomColor()} hover:text-primary transition-colors font-medium`}
+              className={`block w-full text-left py-3 px-4 ${getRandomColor()} hover:text-primary transition-colors font-medium text-base`}
               data-testid="button-mobile-nav-brands"
             >
               Our Brands
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className={`block w-full text-left ${getRandomColor()} hover:text-primary transition-colors font-medium`}
+              className={`block w-full text-left py-3 px-4 ${getRandomColor()} hover:text-primary transition-colors font-medium text-base`}
               data-testid="button-mobile-nav-contact"
             >
               Contact

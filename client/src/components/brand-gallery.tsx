@@ -184,7 +184,7 @@ export default function BrandGallery({
           onClick={() => scrollTo('left')}
           className={cn(
             "absolute left-2 top-1/2 -translate-y-1/2 z-10",
-            "w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20",
+            "w-11 h-11 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20",
             "flex items-center justify-center text-white",
             "hover:bg-white/20 hover:border-white/40 transition-all duration-200",
             "focus:bg-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/50",
@@ -204,7 +204,7 @@ export default function BrandGallery({
           onClick={() => scrollTo('right')}
           className={cn(
             "absolute right-2 top-1/2 -translate-y-1/2 z-10",
-            "w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20",
+            "w-11 h-11 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20",
             "flex items-center justify-center text-white",
             "hover:bg-white/20 hover:border-white/40 transition-all duration-200",
             "focus:bg-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/50",

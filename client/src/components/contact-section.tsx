@@ -254,7 +254,8 @@ export default function ContactSection() {
               href="https://www.instagram.com/cartarep/?igsh=dDgzOHY3MHJrcm9z" 
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card p-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all"
+              className="glass-card p-5 rounded-full hover:bg-primary hover:text-primary-foreground transition-all min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Visit our Instagram page"
               data-testid="link-social-instagram"
             >
               <Instagram className="text-2xl" />
@@ -263,7 +264,8 @@ export default function ContactSection() {
               href="https://www.linkedin.com/company/cartarep/?viewAsMember=true" 
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card p-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all"
+              className="glass-card p-5 rounded-full hover:bg-primary hover:text-primary-foreground transition-all min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Visit our LinkedIn page"
               data-testid="link-social-linkedin"
             >
               <Linkedin className="text-2xl" />
