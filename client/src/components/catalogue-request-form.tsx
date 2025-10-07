@@ -132,7 +132,7 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px] max-h-[85vh] sm:max-h-[90vh] overflow-y-auto bg-black/95 border border-cyan-500/30 touch-pan-y">
+      <DialogContent className="sm:max-w-[600px] max-h-[85dvh] sm:max-h-[90dvh] overflow-y-auto bg-black/95 border border-cyan-500/30 overscroll-behavior-contain">
         <DialogHeader>
           <DialogTitle className="text-white text-xl font-bold">
             Request {brandName} Catalogues
