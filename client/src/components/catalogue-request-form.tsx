@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -12,9 +12,6 @@ import { useToast } from "@/hooks/use-toast";
 import { Download, CheckCircle } from "lucide-react";
 import { z } from "zod";
 import emailjs from '@emailjs/browser';
-
-// Initialize EmailJS with your public key
-emailjs.init('Rbkf3KEL_S-ZotSOE');
 
 // Extend the schema to include multiple catalogues
 const catalogueRequestFormSchema = insertCatalogueRequestSchema.extend({
@@ -35,7 +32,20 @@ interface CatalogueRequestFormProps {
 export function CatalogueRequestForm({ brandName, availableCatalogues, children }: CatalogueRequestFormProps) {
   const [open, setOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailJsInitialized, setEmailJsInitialized] = useState(false);
   const { toast } = useToast();
+
+  // Initialize EmailJS once when component mounts
+  useEffect(() => {
+    if (!emailJsInitialized) {
+      try {
+        emailjs.init('Rbkf3KEL_S-ZotSOE');
+        setEmailJsInitialized(true);
+      } catch (error) {
+        console.error('Failed to initialize EmailJS:', error);
+      }
+    }
+  }, [emailJsInitialized]);
 
   const form = useForm<CatalogueRequestFormData>({
     resolver: zodResolver(catalogueRequestFormSchema),
@@ -52,10 +62,20 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
   });
 
   const onSubmit = async (data: CatalogueRequestFormData) => {
+    // Check if EmailJS is initialized
+    if (!emailJsInitialized) {
+      toast({
+        title: "Service Initializing",
+        description: "Please wait a moment and try again.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
     try {
-      // Send email using EmailJS
+      // Send email using EmailJS with retry logic
       const templateParams = {
         to_name: data.name,
         to_email: data.email,
@@ -68,23 +88,38 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
         date: new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' })
       };
 
-      await emailjs.send(
-        'service_hye50c9', // Your Gmail service ID
-        'template_wri7lv3', // Template for alfredo@cartarep.com catalogue requests
-        templateParams
-      );
-
-      toast({
-        title: "Request Submitted Successfully!",
-        description: "We'll send you the requested catalogues via email shortly.",
-      });
-      form.reset();
-      setOpen(false);
+      let lastError;
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          await emailjs.send(
+            'service_hye50c9',
+            'template_wri7lv3',
+            templateParams
+          );
+          
+          toast({
+            title: "Request Submitted Successfully!",
+            description: "We'll send you the requested catalogues via email shortly.",
+          });
+          form.reset();
+          setOpen(false);
+          return;
+        } catch (err) {
+          lastError = err;
+          if (attempt === 0) {
+            // Wait 1 second before retry
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          }
+        }
+      }
+      
+      throw lastError;
     } catch (error) {
       console.error('EmailJS error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Something went wrong';
       toast({
         title: "Request Failed",
-        description: "Something went wrong. Please try again.",
+        description: `Unable to submit request: ${errorMessage}. Please check your connection and try again.`,
         variant: "destructive",
       });
     } finally {
@@ -97,7 +132,7 @@ export function CatalogueRequestForm({ brandName, availableCatalogues, children 
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto bg-black/95 border border-cyan-500/30">
+      <DialogContent className="sm:max-w-[600px] max-h-[85vh] sm:max-h-[90vh] overflow-y-auto bg-black/95 border border-cyan-500/30 touch-pan-y">
         <DialogHeader>
           <DialogTitle className="text-white text-xl font-bold">
             Request {brandName} Catalogues
