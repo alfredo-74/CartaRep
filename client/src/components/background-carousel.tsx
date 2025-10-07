@@ -26,15 +26,15 @@ export default function BackgroundCarousel() {
       return;
     }
 
-    // Create shuffled array of images
+    // Create shuffled array of images (optimized for Safari iOS - max 12 images)
     const shuffledImages = shuffleArray(backgroundCarouselImages);
     setCarouselImages(shuffledImages);
     
-    // Start carousel animation
+    // Start carousel animation with longer interval for Safari performance
     if (shuffledImages.length > 1) {
       intervalRef.current = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % shuffledImages.length);
-      }, 6000);
+      }, 10000); // Increased to 10s for better Safari performance
     }
 
     // Cleanup interval on unmount

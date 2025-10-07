@@ -120,86 +120,33 @@ export interface Brand {
   collections: readonly LightingCollection[];
 }
 
-// Background carousel images - using all collection images for maximum visual variety
-// ALL IMAGES OPTIMIZED FOR INSTANT LOADING (under 100KB each)
-// EXPANDED with new Olé and Panzeri collections for enhanced visual diversity
+// Background carousel images - OPTIMIZED for Safari iOS performance
+// Reduced to 12 carefully selected images to prevent memory crashes on mobile
+// Each brand represented with 2 signature collections for visual variety
 export const backgroundCarouselImages: string[] = [
-  // a·emotional light collections - ALL AVAILABLE IMAGES
-  aEmotionalRosa,             // Rosa Collection - 28KB
-  aEmotionalTonda,            // Tonda Collection - 48KB
-  aEmotionalEuro,             // Euro Collection - 68KB
-  aEmotionalEurol,            // Eurol Collection - 56KB
-  aEmotionalAgasallo,         // Agasallo Collection - 44KB
-  aEmotionalUmbra,            // Umbra Collection - 56KB
-  aEmotionalCoral,            // Coral Collection - 48KB
-  aEmotionalBretema,          // Bretema Collection - 20KB
-  aEmotionalGallery,          // Gallery Installation - 47KB
-  aEmotionalOnn,              // Onn Collection - minimalist elegance
-  aEmotionalTempo,            // Tempo Collection - rhythmic design elements
+  // a·emotional light - 2 signature pieces
+  aEmotionalRosa,             // Rosa Collection - elegant pink pendant
+  aEmotionalUmbra,            // Umbra Collection - golden halo design
   
-  // Olé Lighting collections - ALL AVAILABLE IMAGES
-  oleMorgana,                 // Morgana Collection - 72KB
-  oleMedusa,                  // Medusa Collection - 56KB
-  oleAvatarPop,               // Avatar Pop Collection - 52KB
-  oleCandela,                 // Candela Collection - warm ceramic elegance
-  oleCeleste,                 // Celeste Collection - celestial natural forms
-  oleKatana,                  // Katana Collection - sleek Japanese precision
-  oleMedusa2,                 // Medusa2 Collection - organic sculptural forms
-  oleMedusa3,                 // Medusa3 Collection - refined jellyfish inspiration
-  oleMorgana2,                // Morgana2 Collection - enhanced Mediterranean charm
-  oleNexo,                    // Nexo Collection - modular connected lighting
-  olePagoda,                  // Pagoda Collection - tiered oriental elegance
-  olePampa,                   // Pampa Collection - grassland-inspired natural forms
-  oleSonora,                  // Sonora Collection - acoustic sound wave design
+  // Olé Lighting - 2 signature pieces
+  oleMedusa,                  // Medusa Collection - organic sculptural forms
+  oleMorgana,                 // Morgana Collection - Mediterranean charm
   
-  // Bover Barcelona collections - ALL AVAILABLE IMAGES
-  boverSkybell,               // Skybell Collection - 100KB
-  boverNans,                  // Nans Collection - 96KB
-  boverKando,                 // Kando Collection - 64KB
-  boverMedi,                  // Medi Collection - 72KB
-  boverBol,                   // Bol Collection - 60KB
-  boverDrep,                  // Drep Collection - 52KB
-  boverNonLa,                 // Non La Collection - 36KB
-  boverMulti,                 // Multi Collection - versatile modular lighting
-  boverNanasDetail,           // Nanas Detail - close-up artisanal craftsmanship
-  boverNansOutdoor,           // Nans Outdoor - weather-resistant elegance
+  // Bover Barcelona - 2 signature pieces
+  boverSkybell,               // Skybell Collection - circular pendants
+  boverKando,                 // Kando Collection - outdoor elegance
   
-  // Panzeri Lighting collections - ALL AVAILABLE IMAGES
-  panzeriZeroRound,           // Zero Round Collection - 60KB
-  panzeriRendezVous,          // Rendez-Vous Collection - 45KB
-  panzeriMurane,              // Muranè Collection - 68KB
-  panzeriAdamas,              // Adamas Collection - diamond crystal luxury
-  panzeriAdamas1,             // Adamas Variant 1 - alternate crystal formations
-  panzeriAdamas2,             // Adamas Variant 2 - enhanced crystal geometry
-  panzeriBella,               // Bella Collection - flowing Italian elegance
-  panzeriHillow,              // Hillow Collection - organic hill-inspired shapes
-  panzeriRoma,                // Roma Collection - architectural Italian design
-  panzeriRoma2,               // Roma Variant - alternative architectural forms
-  panzeriOmbra,               // Ombra Collection - dramatic shadow-play
+  // Panzeri Lighting - 2 signature pieces
+  panzeriZeroRound,           // Zero Round Collection - minimalist precision
+  panzeriRendezVous,          // Rendez-Vous Collection - contemporary Italian design
   
-  // Blux Lighting collections - ALL AVAILABLE IMAGES
-  bluxProduct01,              // Tree Series S Collection - layered pendant over modern table
-  bluxProduct02,              // Canfranc Collection - hospitality lighting installation
-  bluxProduct03,              // Overlay S Collection - tiered geometric pendant
-  bluxProduct04,              // Misko SH Collection - linear pendant with glass spheres
-  bluxProduct05,              // Kupetz Collection - dramatic cascading pendants
-  bluxProduct06,              // Keshi T Collection - sculptural table lamps
-  bluxProduct07,              // Ilde Max Collection - statement chandelier with glass bulbs
-  bluxProduct08,              // C-Ball Number Collection - golden wall sconces
-  bluxProduct09,              // Berry S Collection - adjustable minimalist pendants
-  bluxProduct10,              // Anvil System Collection - modular wooden beam lighting
+  // Blux Lighting - 2 signature pieces
+  bluxProduct01,              // Tree Series S - layered pendant elegance
+  bluxProduct05,              // Kupetz Collection - dramatic cascading design
   
-  // Martinelli Luce collections - ALL AVAILABLE IMAGES
-  martinelliAvro,             // Avro Collection - iconic Italian pendant design
-  martinelliAmb03,            // Amb03 Collection - dramatic cascading light installation
-  martinelliRoll,             // Roll Collection - elegant wall-mounted lighting
-  martinelliMarx,             // Marx Collection - architectural wood and metal design
-  martinelliCyborg,           // Cyborg Collection - sculptural modern lighting forms
-  martinelliParadis,          // Paradis Collection - mushroom-shaped elegant table lamp
-  martinelliComics,           // Comics Collection - classic white table lamp design
-  martinelliGrammoluce,       // Grammoluce Collection - transparent dome lighting
-  martinelliGrammoluce2,      // Grammoluce Variant - innovative interactive design
-  martinelliCobra             // Cobra Collection - iconic red table lamp design
+  // Martinelli Luce - 2 signature pieces
+  martinelliAvro,             // Avro Collection - iconic Italian pendant
+  martinelliCobra             // Cobra Collection - legendary red table lamp
 ];
 
 // Brand collections organized by brand - using real collection images where available

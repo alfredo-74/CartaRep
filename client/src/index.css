@@ -152,6 +152,22 @@
       -webkit-overflow-scrolling: touch;
       overscroll-behavior: contain;
     }
+    
+    /* Safari iOS optimization - reduce animation complexity */
+    .carousel-slides {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    
+    /* Optimize carousel slides for Safari memory */
+    .carousel-slide {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
   }
 }
 
@@ -271,11 +287,11 @@
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 2600%; /* Total width for 26 images */
+    width: 1200%; /* Total width for 12 images - optimized for Safari iOS */
     height: 100%;
-    -webkit-animation: carousel 240s infinite linear;
-    -moz-animation: carousel 240s infinite linear;
-    animation: carousel 240s infinite linear;
+    -webkit-animation: carousel 120s infinite linear;
+    -moz-animation: carousel 120s infinite linear;
+    animation: carousel 120s infinite linear;
     will-change: transform; /* Optimize for animation performance */
   }
 
@@ -297,15 +313,15 @@
 
   @-webkit-keyframes carousel {
     0% { -webkit-transform: translateX(0); transform: translateX(0); }
-    100% { -webkit-transform: translateX(-2500vw); transform: translateX(-2500vw); }
+    100% { -webkit-transform: translateX(-1100vw); transform: translateX(-1100vw); }
   }
   @-moz-keyframes carousel {
     0% { -moz-transform: translateX(0); transform: translateX(0); }
-    100% { -moz-transform: translateX(-2500vw); transform: translateX(-2500vw); }
+    100% { -moz-transform: translateX(-1100vw); transform: translateX(-1100vw); }
   }
   @keyframes carousel {
     0% { -webkit-transform: translateX(0); -moz-transform: translateX(0); transform: translateX(0); }
-    100% { -webkit-transform: translateX(-2500vw); -moz-transform: translateX(-2500vw); transform: translateX(-2500vw); }
+    100% { -webkit-transform: translateX(-1100vw); -moz-transform: translateX(-1100vw); transform: translateX(-1100vw); }
   }
 
   /* Gradient Overlays */
