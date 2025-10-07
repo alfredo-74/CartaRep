@@ -287,11 +287,11 @@
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 1200%; /* Total width for 12 images - optimized for Safari iOS */
+    width: 6000%; /* Total width for 60 images - balanced variety */
     height: 100%;
-    -webkit-animation: carousel 120s infinite linear;
-    -moz-animation: carousel 120s infinite linear;
-    animation: carousel 120s infinite linear;
+    -webkit-animation: carousel 600s infinite linear;
+    -moz-animation: carousel 600s infinite linear;
+    animation: carousel 600s infinite linear;
     will-change: transform; /* Optimize for animation performance */
   }
 
@@ -313,15 +313,15 @@
 
   @-webkit-keyframes carousel {
     0% { -webkit-transform: translateX(0); transform: translateX(0); }
-    100% { -webkit-transform: translateX(-1100vw); transform: translateX(-1100vw); }
+    100% { -webkit-transform: translateX(-5900vw); transform: translateX(-5900vw); }
   }
   @-moz-keyframes carousel {
     0% { -moz-transform: translateX(0); transform: translateX(0); }
-    100% { -moz-transform: translateX(-1100vw); transform: translateX(-1100vw); }
+    100% { -moz-transform: translateX(-5900vw); transform: translateX(-5900vw); }
   }
   @keyframes carousel {
     0% { -webkit-transform: translateX(0); -moz-transform: translateX(0); transform: translateX(0); }
-    100% { -webkit-transform: translateX(-1100vw); -moz-transform: translateX(-1100vw); transform: translateX(-1100vw); }
+    100% { -webkit-transform: translateX(-5900vw); -moz-transform: translateX(-5900vw); transform: translateX(-5900vw); }
   }
 
   /* Gradient Overlays */
