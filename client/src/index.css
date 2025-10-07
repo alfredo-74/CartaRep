@@ -127,16 +127,14 @@
   html {
     scroll-behavior: smooth;
     /* Stabilize viewport height on mobile */
-    height: -webkit-fill-available;
-    height: fill-available;
+    height: 100dvh;
   }
   
   /* Mobile-specific fixes for rotation stability */
   @media (max-width: 768px) {
     body {
       min-height: 100vh;
-      min-height: -webkit-fill-available;
-      min-height: fill-available;
+      min-height: 100dvh;
     }
     
     /* Prevent touch callout on long press */
