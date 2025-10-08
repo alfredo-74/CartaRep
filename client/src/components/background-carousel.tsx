@@ -7,6 +7,15 @@ export default function BackgroundCarousel() {
   const [carouselImages, setCarouselImages] = useState<string[]>([]);
   const [visibleRange, setVisibleRange] = useState({ start: 0, end: 2 });
   const [key, setKey] = useState(0); // Force re-render on rotation
+  // Initialize isMobile correctly on first render (SSR-safe)
+  // Check both dimensions to handle portrait and landscape orientations
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    // Mobile if either dimension is small (handles both orientations)
+    return width < 1024 || height < 1024;
+  });
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Utility function to shuffle array randomly
@@ -19,9 +28,27 @@ export default function BackgroundCarousel() {
     return shuffled;
   };
 
+  // Detect mobile device on mount
+  useEffect(() => {
+    const checkMobile = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      // Mobile if either dimension is small (handles both orientations)
+      setIsMobile(width < 1024 || height < 1024);
+    };
+    
+    checkMobile(); // Check on mount
+    
+    return () => {};
+  }, []);
+
   // Handle orientation/resize changes for iPhone rotation
   useEffect(() => {
     const handleResize = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      // Update mobile state - mobile if either dimension is small
+      setIsMobile(width < 1024 || height < 1024);
       // Force re-render on rotation to fix carousel visibility
       setKey(prev => prev + 1);
     };
@@ -73,7 +100,11 @@ export default function BackgroundCarousel() {
   }, [currentIndex, carouselImages.length]);
 
   // Check if image should be loaded with priority
+  // On mobile: load all images immediately to prevent black holes during rotation
   const shouldLoadWithPriority = (index: number) => {
+    if (isMobile) {
+      return true; // Load all images on mobile to prevent black holes
+    }
     return index >= visibleRange.start && index <= visibleRange.end;
   };
 

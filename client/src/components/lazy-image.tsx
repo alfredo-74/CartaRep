@@ -140,17 +140,25 @@ export function LazyBackground({
   testId,
 }: LazyBackgroundProps) {
   const [imageSrc, setImageSrc] = useState<string | null>(priority ? src : null);
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(priority);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // If priority is true, load image immediately
     if (priority) {
+      setImageSrc(src);
       const img = new Image();
       img.src = src;
       img.onload = () => setImageLoaded(true);
       return;
     }
 
+    // If priority is false and imageSrc already set, skip (already loaded)
+    if (imageSrc) {
+      return;
+    }
+
+    // Otherwise use Intersection Observer for lazy loading
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
