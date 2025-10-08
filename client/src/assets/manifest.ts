@@ -120,81 +120,39 @@ export interface Brand {
   collections: readonly LightingCollection[];
 }
 
-// Background carousel images - OPTIMIZED for Safari iOS performance
-// Expanded to 60 images for better visual variety while maintaining mobile stability
-// Balanced representation: 10 images from each brand
+// Background carousel images - OPTIMIZED for mobile performance
+// Reduced to 18 images (3 per brand) for faster loading and better stability
+// Carefully selected signature pieces representing each brand's essence
 export const backgroundCarouselImages: string[] = [
-  // a·emotional light - 10 collections
+  // a·emotional light - 3 signature collections
   aEmotionalRosa,             // Rosa Collection - elegant pink pendant
-  aEmotionalTonda,            // Tonda Collection - circular wall lights
-  aEmotionalEuro,             // Euro Collection - large sculptural white pendant
-  aEmotionalEurol,            // Eurol Collection - organic bag-shaped pendants
-  aEmotionalAgasallo,         // Agasallo Collection - textured artisanal lights
   aEmotionalUmbra,            // Umbra Collection - golden halo design
-  aEmotionalCoral,            // Coral Collection - pendant lights in modern space
-  aEmotionalBretema,          // Bretema Collection - minimalist elegance
-  aEmotionalGallery,          // Gallery Installation - artistic display
-  aEmotionalOnn,              // Onn Collection - minimalist elegance
+  aEmotionalEuro,             // Euro Collection - large sculptural pendant
   
-  // Olé Lighting - 10 collections
-  oleMorgana,                 // Morgana Collection - Mediterranean charm
+  // Olé Lighting - 3 signature collections
   oleMedusa,                  // Medusa Collection - organic sculptural forms
+  oleMorgana,                 // Morgana Collection - Mediterranean charm
   oleAvatarPop,               // Avatar Pop Collection - modern design
-  oleCandela,                 // Candela Collection - warm ceramic elegance
-  oleCeleste,                 // Celeste Collection - celestial natural forms
-  oleKatana,                  // Katana Collection - sleek Japanese precision
-  oleMedusa2,                 // Medusa2 Collection - refined jellyfish inspiration
-  oleNexo,                    // Nexo Collection - modular connected lighting
-  olePagoda,                  // Pagoda Collection - tiered oriental elegance
-  oleSonora,                  // Sonora Collection - acoustic sound wave design
   
-  // Bover Barcelona - 10 collections
+  // Bover Barcelona - 3 signature collections
   boverSkybell,               // Skybell Collection - circular pendants
-  boverNans,                  // Nans Collection - artisanal craftsmanship
   boverKando,                 // Kando Collection - outdoor elegance
-  boverMedi,                  // Medi Collection - Mediterranean lighting
-  boverBol,                   // Bol Collection - bowl-shaped design
-  boverDrep,                  // Drep Collection - contemporary forms
-  boverNonLa,                 // Non La Collection - Asian-inspired design
-  boverMulti,                 // Multi Collection - versatile modular lighting
-  boverNanasDetail,           // Nanas Detail - close-up craftsmanship
-  boverNansOutdoor,           // Nans Outdoor - weather-resistant elegance
+  boverNans,                  // Nans Collection - artisanal craftsmanship
   
-  // Panzeri Lighting - 10 collections
+  // Panzeri Lighting - 3 signature collections
   panzeriZeroRound,           // Zero Round Collection - minimalist precision
   panzeriRendezVous,          // Rendez-Vous Collection - contemporary Italian
-  panzeriMurane,              // Muranè Collection - Venetian glass artistry
   panzeriAdamas,              // Adamas Collection - diamond crystal luxury
-  panzeriAdamas1,             // Adamas Variant 1 - alternate formations
-  panzeriAdamas2,             // Adamas Variant 2 - enhanced geometry
-  panzeriBella,               // Bella Collection - flowing elegance
-  panzeriHillow,              // Hillow Collection - organic shapes
-  panzeriRoma,                // Roma Collection - architectural design
-  panzeriOmbra,               // Ombra Collection - dramatic shadow-play
   
-  // Blux Lighting - 10 collections
+  // Blux Lighting - 3 signature collections
   bluxProduct01,              // Tree Series S - layered pendant elegance
-  bluxProduct02,              // Canfranc Collection - hospitality lighting
-  bluxProduct03,              // Overlay S Collection - tiered geometric pendant
-  bluxProduct04,              // Misko SH Collection - linear pendant with spheres
   bluxProduct05,              // Kupetz Collection - dramatic cascading design
-  bluxProduct06,              // Keshi T Collection - sculptural table lamps
   bluxProduct07,              // Ilde Max Collection - statement chandelier
-  bluxProduct08,              // C-Ball Number Collection - golden wall sconces
-  bluxProduct09,              // Berry S Collection - adjustable pendants
-  bluxProduct10,              // Anvil System Collection - modular wooden beam
   
-  // Martinelli Luce - 10 collections
+  // Martinelli Luce - 3 signature collections
   martinelliAvro,             // Avro Collection - iconic Italian pendant
-  martinelliAmb03,            // Amb03 Collection - cascading light installation
-  martinelliRoll,             // Roll Collection - wall-mounted lighting
-  martinelliMarx,             // Marx Collection - wood and metal design
-  martinelliCyborg,           // Cyborg Collection - sculptural modern forms
-  martinelliParadis,          // Paradis Collection - mushroom-shaped lamp
-  martinelliComics,           // Comics Collection - classic table lamp
-  martinelliGrammoluce,       // Grammoluce Collection - transparent dome
-  martinelliGrammoluce2,      // Grammoluce Variant - interactive design
-  martinelliCobra             // Cobra Collection - legendary red table lamp
+  martinelliCobra,            // Cobra Collection - legendary red table lamp
+  martinelliParadis           // Paradis Collection - mushroom-shaped lamp
 ];
 
 // Brand collections organized by brand - using real collection images where available
