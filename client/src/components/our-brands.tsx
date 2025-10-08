@@ -6,7 +6,8 @@ import BrandGallery from "./brand-gallery";
 import { brandsData } from '@/assets/manifest';
 
 export default function OurBrands() {
-  const [isVisible, setIsVisible] = useState(false);
+  // Start visible on mobile (Safari iOS Intersection Observer fix)
+  const [isVisible, setIsVisible] = useState(true);
   const sectionRef = useRef<HTMLDivElement>(null);
 
 
@@ -20,8 +21,15 @@ export default function OurBrands() {
     return shuffled;
   };
 
-  // Intersection observer to trigger fade-in animations when section becomes visible
+  // Intersection observer for fade-in animation (desktop only for better mobile compatibility)
   useEffect(() => {
+    // Skip animation on mobile to ensure brands always show
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

@@ -6,6 +6,7 @@ export default function BackgroundCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [carouselImages, setCarouselImages] = useState<string[]>([]);
   const [visibleRange, setVisibleRange] = useState({ start: 0, end: 2 });
+  const [key, setKey] = useState(0); // Force re-render on rotation
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Utility function to shuffle array randomly
@@ -18,6 +19,22 @@ export default function BackgroundCarousel() {
     return shuffled;
   };
 
+  // Handle orientation/resize changes for iPhone rotation
+  useEffect(() => {
+    const handleResize = () => {
+      // Force re-render on rotation to fix carousel visibility
+      setKey(prev => prev + 1);
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
+    };
+  }, []);
+
   // Initialize carousel with images from manifest
   useEffect(() => {
     // Validate carousel images from manifest
@@ -26,7 +43,7 @@ export default function BackgroundCarousel() {
       return;
     }
 
-    // Create shuffled array of images (optimized for Safari iOS - max 12 images)
+    // Create shuffled array of images (optimized for Safari iOS - max 18 images)
     const shuffledImages = shuffleArray(backgroundCarouselImages);
     setCarouselImages(shuffledImages);
     
@@ -61,12 +78,12 @@ export default function BackgroundCarousel() {
   };
 
   return (
-    <div className="carousel-container" data-testid="background-carousel">
+    <div key={key} className="carousel-container" data-testid="background-carousel">
       <div className="carousel-slides">
         {carouselImages.length > 0 ? (
           carouselImages.map((imageUrl, index) => (
             <LazyBackground
-              key={`carousel-slide-${index}`}
+              key={`carousel-slide-${index}-${key}`}
               src={imageUrl}
               className={`carousel-slide ${
                 index === currentIndex ? 'active' : ''
