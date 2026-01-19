@@ -1,0 +1,26 @@
+# CartaRep robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://www.cartarep.com/sitemap.xml
+
+# Major Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

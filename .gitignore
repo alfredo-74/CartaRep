@@ -47,3 +47,11 @@ replit.md
 
 # Backup folders
 BACKUPS_CARTAREP/
+
+# Uploaded assets and working files
+attached_assets/
+
+# Verification and debug screenshots
+*.png
+!client/public/*.png
+!client/src/assets/*.png
