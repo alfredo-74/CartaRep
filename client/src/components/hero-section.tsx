@@ -55,7 +55,7 @@ export default function HeroSection() {
           {/* CTA Button */}
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 hover:scale-105"
             data-testid="button-hero-cta"
           >
             Discuss your project <ArrowRight className="w-5 h-5" />

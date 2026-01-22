@@ -72,7 +72,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-cyan-400 transition-colors text-base font-neon font-medium"
+                className="text-gray-300 hover:text-cyan-400 transition-colors text-lg font-neon font-medium"
                 data-testid={`button-nav-${item.id}`}
               >
                 {item.label}
@@ -98,7 +98,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-3 px-4 text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors font-neon text-base font-medium"
+                className="block w-full text-left py-3 px-4 text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors font-neon text-lg font-medium"
                 data-testid={`button-mobile-nav-${item.id}`}
               >
                 {item.label}

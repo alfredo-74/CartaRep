@@ -61,10 +61,10 @@ export default function HowWeWork() {
             <h3 className="text-xl font-neon font-bold mb-3 text-emerald-400">
               Direct Production Abroad
             </h3>
-            <p className={`${directDescColor} font-neon mb-4 text-base`}>
+            <p className={`${directDescColor} font-neon mb-4 text-lg`}>
               We connect you directly with vetted manufacturers in Turkey, Italy, and beyond.
             </p>
-            <ul className="text-base font-neon text-gray-400 space-y-2">
+            <ul className="text-lg font-neon text-gray-400 space-y-2">
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-emerald-500" /> Optimised costs</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-emerald-500" /> Direct relationship</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-emerald-500" /> CartaRep coordinates and protects</li>
@@ -76,10 +76,10 @@ export default function HowWeWork() {
             <h3 className="text-xl font-neon font-bold mb-3 text-orange-400">
               Trusted UK Partner
             </h3>
-            <p className={`${ukDescColor} font-neon mb-4 text-base`}>
+            <p className={`${ukDescColor} font-neon mb-4 text-lg`}>
               Prefer not to import? We manage production through our trusted UK wholesaler.
             </p>
-            <ul className="text-base font-neon text-gray-400 space-y-2">
+            <ul className="text-lg font-neon text-gray-400 space-y-2">
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-orange-500" /> Zero customs or import hassle</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-orange-500" /> Full compliance</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-orange-500" /> Maximum convenience</li>
@@ -96,8 +96,8 @@ export default function HowWeWork() {
                   key={step.title}
                   className="text-center"
                 >
-                  <h4 className="font-neon font-bold text-white mb-3 text-lg">{step.title}</h4>
-                  <p className="font-neon text-gray-300 text-base leading-relaxed">{step.description}</p>
+                  <h4 className="font-neon font-bold text-white mb-3 text-xl">{step.title}</h4>
+                  <p className="font-neon text-white text-lg leading-relaxed">{step.description}</p>
                 </div>
               ))}
             </div>

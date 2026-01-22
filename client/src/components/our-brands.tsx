@@ -141,7 +141,7 @@ export default function OurBrands() {
                     {brand.name}
                   </h3>
                 )}
-                <p className="text-cyan-400 text-base font-neon leading-relaxed font-light line-clamp-5" data-testid={`text-brand-description-${index}`}>
+                <p className="text-cyan-400 text-lg font-neon leading-relaxed font-light line-clamp-5" data-testid={`text-brand-description-${index}`}>
                   {brand.description}
                 </p>
               </div>

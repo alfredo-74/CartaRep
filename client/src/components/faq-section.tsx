@@ -83,12 +83,12 @@ export default function FAQSection() {
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full p-6 text-left flex items-center justify-between hover:bg-amber-950/10 transition-colors"
                 >
-                  <span className="font-neon font-semibold text-white pr-4">{faq.question}</span>
+                  <span className="font-neon font-semibold text-white pr-4 text-lg">{faq.question}</span>
                   <ChevronDown className={`w-5 h-5 text-amber-400 transition-transform flex-shrink-0 ${openIndex === index ? 'rotate-180' : ''}`} />
                 </button>
                 {openIndex === index && (
                   <div className="px-6 pb-6">
-                    <p className="text-gray-400 font-neon leading-relaxed text-base">{faq.answer}</p>
+                    <p className="text-gray-400 font-neon leading-relaxed text-lg">{faq.answer}</p>
                   </div>
                 )}
               </div>

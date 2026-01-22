@@ -115,7 +115,6 @@ export const brandLogos = {
   'Bover Barcelona': boverLogo,
   'Panzeri Lighting': panzeriLogo,
   'Blux Lighting': bluxLogo,
-  'Martinelli Luce': martinelliLogo,
   'Karman': karmanLogo
 } as const;
 
@@ -163,11 +162,6 @@ export const backgroundCarouselImages: string[] = [
   bluxProduct01,              // Tree Series S - layered pendant elegance
   bluxProduct05,              // Kupetz Collection - dramatic cascading design
   bluxProduct07,              // Ilde Max Collection - statement chandelier
-  
-  // Martinelli Luce - 3 signature collections
-  martinelliAvro,             // Avro Collection - iconic Italian pendant
-  martinelliCobra,            // Cobra Collection - legendary red table lamp
-  martinelliParadis,          // Paradis Collection - mushroom-shaped lamp
 
   // Karman - 3 signature collections
   karmanAlibabig,             // Alibabig Collection - iconic oversized suspension
@@ -175,7 +169,7 @@ export const backgroundCarouselImages: string[] = [
   karmanDejaVu                // Déjà-Vu Collection - contemporary elegance
 ];
 
-// Brand collections organized by brand - using real collection images where available
+// Brand collections organised by brand - using real collection images where available
 // ALL IMAGES OPTIMIZED FOR INSTANT LOADING
 export const brandCollectionImages = {
   'a·emotional light': [
@@ -467,59 +461,6 @@ export const brandCollectionImages = {
       alt: "Blux Anvil System - modular pendant lighting with wooden beam and spherical glass fixtures for architectural spaces"
     }
   ],
-  
-  'Martinelli Luce': [
-    {
-      name: "Avro Collection",
-      image: martinelliAvro,
-      alt: "Martinelli Luce Avro - iconic orange pendant light with distinctive UFO-inspired design creating modern ambiance"
-    },
-    {
-      name: "Amb03 Collection",
-      image: martinelliAmb03,
-      alt: "Martinelli Luce Amb03 - dramatic cascading light installation with flowing wave patterns in contemporary space"
-    },
-    {
-      name: "Roll Collection",
-      image: martinelliRoll,
-      alt: "Martinelli Luce Roll - elegant black and white wall-mounted lighting with geometric minimalist design"
-    },
-    {
-      name: "Marx Collection",
-      image: martinelliMarx,
-      alt: "Martinelli Luce Marx - architectural wall lamp combining wood, metal and brushed steel elements"
-    },
-    {
-      name: "Cyborg Collection",
-      image: martinelliCyborg,
-      alt: "Martinelli Luce Cyborg - sculptural modern floor lamps with organic arch forms in contemporary setting"
-    },
-    {
-      name: "Paradis Collection",
-      image: martinelliParadis,
-      alt: "Martinelli Luce Paradis - elegant mushroom-shaped table lamp with white shade and bronze base"
-    },
-    {
-      name: "Comics Collection",
-      image: martinelliComics,
-      alt: "Martinelli Luce Comics - classic white table lamp with sculptural form in historic interior setting"
-    },
-    {
-      name: "Grammoluce Collection",
-      image: martinelliGrammoluce,
-      alt: "Martinelli Luce Grammoluce - innovative transparent dome table lamp with interactive design"
-    },
-    {
-      name: "Grammoluce Interactive",
-      image: martinelliGrammoluce2,
-      alt: "Martinelli Luce Grammoluce - close-up view showing innovative interactive lighting mechanism"
-    },
-    {
-      name: "Cobra Collection",
-      image: martinelliCobra,
-      alt: "Martinelli Luce Cobra - iconic red spherical table lamp with curved design in rustic setting"
-    }
-  ],
 
   'Karman': [
     {
@@ -616,13 +557,6 @@ export const brandsData: Brand[] = [
     description: "Blux combines Spanish craftsmanship with innovative design to create contemporary lighting solutions. From decorative to architectural and outdoor collections, each piece reflects modern aesthetics with functional excellence for residential and commercial spaces.",
     website: "https://bluxlighting.com/",
     collections: brandCollectionImages['Blux Lighting']
-  },
-  {
-    name: "Martinelli Luce",
-    logoUrl: martinelliLogo,
-    description: "Martinelli Luce creates iconic Italian lighting that unites geometry, nature, and innovation. With a legacy of bold, timeless design, each collection blends creativity and technology, shaping interiors with character, precision, and enduring style. | REPUBLIC OF IRELAND ONLY |",
-    website: "https://martinelliluce.it/en/",
-    collections: brandCollectionImages['Martinelli Luce']
   },
   {
     name: "Karman",
@@ -752,7 +686,7 @@ export {
  * ✅ Code References Updated:
  * - All imports use clean descriptive names
  * - Background carousel array optimized with file size comments
- * - Brand collections properly organized
+ * - Brand collections properly organised
  * - Type safety maintained with interfaces
  * 
  * 📊 Performance Impact:

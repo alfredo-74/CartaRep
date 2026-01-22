@@ -57,7 +57,7 @@ export default function WhoWeWorkWith() {
       icon: BookOpen,
       title: "Material Librarians",
       description: "Easily recommend reliable manufacturers and protect your studio's legacy.",
-      message: "Clear, organized, safe to recommend.",
+      message: "Clear, organised, safe to recommend.",
       color: "teal"
     }
   ];
