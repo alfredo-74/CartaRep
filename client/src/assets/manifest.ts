@@ -6,42 +6,10 @@
 // PERFORMANCE OPTIMIZED: All images compressed to under 100KB with clean naming
 
 // Logo imports
-import aEmotionalLogo from './a-emotional-final.jpg';
-import oleLogo from './ole-logo.png';
 import boverLogo from './bover-newest.jpg';
 import panzeriLogo from './panzeri-logo-new.png';
 import bluxLogo from './blux-logo.jpg';
-import martinelliLogo from './martinelli-logo.jpg';
 
-// a·emotional light collection imports - ALL OPTIMIZED
-import aEmotionalRosa from './a-emotional-rosa.jpg';
-import aEmotionalTonda from './a-emotional-tonda.jpg';
-import aEmotionalEuro from './a-emotional-euro.jpg';
-import aEmotionalEurol from './a-emotional-eurol.jpg';
-import aEmotionalAgasallo from './a-emotional-agasallo.jpg';
-import aEmotionalUmbra from './a-emotional-umbra.jpg';
-import aEmotionalCoral from './a-emotional-coral.jpg';
-import aEmotionalBretema from './a-emotional-bretema.jpg';
-import aEmotionalGallery from './a-emotional-gallery.jpg';
-import aEmotionalOnn from './a-emotional-onn.jpg';
-import aEmotionalTempo from './a-emotional-tempo.jpg';
-
-// Olé Lighting collection imports - ALL OPTIMIZED
-import oleAvatarPop from './ole-avatar-pop.jpg';
-import oleMedusa from './ole-medusa.jpg';
-import oleMorgana from './ole-morgana.jpg';
-
-// NEW Olé Lighting collection imports - ALL OPTIMIZED
-import oleCandela from './ole-candela.jpg';
-import oleCeleste from './ole-celeste.jpg';
-import oleKatana from './ole-katana.jpg';
-import oleMedusa2 from './ole-medusa2.jpg';
-import oleMedusa3 from './ole-medusa3.jpg';
-import oleMorgana2 from './ole-morgana2.jpg';
-import oleNexo from './ole-nexo.jpg';
-import olePagoda from './ole-pagoda.jpg';
-import olePampa from './ole-pampa.jpg';
-import oleSonora from './ole-sonora.jpg';
 
 // Bover Barcelona collection imports - ALL OPTIMIZED  
 import boverKando from './bover-kando.jpg';
@@ -82,17 +50,6 @@ import bluxProduct08 from './blux-brand-8.jpg';
 import bluxProduct09 from './blux-brand-9.jpg';
 import bluxProduct10 from './blux-brand-10.jpg';
 
-// Martinelli Luce collection imports - ALL OPTIMIZED
-import martinelliAvro from './martinelli-avro.jpg';
-import martinelliAmb03 from './martinelli-amb03.jpg';
-import martinelliRoll from './martinelli-roll.jpg';
-import martinelliMarx from './martinelli-marx.jpg';
-import martinelliCyborg from './martinelli-cyborg.jpg';
-import martinelliParadis from './martinelli-paradis.jpg';
-import martinelliComics from './martinelli-comics.jpg';
-import martinelliGrammoluce from './martinelli-grammoluce.jpg';
-import martinelliGrammoluce2 from './martinelli-grammoluce2.jpg';
-import martinelliCobra from './martinelli-cobra.jpg';
 
 // Karman collection imports
 import karmanLogo from './karman-logo.svg';
@@ -110,8 +67,6 @@ import karmanUgoRilla from './karman-ugo-rilla.jpg';
 
 // Brand logos export
 export const brandLogos = {
-  'a·emotional light': aEmotionalLogo,
-  'Olé Lighting': oleLogo,
   'Bover Barcelona': boverLogo,
   'Panzeri Lighting': panzeriLogo,
   'Blux Lighting': bluxLogo,
@@ -135,29 +90,19 @@ export interface Brand {
 }
 
 // Background carousel images - OPTIMIZED for mobile performance
-// Reduced to 18 images (3 per brand) for faster loading and better stability
+// Reduced to 12 images (3 per brand) for faster loading and better stability
 // Carefully selected signature pieces representing each brand's essence
 export const backgroundCarouselImages: string[] = [
-  // a·emotional light - 3 signature collections
-  aEmotionalRosa,             // Rosa Collection - elegant pink pendant
-  aEmotionalUmbra,            // Umbra Collection - golden halo design
-  aEmotionalEuro,             // Euro Collection - large sculptural pendant
-  
-  // Olé Lighting - 3 signature collections
-  oleMedusa,                  // Medusa Collection - organic sculptural forms
-  oleMorgana,                 // Morgana Collection - Mediterranean charm
-  oleAvatarPop,               // Avatar Pop Collection - modern design
-  
   // Bover Barcelona - 3 signature collections
   boverSkybell,               // Skybell Collection - circular pendants
   boverKando,                 // Kando Collection - outdoor elegance
   boverNans,                  // Nans Collection - artisanal craftsmanship
-  
+
   // Panzeri Lighting - 3 signature collections
   panzeriZeroRound,           // Zero Round Collection - minimalist precision
   panzeriRendezVous,          // Rendez-Vous Collection - contemporary Italian
   panzeriAdamas,              // Adamas Collection - diamond crystal luxury
-  
+
   // Blux Lighting - 3 signature collections
   bluxProduct01,              // Tree Series S - layered pendant elegance
   bluxProduct05,              // Kupetz Collection - dramatic cascading design
@@ -172,132 +117,6 @@ export const backgroundCarouselImages: string[] = [
 // Brand collections organised by brand - using real collection images where available
 // ALL IMAGES OPTIMIZED FOR INSTANT LOADING
 export const brandCollectionImages = {
-  'a·emotional light': [
-    {
-      name: "Rosa Collection",
-      image: aEmotionalRosa,
-      alt: "a·emotional light Rosa collection - elegant pink pendant lighting in modern interior"
-    },
-    {
-      name: "Tonda Collection",
-      image: aEmotionalTonda,
-      alt: "a·emotional light Tonda collection - circular wall lights with intricate pattern design"
-    },
-    {
-      name: "Euro Collection",
-      image: aEmotionalEuro,
-      alt: "a·emotional light Euro collection - large sculptural white pendant light"
-    },
-    {
-      name: "Eurol Collection",
-      image: aEmotionalEurol,
-      alt: "a·emotional light Eurol collection - organic bag-shaped pendant lights"
-    },
-    {
-      name: "Agasallo Collection",
-      image: aEmotionalAgasallo,
-      alt: "a·emotional light Agasallo collection - textured artisanal bag lights on concrete wall"
-    },
-    {
-      name: "Umbra Collection",
-      image: aEmotionalUmbra,
-      alt: "a·emotional light Umbra collection - circular golden halo lighting design"
-    },
-    {
-      name: "Coral Collection",
-      image: aEmotionalCoral,
-      alt: "a·emotional light Coral collection - pendant lights in modern living space"
-    },
-    {
-      name: "Bretema Collection",
-      image: aEmotionalBretema,
-      alt: "a·emotional light Bretema collection - showroom display at Euroluce 2025"
-    },
-    {
-      name: "Gallery Installation",
-      image: aEmotionalGallery,
-      alt: "a·emotional light gallery installation - restaurant lighting design showcase"
-    },
-    {
-      name: "Onn Collection",
-      image: aEmotionalOnn,
-      alt: "a·emotional light Onn collection - minimalist elegance with clean geometric forms"
-    },
-    {
-      name: "Tempo Collection",
-      image: aEmotionalTempo,
-      alt: "a·emotional light Tempo collection - rhythmic design elements with dynamic lighting patterns"
-    }
-  ],
-  
-  'Olé Lighting': [
-    {
-      name: "Morgana Collection",
-      image: oleMorgana,
-      alt: "Olé Lighting Morgana collection - Mediterranean inspired ambient lighting"
-    },
-    {
-      name: "Medusa Collection",
-      image: oleMedusa,
-      alt: "Olé Lighting Medusa collection - sculptural statement lighting"
-    },
-    {
-      name: "Avatar Pop Collection",
-      image: oleAvatarPop,
-      alt: "Olé Lighting Avatar Pop collection - playful contemporary design"
-    },
-    {
-      name: "Candela Collection",
-      image: oleCandela,
-      alt: "Olé Lighting Candela collection - warm candle-inspired pendants with ceramic elegance"
-    },
-    {
-      name: "Celeste Collection",
-      image: oleCeleste,
-      alt: "Olé Lighting Celeste collection - celestial-inspired hanging lights with natural forms"
-    },
-    {
-      name: "Katana Collection",
-      image: oleKatana,
-      alt: "Olé Lighting Katana collection - sleek linear lighting with Japanese precision"
-    },
-    {
-      name: "Medusa2 Collection",
-      image: oleMedusa2,
-      alt: "Olé Lighting Medusa2 collection - organic sculptural forms with flowing tentacle design"
-    },
-    {
-      name: "Medusa3 Collection",
-      image: oleMedusa3,
-      alt: "Olé Lighting Medusa3 collection - refined jellyfish-inspired pendants in modern setting"
-    },
-    {
-      name: "Morgana2 Collection",
-      image: oleMorgana2,
-      alt: "Olé Lighting Morgana2 collection - enhanced Mediterranean charm with warm textures"
-    },
-    {
-      name: "Nexo Collection",
-      image: oleNexo,
-      alt: "Olé Lighting Nexo collection - modular connected lighting for contemporary spaces"
-    },
-    {
-      name: "Pagoda Collection",
-      image: olePagoda,
-      alt: "Olé Lighting Pagoda collection - tiered oriental-inspired lighting with layered elegance"
-    },
-    {
-      name: "Pampa Collection",
-      image: olePampa,
-      alt: "Olé Lighting Pampa collection - earthy natural materials with grassland inspiration"
-    },
-    {
-      name: "Sonora Collection",
-      image: oleSonora,
-      alt: "Olé Lighting Sonora collection - acoustic-inspired design with sound wave aesthetics"
-    }
-  ],
-  
   'Bover Barcelona': [
     {
       name: "Kando Collection",
@@ -524,20 +343,6 @@ export const brandCollectionImages = {
 // Complete brand data with descriptions and metadata
 export const brandsData: Brand[] = [
   {
-    name: "a·emotional light",
-    logoUrl: aEmotionalLogo,
-    description: "A-emotional Light takes sculptural form through craftsmanship and design. Each handcrafted piece is organic and nature-inspired, blending art and light into unique creations that bring warmth, beauty, and individuality to residential and hospitality interiors.",
-    website: "https://www.a-emotionallight.com/",
-    collections: brandCollectionImages['a·emotional light']
-  },
-  {
-    name: "Olé Lighting",
-    logoUrl: oleLogo,
-    description: "Olé designs soulful lighting with sustainable materials and creative solutions. Mediterranean-inspired, each collection transforms indoor and outdoor spaces with originality and efficiency, creating lighting experiences that combine design and comfort.",
-    website: "https://www.ole-lighting.com/en",
-    collections: brandCollectionImages['Olé Lighting']
-  },
-  {
     name: "Bover Barcelona",
     logoUrl: boverLogo,
     description: "Bover blends contemporary lines with timeless charm. Using materials like wicker, woven steel, and hand-pleated fabric, each design is crafted for outdoor spaces while versatile enough for interiors, delivering elegance, durability, and character across any project.",
@@ -586,35 +391,7 @@ export const validateCarouselImages = (images: string[]): boolean => {
 export {
   // Individual brand collections
   brandCollectionImages as collections,
-  
-  // a·emotional light collections
-  aEmotionalRosa,
-  aEmotionalTonda,
-  aEmotionalEuro,
-  aEmotionalEurol,
-  aEmotionalAgasallo,
-  aEmotionalUmbra,
-  aEmotionalCoral,
-  aEmotionalBretema,
-  aEmotionalGallery,
-  aEmotionalOnn,
-  aEmotionalTempo,
-  
-  // Olé Lighting collections - EXPANDED
-  oleAvatarPop,
-  oleMedusa,
-  oleMorgana,
-  oleCandela,
-  oleCeleste,
-  oleKatana,
-  oleMedusa2,
-  oleMedusa3,
-  oleMorgana2,
-  oleNexo,
-  olePagoda,
-  olePampa,
-  oleSonora,
-  
+
   // Bover Barcelona collections
   boverKando,
   boverNansOutdoor,

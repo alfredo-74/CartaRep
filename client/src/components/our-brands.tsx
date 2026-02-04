@@ -50,16 +50,6 @@ export default function OurBrands() {
 
   const getBrandCatalogues = (brandName: string) => {
     const catalogues: { [key: string]: Array<{ name: string; description: string }> } = {
-      "a·emotional light": [
-        { name: "NEW 2025 CATALOGUE", description: "Latest collection featuring new designs and handcrafted lighting pieces" },
-        { name: "2024 NEWS CATALOGUE", description: "Featured collections and new product launches from 2024" },
-        { name: "2023 CATALOGUE", description: "Complete product overview with technical specifications" },
-        { name: "Catalogue Press Kit", description: "High-resolution images and brand information for professionals" }
-      ],
-      "Olé Lighting": [
-        { name: "Catalogue 2025-2026", description: "Complete indoor and outdoor lighting solutions with latest designs" },
-        { name: "OUTDOORS CATALOGUE 2023", description: "Weather-resistant outdoor lighting systems and installations" }
-      ],
       "Bover Barcelona": [
         { name: "New 2025 Icons", description: "Latest iconic designs and product innovations for 2025" },
         { name: "Indoor Catalogue", description: "Modern Mediterranean lighting designs for interior spaces" },
@@ -79,18 +69,6 @@ export default function OurBrands() {
         { name: "New Collections 2025", description: "Latest collection featuring innovative designs and contemporary lighting solutions" },
         { name: "General Catalogue", description: "Complete product overview with decorative, architectural and outdoor collections" },
         { name: "BrandBook B.lux", description: "Brand identity, design philosophy and company information for professionals" }
-      ],
-      "Martinelli Luce": [
-        { name: "LAMPS CATALOGUE", description: "Complete collection of iconic Italian lamps and lighting designs" },
-        { name: "Architectural Catalogue", description: "Professional architectural lighting solutions and systems" },
-        { name: "Small Talks Brochure", description: "Latest 2025 collection featuring intimate lighting solutions" },
-        { name: "Noura Brochure", description: "Contemporary pendant collection with organic forms" },
-        { name: "Proposals 2025", description: "New design proposals and product innovations for 2025" },
-        { name: "Pipistrello Collection", description: "Documentation for the iconic Pipistrello lamp series" },
-        { name: "Metafora Collection", description: "Philosophical approach to lighting design and architecture" },
-        { name: "Infinita Collection", description: "Continuous lighting design with flowing aesthetics" },
-        { name: "Multidot Collection", description: "Modular dotted lighting patterns and configurations" },
-        { name: "AVRO Brochure", description: "Technical documentation for the distinctive AVRO pendant system" }
       ],
       "Karman": [
         { name: "Hungry for Light 2025", description: "Complete collections catalogue showcasing Karman's latest lighting designs and innovations" },
