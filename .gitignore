@@ -55,3 +55,4 @@ attached_assets/
 *.png
 !client/public/*.png
 !client/src/assets/*.png
+.aider*

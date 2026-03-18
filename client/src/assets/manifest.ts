@@ -51,26 +51,11 @@ import bluxProduct09 from './blux-brand-9.jpg';
 import bluxProduct10 from './blux-brand-10.jpg';
 
 
-// Karman collection imports
-import karmanLogo from './karman-logo.svg';
-import karmanAlibabig from './karman-alibabig.jpg';
-import karmanMobyDick from './karman-moby-dick.jpg';
-import karmanDejaVu from './karman-deja-vu.jpg';
-import karmanKimono from './karman-kimono.jpg';
-import karmanSahara from './karman-sahara.jpg';
-import karmanTiVedo from './karman-ti-vedo.jpg';
-import karmanCell from './karman-cell.jpg';
-import karmanBag from './karman-bag.jpg';
-import karmanSnoob from './karman-snoob.jpg';
-import karmanMoonbloom from './karman-moonbloom.jpg';
-import karmanUgoRilla from './karman-ugo-rilla.jpg';
-
 // Brand logos export
 export const brandLogos = {
   'Bover Barcelona': boverLogo,
   'Panzeri Lighting': panzeriLogo,
-  'Blux Lighting': bluxLogo,
-  'Karman': karmanLogo
+  'Blux Lighting': bluxLogo
 } as const;
 
 // Collection interface for type safety
@@ -108,10 +93,6 @@ export const backgroundCarouselImages: string[] = [
   bluxProduct05,              // Kupetz Collection - dramatic cascading design
   bluxProduct07,              // Ilde Max Collection - statement chandelier
 
-  // Karman - 3 signature collections
-  karmanAlibabig,             // Alibabig Collection - iconic oversized suspension
-  karmanMobyDick,             // Moby Dick Collection - sculptural organic forms
-  karmanDejaVu                // Déjà-Vu Collection - contemporary elegance
 ];
 
 // Brand collections organised by brand - using real collection images where available
@@ -281,63 +262,6 @@ export const brandCollectionImages = {
     }
   ],
 
-  'Karman': [
-    {
-      name: "Alibabig Collection",
-      image: karmanAlibabig,
-      alt: "Karman Alibabig - iconic oversized fabric suspension light with dramatic presence"
-    },
-    {
-      name: "Moby Dick Collection",
-      image: karmanMobyDick,
-      alt: "Karman Moby Dick - large sculptural whale-inspired pendant with organic flowing forms"
-    },
-    {
-      name: "Déjà-Vu Collection",
-      image: karmanDejaVu,
-      alt: "Karman Déjà-Vu - contemporary glass pendant with elegant double-layer design"
-    },
-    {
-      name: "Kimono Collection",
-      image: karmanKimono,
-      alt: "Karman Kimono - outdoor lighting with fabric draping inspired by Japanese traditional garments"
-    },
-    {
-      name: "Sahara Collection",
-      image: karmanSahara,
-      alt: "Karman Sahara - warm desert-inspired pendant lights with organic textile forms"
-    },
-    {
-      name: "Ti.Vedo Collection",
-      image: karmanTiVedo,
-      alt: "Karman Ti.Vedo - playful see-through pendant with transparent mesh design"
-    },
-    {
-      name: "Cell Collection",
-      image: karmanCell,
-      alt: "Karman Cell - geometric cellular structured pendant with modern architectural appeal"
-    },
-    {
-      name: "Bag Collection",
-      image: karmanBag,
-      alt: "Karman Bag - soft fabric suspension light shaped like an elegant handbag"
-    },
-    {
-      name: "Snoob Collection",
-      image: karmanSnoob,
-      alt: "Karman Snoob - contemporary pendant with distinctive character and bold presence"
-    },
-    {
-      name: "Moonbloom Collection",
-      image: karmanMoonbloom,
-      alt: "Karman Moonbloom - lunar-inspired pendant with blooming flower-like illumination"
-    },
-    {
-      name: "Ugo Rilla Collection",
-      image: karmanUgoRilla,
-      alt: "Karman Ugo Rilla - wall-mounted lighting with playful gorilla-inspired design"
-    }
-  ]
 } as const;
 
 // Complete brand data with descriptions and metadata
@@ -363,13 +287,6 @@ export const brandsData: Brand[] = [
     website: "https://bluxlighting.com/",
     collections: brandCollectionImages['Blux Lighting']
   },
-  {
-    name: "Karman",
-    logoUrl: karmanLogo,
-    description: "Karman brings personality and playfulness to lighting design with bold, unconventional creations. Founded in Italy, their collection features distinctive fabric forms, sculptural shapes, and whimsical designs that transform spaces with character, creativity, and Italian craftsmanship.",
-    website: "https://karmanitalia.it/en/",
-    collections: brandCollectionImages['Karman']
-  }
 ];
 
 // Utility function to get brand by name
@@ -429,18 +346,6 @@ export {
   bluxProduct09,
   bluxProduct10,
 
-  // Karman collections
-  karmanAlibabig,
-  karmanMobyDick,
-  karmanDejaVu,
-  karmanKimono,
-  karmanSahara,
-  karmanTiVedo,
-  karmanCell,
-  karmanBag,
-  karmanSnoob,
-  karmanMoonbloom,
-  karmanUgoRilla
 };
 
 /**

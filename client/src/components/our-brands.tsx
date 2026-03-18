@@ -70,17 +70,8 @@ export default function OurBrands() {
         { name: "General Catalogue", description: "Complete product overview with decorative, architectural and outdoor collections" },
         { name: "BrandBook B.lux", description: "Brand identity, design philosophy and company information for professionals" }
       ],
-      "Karman": [
-        { name: "Hungry for Light 2025", description: "Complete collections catalogue showcasing Karman's latest lighting designs and innovations" },
-        { name: "Complete Catalogue 2025", description: "Comprehensive product overview featuring all Karman collections with technical specifications" },
-        { name: "Outdoor 2025", description: "Outdoor lighting collections catalogue for gardens, terraces, and exterior spaces" },
-        { name: "Contract Book", description: "Professional lighting solutions for hospitality, restaurants, hotels, and commercial projects" },
-        { name: "Hotel Collection", description: "Specialized lighting designs for hotel lobbies, rooms, and public spaces" },
-        { name: "Restaurant Collection", description: "Ambient and functional lighting solutions for dining environments" },
-        { name: "Alibaglass Catalogue", description: "Technical documentation for the Alibaglass glass pendant collection" },
-        { name: "Leda Collection", description: "Detailed specifications for the elegant Leda lighting series" }
-      ]
     };
+
     return catalogues[brandName] || [];
   };
 
