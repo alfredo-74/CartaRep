@@ -122,6 +122,10 @@
     /* Prevent layout shift on mobile rotation */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    /* Sharp text rendering */
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
@@ -153,21 +157,7 @@
       overscroll-behavior: contain;
     }
     
-    /* Safari iOS optimization - reduce animation complexity */
-    .carousel-slides {
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
-    
-    /* Optimize carousel slides for Safari memory */
-    .carousel-slide {
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
+    /* Safari iOS: carousel slides already use opacity transition, no extra GPU hints needed */
   }
 }
 
@@ -302,8 +292,6 @@
     -webkit-transition: opacity 0.8s ease-in-out;
     -moz-transition: opacity 0.8s ease-in-out;
     transition: opacity 0.8s ease-in-out;
-    -webkit-filter: brightness(1.1) contrast(1.05);
-    filter: brightness(1.1) contrast(1.05);
   }
 
   .carousel-slides .carousel-slide.active {
