@@ -37,6 +37,8 @@ import panzeriHillow from './panzeri-hillow.jpg';
 import panzeriOmbra from './panzeri-ombra.jpg';
 import panzeriRoma from './panzeri-roma.jpg';
 import panzeriRoma2 from './panzeri-roma2.jpg';
+import panzeriScent from './panzeri-scent.jpg';
+import panzeriScent2 from './panzeri-scent2.jpg';
 
 // Blux Lighting collection imports - ALL OPTIMIZED
 import bluxProduct01 from './blux-brand-1.jpg';
@@ -81,10 +83,10 @@ export const backgroundCarouselImages: string[] = [
   boverKando, boverNansOutdoor, boverMedi, boverNanasDetail,
   boverBol, boverNans, boverDrep, boverSkybell, boverNonLa, boverMulti,
 
-  // Panzeri Lighting - all 11
+  // Panzeri Lighting - all 13
   panzeriZeroRound, panzeriRoma, panzeriRoma2, panzeriRendezVous,
   panzeriOmbra, panzeriMurane, panzeriAdamas, panzeriAdamas1,
-  panzeriAdamas2, panzeriBella, panzeriHillow,
+  panzeriAdamas2, panzeriBella, panzeriHillow, panzeriScent, panzeriScent2,
 
   // Blux Lighting - all 10
   bluxProduct01, bluxProduct02, bluxProduct03, bluxProduct04, bluxProduct05,
@@ -202,6 +204,16 @@ export const brandCollectionImages = {
       name: "Hillow Collection",
       image: panzeriHillow,
       alt: "Panzeri Hillow collection - organic hill-inspired shapes with natural textures"
+    },
+    {
+      name: "Scent Collection",
+      image: panzeriScent,
+      alt: "Panzeri Scent - architectural spotlight with coloured glass diffuser for warm ambient lighting"
+    },
+    {
+      name: "Scent Collection",
+      image: panzeriScent2,
+      alt: "Panzeri Scent - architectural spotlight installed in contemporary interior with refined atmosphere"
     }
   ],
   
@@ -330,6 +342,8 @@ export {
   panzeriRoma,
   panzeriRoma2,
   panzeriOmbra,
+  panzeriScent,
+  panzeriScent2,
   
   // Blux Lighting collections
   bluxProduct01,
