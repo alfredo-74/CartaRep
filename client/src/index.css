@@ -288,7 +288,8 @@
     height: 100%;
   }
 
-  .carousel-slide {
+  /* Two-class selector beats Tailwind's single-class .relative utility */
+  .carousel-slides .carousel-slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -305,7 +306,7 @@
     filter: brightness(1.1) contrast(1.05);
   }
 
-  .carousel-slide.active {
+  .carousel-slides .carousel-slide.active {
     opacity: 0.5;
   }
 

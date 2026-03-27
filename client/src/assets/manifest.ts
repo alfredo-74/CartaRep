@@ -74,25 +74,20 @@ export interface Brand {
   collections: readonly LightingCollection[];
 }
 
-// Background carousel images - OPTIMIZED for mobile performance
-// Reduced to 12 images (3 per brand) for faster loading and better stability
-// Carefully selected signature pieces representing each brand's essence
+// Background carousel images - ALL brand images, shuffled randomly at runtime
 export const backgroundCarouselImages: string[] = [
-  // Bover Barcelona - 3 signature collections
-  boverSkybell,               // Skybell Collection - circular pendants
-  boverKando,                 // Kando Collection - outdoor elegance
-  boverNans,                  // Nans Collection - artisanal craftsmanship
+  // Bover Barcelona - all 10
+  boverKando, boverNansOutdoor, boverMedi, boverNanasDetail,
+  boverBol, boverNans, boverDrep, boverSkybell, boverNonLa, boverMulti,
 
-  // Panzeri Lighting - 3 signature collections
-  panzeriZeroRound,           // Zero Round Collection - minimalist precision
-  panzeriRendezVous,          // Rendez-Vous Collection - contemporary Italian
-  panzeriAdamas,              // Adamas Collection - diamond crystal luxury
+  // Panzeri Lighting - all 11
+  panzeriZeroRound, panzeriRoma, panzeriRoma2, panzeriRendezVous,
+  panzeriOmbra, panzeriMurane, panzeriAdamas, panzeriAdamas1,
+  panzeriAdamas2, panzeriBella, panzeriHillow,
 
-  // Blux Lighting - 3 signature collections
-  bluxProduct01,              // BIMU SV - architectural spotlight system
-  bluxProduct05,              // Berry S - decorative pendant
-  bluxProduct10,              // Solid System - modular architectural lighting
-
+  // Blux Lighting - all 10
+  bluxProduct01, bluxProduct02, bluxProduct03, bluxProduct04, bluxProduct05,
+  bluxProduct06, bluxProduct07, bluxProduct08, bluxProduct09, bluxProduct10,
 ];
 
 // Brand collections organised by brand - using real collection images where available
