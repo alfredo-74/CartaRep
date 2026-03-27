@@ -78,7 +78,7 @@ export default function BackgroundCarousel() {
     if (shuffledImages.length > 1) {
       intervalRef.current = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % shuffledImages.length);
-      }, 10000); // Increased to 10s for better Safari performance
+      }, 4000);
     }
 
     // Cleanup interval on unmount

@@ -299,9 +299,9 @@
     background-position: center;
     opacity: 0;
     background-repeat: no-repeat;
-    -webkit-transition: opacity 1.5s ease-in-out;
-    -moz-transition: opacity 1.5s ease-in-out;
-    transition: opacity 1.5s ease-in-out;
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
     -webkit-filter: brightness(1.1) contrast(1.05);
     filter: brightness(1.1) contrast(1.05);
   }
