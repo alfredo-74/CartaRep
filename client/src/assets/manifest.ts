@@ -241,8 +241,7 @@ export const brandCollectionImages = {
     {
       name: "Berry S",
       image: bluxProduct05,
-      alt: "Blux Berry S - decorative pendant in black with minimalist spherical form for stylish interiors",
-      objectFit: 'contain' as const,
+      alt: "Blux Berry S - decorative pendant with detachable magnetic shade, shown with hand removing the dome cap",
     },
     {
       name: "Myn",
