@@ -89,9 +89,9 @@ export const backgroundCarouselImages: string[] = [
   panzeriAdamas,              // Adamas Collection - diamond crystal luxury
 
   // Blux Lighting - 3 signature collections
-  bluxProduct01,              // Tree Series S - layered pendant elegance
-  bluxProduct05,              // Kupetz Collection - dramatic cascading design
-  bluxProduct07,              // Ilde Max Collection - statement chandelier
+  bluxProduct01,              // BIMU SV - architectural spotlight system
+  bluxProduct05,              // Berry S - decorative pendant
+  bluxProduct10,              // Solid System - modular architectural lighting
 
 ];
 
@@ -211,54 +211,54 @@ export const brandCollectionImages = {
   
   'Blux Lighting': [
     {
-      name: "Tree Series S Collection",
+      name: "BIMU SV",
       image: bluxProduct01,
-      alt: "Blux Tree Series S - contemporary pendant light with layered design creating warm ambient illumination over modern table setting"
+      alt: "Blux BIMU SV - architectural spotlight system in black and orange for professional lighting installations"
     },
     {
-      name: "Canfranc Collection",
+      name: "Beaded F",
       image: bluxProduct02,
-      alt: "Blux Canfranc - elegant hospitality lighting installation with multiple pendant fixtures creating sophisticated dining atmosphere"
+      alt: "Blux Beaded F - decorative pendant with elegant beaded design for refined residential and hospitality interiors"
     },
     {
-      name: "Overlay S Collection",
+      name: "Beaded S",
       image: bluxProduct03,
-      alt: "Blux Overlay S - tiered pendant light with multi-layered geometric design in warm metallic tones for modern interiors"
+      alt: "Blux Beaded S - decorative beaded pendant light with delicate detailing for contemporary interiors"
     },
     {
-      name: "Misko SH Collection",
+      name: "Beira W",
       image: bluxProduct04,
-      alt: "Blux Misko SH - linear pendant lighting with spherical glass elements suspended over contemporary dining table"
+      alt: "Blux Beira W - decorative wall light with clean contemporary design for modern living spaces"
     },
     {
-      name: "Kupetz Collection",
+      name: "Berry S",
       image: bluxProduct05,
-      alt: "Blux Kupetz - dramatic decorative pendant lights with cascading arrangement in vibrant architectural spaces"
+      alt: "Blux Berry S - decorative pendant in black with minimalist spherical form for stylish interiors"
     },
     {
-      name: "Keshi T Collection",
+      name: "Myn",
       image: bluxProduct06,
-      alt: "Blux Keshi T - modern table lamps with sculptural black wire structure and marble base for sophisticated settings"
+      alt: "Blux Myn - decorative pendant with reflector in black for focused and ambient illumination"
     },
     {
-      name: "Ilde Max Collection",
+      name: "Solid SH",
       image: bluxProduct07,
-      alt: "Blux Ilde Max - statement chandelier with multiple glass bulbs and red cable detail for contemporary interiors"
+      alt: "Blux Solid SH - decorative pendant showcased at Euroluce, elegant and versatile for contract and residential"
     },
     {
-      name: "C-Ball Number Collection",
+      name: "Solid SH",
       image: bluxProduct08,
-      alt: "Blux C-Ball Number - architectural wall sconces with golden finish for corridor and hallway hospitality lighting"
+      alt: "Blux Solid SH - decorative pendant at Euroluce, clean geometric form with premium finish"
     },
     {
-      name: "Berry S Collection",
+      name: "Solid SH",
       image: bluxProduct09,
-      alt: "Blux Berry S - adjustable pendant lights with minimalist black design and focused directional illumination"
+      alt: "Blux Solid SH - decorative pendant at Euroluce, architectural lighting presence in a hospitality setting"
     },
     {
-      name: "Anvil System Collection",
+      name: "Solid System",
       image: bluxProduct10,
-      alt: "Blux Anvil System - modular pendant lighting with wooden beam and spherical glass fixtures for architectural spaces"
+      alt: "Blux Solid System in aluminium - modular architectural lighting solution for professional installations"
     }
   ],
 
