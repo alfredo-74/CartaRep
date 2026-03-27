@@ -169,8 +169,8 @@ export default function BrandGallery({
               <img
                 src={collection.image}
                 alt={collection.alt}
-                className="brand-window-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                loading={index < 4 ? "eager" : "lazy"} // Prioritize first 4 images
+                className={`brand-window-image w-full h-full group-hover:scale-105 transition-transform duration-300 ${collection.objectFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                loading={index < 4 ? "eager" : "lazy"}
                 data-testid={`gallery-image-${testIdPrefix}-${index}`}
               />
             </div>

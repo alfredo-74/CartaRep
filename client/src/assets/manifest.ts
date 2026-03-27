@@ -63,6 +63,7 @@ export interface LightingCollection {
   readonly name: string;
   readonly image: string;
   readonly alt: string;
+  readonly objectFit?: 'cover' | 'contain';
 }
 
 // Brand interface
@@ -228,7 +229,8 @@ export const brandCollectionImages = {
     {
       name: "Berry S",
       image: bluxProduct05,
-      alt: "Blux Berry S - decorative pendant in black with minimalist spherical form for stylish interiors"
+      alt: "Blux Berry S - decorative pendant in black with minimalist spherical form for stylish interiors",
+      objectFit: 'contain' as const,
     },
     {
       name: "Myn",
